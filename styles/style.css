@@ -21,12 +21,6 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: #151d52;
   color: #fff;
-  background-image: url(../images/interface/saad/bg.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-position: center top;
-  background-attachment: fixed;
 }
 
 .bg-custom {
@@ -377,10 +371,12 @@ footer {
     left: 0;
     height: 100vh;
     padding-top: 80px;
-    margin-top: 20px;
+    margin: 0px !important;
     align-items: flex-start;
     background: #0c1033;
     border: 1px dashed rgba(255, 255, 255, 0.09);
+    border-left: 0;
+    border-right: 0
   }
 }
 @media screen and (max-width: 500px) {
