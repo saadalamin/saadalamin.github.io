@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #151d52 !important;
+  background-color: #0b1347 !important;
   color: #fff;
 }
 
@@ -365,11 +365,6 @@ main {
 }
 
 /*** BLOG PAGE ***/
-.blog ::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
-}
-
 /*** CUSTOM RESPONSIBILITY ***/
 @media screen and (min-width: 993px) {
   .navbar {
@@ -427,8 +422,8 @@ main {
     padding-top: 60px;
     margin: 0px !important;
     align-items: flex-start;
-    background: transparent;
-    box-shadow: 0 0 18px #0d1652;
+    background: #0e195c;
+    box-shadow: 0 -10px 18px #050a2e;
     border-radius: 0;
   }
 }
