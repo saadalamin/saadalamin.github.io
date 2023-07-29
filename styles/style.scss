@@ -351,15 +351,24 @@ main {
 /*** ABOUT PAGE ***/
 .about {
   .media-links {
-    padding-top: 15px;
+    text-align: center;
+    padding-top: 10px;
     a {
       display: inline-block;
       margin: 10px !important;
     }
     a img {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
     }
+  }
+}
+
+/*** BLOG PAGE ***/
+.blog {
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
   }
 }
 

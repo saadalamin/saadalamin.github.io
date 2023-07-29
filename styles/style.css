@@ -353,15 +353,22 @@ main {
 
 /*** ABOUT PAGE ***/
 .about .media-links {
-  padding-top: 15px;
+  text-align: center;
+  padding-top: 10px;
 }
 .about .media-links a {
   display: inline-block;
   margin: 10px !important;
 }
 .about .media-links a img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+}
+
+/*** BLOG PAGE ***/
+.blog ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
 
 /*** CUSTOM RESPONSIBILITY ***/
