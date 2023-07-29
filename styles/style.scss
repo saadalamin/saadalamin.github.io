@@ -25,7 +25,7 @@ body::-webkit-scrollbar-thumb {
  font-family: $primary-font;
 }
 body {
- background-color: $primary-color;
+ background-color: $primary-color !important;
  color: $primary-text-color;
  //@include image-center("../images/interface/saad/bg.jpeg");
  //background-position: center top;
@@ -39,7 +39,7 @@ body {
 }
 .navbar {
  height: 65px;
- background-color: $primary-color;
+ background-color: #0d1652;
  position: sticky;
  top: 0;
  left: 0;
@@ -81,6 +81,9 @@ h6 {
   background-color: #e92f2f;
  }
 }
+
+/*** HOME PAGE ***/
+
 main {
  padding-bottom: 50px;
 }
@@ -130,7 +133,7 @@ main {
     padding: 0 12px;
     p {
      width: 100%;
-     background-color: rgba(22, 31, 94, 0.95);
+     background-color: #161e5e;
      padding: 15px;
      white-space: nowrap;
      overflow: hidden;
@@ -291,7 +294,10 @@ footer {
   object-fit: cover;
  }
 }
-.projects {
+
+/*** WORKS PAGE ***/
+
+.works {
  .banner {
   width: 100%;
   height: 200px;
@@ -315,9 +321,13 @@ footer {
   }
  }
 }
+
+
+/*** CUSTOM RESPONSIBILITY ***/
+
 @media screen and (min-width: 993px) {
  .navbar {
-  background: #0c1033;
+  background: #0d1652;
  }
  .home {
   padding-top: 10px;
@@ -375,13 +385,12 @@ footer {
    top: 0;
    left: 0;
    height: 100vh;
-   padding-top: 80px;
+   padding-top: 60px;
    margin: 0px !important;
    align-items: flex-start;
-   background: #0c1033;
-   border: 1px dashed rgba(255, 255, 255, 0.09);
-   border-left: 0;
-   border-top: 0;
+   background: transparent;
+   box-shadow: 0 0 18px #0d1652;
+   border-radius: 0;
   }
  }
 }

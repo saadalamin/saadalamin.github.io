@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #151d52;
+  background-color: #151d52 !important;
   color: #fff;
 }
 
@@ -33,7 +33,7 @@ body {
 
 .navbar {
   height: 65px;
-  background-color: #151d52;
+  background-color: #0d1652;
   position: sticky;
   top: 0;
   left: 0;
@@ -83,6 +83,7 @@ h6 {
   background-color: #e92f2f;
 }
 
+/*** HOME PAGE ***/
 main {
   padding-bottom: 50px;
 }
@@ -106,7 +107,8 @@ main {
   text-shadow: 0 0 1px #000;
 }
 .home .profile .profile-image {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 100rem;
   border: 2px solid white;
 }
@@ -124,7 +126,8 @@ main {
 }
 .home .posts .post img {
   max-height: 300px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0.4rem;
 }
 .home .posts .post img:hover {
@@ -140,7 +143,7 @@ main {
 }
 .home .posts .post .body p {
   width: 100%;
-  background-color: rgba(22, 31, 94, 0.95);
+  background-color: #161e5e;
   padding: 15px;
   white-space: nowrap;
   overflow: hidden;
@@ -179,7 +182,8 @@ main {
   height: 78px;
   padding: 18px;
   border-radius: 1rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: #fff;
   margin-top: -100px;
 }
@@ -290,10 +294,12 @@ footer {
   width: 100%;
   max-width: 400px;
   border: 1px dashed #fff;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.projects .banner {
+/*** WORKS PAGE ***/
+.works .banner {
   width: 100%;
   height: 200px;
   background-image: url(../images/interface/saad/banner.jpg);
@@ -301,25 +307,26 @@ footer {
   background-size: cover;
   background-position: center;
 }
-.projects .title {
+.works .title {
   padding: 20px 0;
 }
-.projects .project-container-a p, .projects .project-container-b p {
+.works .project-container-a p, .works .project-container-b p {
   width: 100%;
   background-color: #1e2c83;
   padding: 10px;
 }
-.projects .project-container-a .row div img, .projects .project-container-b .row div img {
+.works .project-container-a .row div img, .works .project-container-b .row div img {
   border: 1px dashed rgba(255, 255, 255, 0.15);
 }
-.projects .project-container-a .row div img:hover, .projects .project-container-b .row div img:hover {
+.works .project-container-a .row div img:hover, .works .project-container-b .row div img:hover {
   border: 1.5px dashed white;
   opacity: 0.6;
 }
 
+/*** CUSTOM RESPONSIBILITY ***/
 @media screen and (min-width: 993px) {
   .navbar {
-    background: #0c1033;
+    background: #0d1652;
   }
   .home {
     padding-top: 10px;
@@ -370,13 +377,12 @@ footer {
     top: 0;
     left: 0;
     height: 100vh;
-    padding-top: 80px;
+    padding-top: 60px;
     margin: 0px !important;
     align-items: flex-start;
-    background: #0c1033;
-    border: 1px dashed rgba(255, 255, 255, 0.09);
-    border-left: 0;
-    border-right: 0
+    background: transparent;
+    box-shadow: 0 0 18px #0d1652;
+    border-radius: 0;
   }
 }
 @media screen and (max-width: 500px) {

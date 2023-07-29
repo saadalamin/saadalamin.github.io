@@ -12,6 +12,10 @@
 // }, 1000);
 
 /* Scroll to top */
+
+
+/****** BUILT-IN FUNCTIONS ******/
+
 var getJSON = function (url, callback) {
  try {
   var xhr = new XMLHttpRequest();
@@ -37,7 +41,7 @@ var getJSON = function (url, callback) {
  }
 };
 
-/* Home section */
+/********* HOME PAGE **********/
 var elm = document.querySelectorAll("p"),
  elm1 = document.querySelectorAll(".post"),
  box = document.getElementById("modalMain");
@@ -73,8 +77,8 @@ if (a) {
   };
 }
 
-/* Project section */
-var prj = document.querySelectorAll(".projects > .container")[0];
+/********* PROJECT PAGE **********/
+var prj = document.querySelectorAll(".works > .container")[0];
 
 function appendProject(imgLink, title, goLink, projectRow, projectObject) {
  var a = document.createElement("div");
