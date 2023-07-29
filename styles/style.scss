@@ -112,7 +112,7 @@ main {
   width: 100%;
   height: 200px;
  }
- .posts {
+ .posts-a {
   padding: 20px;
   .post {
    position: relative;
@@ -124,6 +124,48 @@ main {
      border: 1.5px dashed white;
      opacity: 0.4;
     }
+   }
+   .body {
+    position: absolute;
+    width: 100%;
+    bottom: -18px;
+    left: 0;
+    padding: 0 12px;
+    p {
+     width: 100%;
+     background-color: #161e5e;
+     padding: 15px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     span:last-child {
+      display: block;
+      padding: 4px 0;
+      font-size: 13px;
+      color: #969696;
+     }
+    }
+   }
+  }
+ }
+ .posts-b {
+  padding: 20px;
+  a {
+    color: inherit;
+  }
+  .post {
+   position: relative;
+   img {
+    max-height: 230px;
+    object-fit: cover;
+    object-position: center;
+    &:hover {
+     border: 1.5px dashed white;
+     opacity: 0.4;
+    }
+   }
+   img:first-child {
+        object-position: 0 30%;
    }
    .body {
     position: absolute;
@@ -278,7 +320,7 @@ main {
  }
 }
 footer {
- background-color: #161f5e;
+ background-color: #0d1652;
 }
 #modalMain {
  z-index: 10001;

@@ -118,30 +118,30 @@ main {
   width: 100%;
   height: 200px;
 }
-.home .posts {
+.home .posts-a {
   padding: 20px;
 }
-.home .posts .post {
+.home .posts-a .post {
   position: relative;
 }
-.home .posts .post img {
+.home .posts-a .post img {
   max-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.4rem;
 }
-.home .posts .post img:hover {
+.home .posts-a .post img:hover {
   border: 1.5px dashed white;
   opacity: 0.4;
 }
-.home .posts .post .body {
+.home .posts-a .post .body {
   position: absolute;
   width: 100%;
   bottom: -18px;
   left: 0;
   padding: 0 12px;
 }
-.home .posts .post .body p {
+.home .posts-a .post .body p {
   width: 100%;
   background-color: #161e5e;
   padding: 15px;
@@ -149,7 +149,52 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.home .posts .post .body p span:last-child {
+.home .posts-a .post .body p span:last-child {
+  display: block;
+  padding: 4px 0;
+  font-size: 13px;
+  color: #969696;
+}
+.home .posts-b {
+  padding: 20px;
+}
+.home .posts-b a {
+  color: inherit;
+}
+.home .posts-b .post {
+  position: relative;
+}
+.home .posts-b .post img {
+  max-height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.home .posts-b .post img:hover {
+  border: 1.5px dashed white;
+  opacity: 0.4;
+}
+.home .posts-b .post img:first-child {
+  -o-object-position: 0 30%;
+     object-position: 0 30%;
+}
+.home .posts-b .post .body {
+  position: absolute;
+  width: 100%;
+  bottom: -18px;
+  left: 0;
+  padding: 0 12px;
+}
+.home .posts-b .post .body p {
+  width: 100%;
+  background-color: #161e5e;
+  padding: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.home .posts-b .post .body p span:last-child {
   display: block;
   padding: 4px 0;
   font-size: 13px;
@@ -279,7 +324,7 @@ main {
 }
 
 footer {
-  background-color: #161f5e;
+  background-color: #0d1652;
 }
 
 #modalMain {
