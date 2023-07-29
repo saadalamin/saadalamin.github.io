@@ -27,9 +27,9 @@ body::-webkit-scrollbar-thumb {
 body {
  background-color: $primary-color;
  color: $primary-text-color;
- @include image-center("../images/interface/saad/bg.jpeg");
- background-position: center top;
- background-attachment: fixed;
+ //@include image-center("../images/interface/saad/bg.jpeg");
+ //background-position: center top;
+ //background-attachment: fixed;
 }
 .bg-custom {
  background-color: $secondary-color;
@@ -376,10 +376,12 @@ footer {
    left: 0;
    height: 100vh;
    padding-top: 80px;
-   margin-top: 20px;
+   margin: 0px !important;
    align-items: flex-start;
    background: #0c1033;
    border: 1px dashed rgba(255, 255, 255, 0.09);
+   border-left: 0;
+   border-top: 0;
   }
  }
 }
