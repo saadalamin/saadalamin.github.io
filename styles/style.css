@@ -25,7 +25,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-position: center top;
+  background-position: 60% top;
   background-attachment: fixed;
 }
 
@@ -517,14 +517,6 @@ main {
     border-radius: 0;
   }
 }
-@media screen and (max-width: 400px) {
-  .first .intro h2 {
-    font-size: 1.5rem;
-  }
-  .first .intro p {
-    font-size: 0.8rem;
-  }
-}
 @media screen and (max-width: 500px) {
   #switch_btn {
     text-align: left !important;
@@ -536,6 +528,8 @@ main {
   .about {
     padding: 5px 15px;
   }
+}
+@media screen and (max-width: 700px) {
   .first .intro {
     padding: 50px 60px;
     text-align: center;
@@ -549,6 +543,14 @@ main {
     line-height: 28px;
     margin-top: 50px !important;
     width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .first .intro h2 {
+    font-size: 2rem;
+  }
+  .first .intro p {
+    font-size: 0.7rem;
   }
 }
 /*** FOOTER & Others ***/
