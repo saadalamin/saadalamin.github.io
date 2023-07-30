@@ -412,13 +412,20 @@ main {
           font-weight: bolder;
           font-size: 1rem;
         }
-        p {
-          font-size: 0.9rem;
-        }
         span {
           display: block;
           height: 0px !important;
           visibility: hidden;
+        }
+        p {
+          font-size: 0.9rem;
+          height: 40px;
+          overflow: hidden;
+          b {
+            color: blue;
+            text-decoration: underline;
+            margin-left: 5px;
+          }
         }
       }
       img {
