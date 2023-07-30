@@ -107,7 +107,9 @@ var counting = function () {
     count(0, counter[j], j);
   }
 };
+
 document.body.onload = counting();
+
 
 /********* PROJECT PAGE **********/
 var prj = document.querySelectorAll(".works > .container")[0];
@@ -118,7 +120,7 @@ function appendProject(imgLink, title, goLink, projectRow, projectObject) {
   var c = document.createElement("p");
   var d = document.createElement("a");
   a.classList.add("col-md-4");
-  b.src = "images/projects/" + imgLink;
+  b.src = "images/works/" + imgLink;
   b.alt = "Saad Al Amin Projects";
   b.title = title.toUpperCase();
   b.style.width = "100%";

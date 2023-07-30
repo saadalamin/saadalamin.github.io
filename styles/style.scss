@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: #0b1347 !important;
   color: $primary-text-color;
-  @include image-center("../images/interface/saad/bg.jpeg");
+  @include image-center("../images/interface/bg.jpeg");
   background-position: center top;
   background-attachment: fixed;
 }
@@ -45,7 +45,7 @@ body {
   left: 0;
   z-index: 10000;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
-  @include image-center("../images/interface/saad/newcover.jpg");
+  @include image-center("../images/interface/newcover.jpg");
   ul {
     padding: 0 !important;
   }
@@ -105,7 +105,7 @@ main {
     width: 100%;
     height: 150px;
     align-items: center;
-    @include image-center("../images/interface/saad/coverphoto-blur.jpg");
+    @include image-center("../images/interface/coverphoto-blur.jpg");
     &-details {
       width: 80%;
       margin: 0 auto;
@@ -206,7 +206,7 @@ main {
     width: 100%;
     padding: 90px 20px 40px 20px;
     background-color: rgba(22, 31, 94, 0.4);
-    @include image-center("../images/interface/saad/newcover-blur.jpg");
+    @include image-center("../images/interface/newcover-blur.jpg");
     margin: 20px 0;
     row-gap: 12px;
     section {
@@ -349,7 +349,7 @@ main {
   .banner {
     width: 100%;
     height: 200px;
-    @include image-center("../images/interface/saad/banner.jpg");
+    @include image-center("../images/interface/banner.jpg");
   }
   .title {
     padding: 20px 0;
@@ -373,15 +373,25 @@ main {
 
 /*** ABOUT PAGE ***/
 .about {
+  .title {
+    margin-left: 0;
+  }
   .opinion {
+    padding: 0 10px;
     .opinion-list {
+      padding: 0 10px;
       .item {
+        height: min-content;
         border-radius: 2rem;
         background-color: #fff;
         color: #000;
         align-items: center;
         div:last-child {
           padding: 20px;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
         }
         h4 {
           font-weight: bolder;
@@ -402,10 +412,12 @@ main {
   }
   .media-links {
     padding-top: 10px;
-    text-align: center;
     a {
       display: inline-block;
       margin: 10px !important;
+      &:hover {
+        opacity: .5;
+      }
     }
     a img {
       width: 35px;
@@ -497,7 +509,10 @@ main {
     p {
       font-size: 1rem !important;
     }
+  }.about {
+    padding: 5px 15px;
   }
+
 }
 
 /*** FOOTER & Others ***/

@@ -21,7 +21,7 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: #0b1347 !important;
   color: #fff;
-  background-image: url(../images/interface/saad/bg.jpeg);
+  background-image: url(../images/interface/bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -45,7 +45,7 @@ body {
   left: 0;
   z-index: 10000;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
-  background-image: url(../images/interface/saad/newcover.jpg);
+  background-image: url(../images/interface/newcover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -114,7 +114,7 @@ main {
   width: 100%;
   height: 150px;
   align-items: center;
-  background-image: url(../images/interface/saad/coverphoto-blur.jpg);
+  background-image: url(../images/interface/coverphoto-blur.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -223,7 +223,7 @@ main {
   width: 100%;
   padding: 90px 20px 40px 20px;
   background-color: rgba(22, 31, 94, 0.4);
-  background-image: url(../images/interface/saad/newcover-blur.jpg);
+  background-image: url(../images/interface/newcover-blur.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -357,7 +357,7 @@ main {
 .works .banner {
   width: 100%;
   height: 200px;
-  background-image: url(../images/interface/saad/banner.jpg);
+  background-image: url(../images/interface/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -382,7 +382,18 @@ main {
 }
 
 /*** ABOUT PAGE ***/
+.about .title {
+  margin-left: 0;
+}
+.about .opinion {
+  padding: 0 10px;
+}
+.about .opinion .opinion-list {
+  padding: 0 10px;
+}
 .about .opinion .opinion-list .item {
+  height: -moz-min-content;
+  height: min-content;
   border-radius: 2rem;
   background-color: #fff;
   color: #000;
@@ -390,6 +401,10 @@ main {
 }
 .about .opinion .opinion-list .item div:last-child {
   padding: 20px;
+}
+.about .opinion .opinion-list .item a {
+  color: inherit;
+  text-decoration: none;
 }
 .about .opinion .opinion-list .item h4 {
   font-weight: bolder;
@@ -408,11 +423,13 @@ main {
 }
 .about .media-links {
   padding-top: 10px;
-  text-align: center;
 }
 .about .media-links a {
   display: inline-block;
   margin: 10px !important;
+}
+.about .media-links a:hover {
+  opacity: 0.5;
 }
 .about .media-links a img {
   width: 35px;
@@ -489,6 +506,9 @@ main {
   .features p {
     font-size: 1rem !important;
   }
+  .about {
+    padding: 5px 15px;
+  }
 }
 /*** FOOTER & Others ***/
 footer {
@@ -510,4 +530,4 @@ footer {
   border: 1px dashed #fff;
   -o-object-fit: cover;
      object-fit: cover;
-}/*# sourceMappingURL=style.css.map */
+}

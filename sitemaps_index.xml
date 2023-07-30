@@ -13,17 +13,17 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://saadalamin.github.io/work.html</loc>
-  <lastmod>2022-04-30T08:18:17+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://saadalamin.github.io/about.html</loc>
+  <loc>https://saadalamin.github.io/works.html</loc>
   <lastmod>2022-04-30T08:18:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://saadalamin.github.io/blog.html</loc>
+  <lastmod>2022-04-30T08:18:17+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://saadalamin.github.io/about.html</loc>
   <lastmod>2022-04-30T08:18:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
