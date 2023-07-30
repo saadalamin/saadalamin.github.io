@@ -43,21 +43,23 @@ var getJSON = function (url, callback) {
 /********* HOME PAGE **********/
 var elm = document.querySelectorAll("p"),
   elm1 = document.querySelectorAll(".post"),
-  elm2 = document.querySelectorAll(".project-container-c .row > div"),
+  elm2 = document.querySelectorAll(".project-container-c .row img"),
   elm3 = document.querySelectorAll(".opinion-list > div"),
   box = document.getElementById("modalMain");
 var modalConfig = function (
   e,
   customTitle = undefined,
-  customContent = undefined
+  customContent = undefined,
+  src = undefined
 ) {
   e.onclick = function () {
     var t = customTitle;
     if (!customTitle && e.querySelectorAll("p")[0])
       t = e.querySelectorAll("p")[0].innerHTML;
 
-    document.querySelectorAll("#modalMain img")[0].src =
+    if (e.querySelectorAll("img")[0]) document.querySelectorAll("#modalMain img")[0].src =
       e.querySelectorAll("img")[0].src;
+    else if (src) document.querySelectorAll("#modalMain img")[0].src = src;
 
     if (document.querySelectorAll("#modalMain .title-post")[0])
       document.querySelectorAll("#modalMain .title-post")[0].innerHTML = t;
@@ -82,7 +84,7 @@ if (elm1) {
 }
 if (elm2) {
   elm2.forEach((e) => {
-    modalConfig(e);
+    modalConfig(e, "", "", e.src);
   });
 }
 if (elm3) {
