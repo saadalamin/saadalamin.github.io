@@ -46,9 +46,12 @@ body {
   z-index: 10000;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
   @include image-center("../images/interface/saad/newcover.jpg");
+  ul {
+    padding: 0 !important;
+  }
   a {
     text-decoration: none;
-    color: #fff;
+    color: inherit;
   }
   .desktop a.active {
     border-bottom: 1px solid #fff;
@@ -87,7 +90,9 @@ h6 {
 .first {
   height: 100vh;
   background-color: transparent;
-  h1 {font-size: 12rem;}
+  h1 {
+    font-size: 2rem;
+  }
 }
 main {
   padding-bottom: 50px;
@@ -213,6 +218,7 @@ main {
         margin: 0;
         padding: 0 10px;
         color: #c0c0c0;
+        font-size: 0.85rem;
       }
       img {
         width: 78px;
@@ -486,6 +492,11 @@ main {
   #switch_btn {
     text-align: left !important;
     padding-left: 10px !important;
+  }
+  .features {
+    p {
+      font-size: 1rem !important;
+    }
   }
 }
 

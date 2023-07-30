@@ -50,9 +50,12 @@ body {
   background-size: cover;
   background-position: center;
 }
+.navbar ul {
+  padding: 0 !important;
+}
 .navbar a {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
 }
 .navbar .desktop a.active {
   border-bottom: 1px solid #fff;
@@ -95,7 +98,7 @@ h6 {
   background-color: transparent;
 }
 .first h1 {
-  font-size: 12rem;
+  font-size: 2rem;
 }
 
 main {
@@ -237,6 +240,7 @@ main {
   margin: 0;
   padding: 0 10px;
   color: #c0c0c0;
+  font-size: 0.85rem;
 }
 .home .features section img {
   width: 78px;
@@ -481,6 +485,9 @@ main {
   #switch_btn {
     text-align: left !important;
     padding-left: 10px !important;
+  }
+  .features p {
+    font-size: 1rem !important;
   }
 }
 /*** FOOTER & Others ***/
