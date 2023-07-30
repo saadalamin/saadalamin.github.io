@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 $primary-color: #151d52;
 $secondary-color: #1e2c83;
 $primary-text-color: #fff;
@@ -90,6 +90,7 @@ h6 {
 
 .first {
   height: 100vh;
+  min-height: 560px;
   background-color: transparent;
   .intro {
     padding: 85px 100px;
@@ -137,8 +138,7 @@ main {
     width: 100%;
     height: 200px;
   }
-  .posts-a,
-  .posts-b {
+  .posts-a {
     padding: 20px;
     a {
       color: inherit;
@@ -155,6 +155,9 @@ main {
           border: 1.5px dashed white;
           opacity: 0.4;
         }
+      }
+      img:first-child {
+        object-position: 0 30%;
       }
       .body {
         position: absolute;
@@ -176,18 +179,6 @@ main {
             color: #969696;
           }
         }
-      }
-    }
-  }
-  .posts-b {
-    .post {
-      img {
-        max-height: 230px;
-        object-position: center;
-        aspect-ratio: 16 / 9;
-      }
-      img:first-child {
-        object-position: 0 30%;
       }
     }
   }
@@ -536,6 +527,19 @@ main {
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  .first {
+    .intro {
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
 @media screen and (max-width: 500px) {
   #switch_btn {
     text-align: left !important;
@@ -548,6 +552,23 @@ main {
   }
   .about {
     padding: 5px 15px;
+  }
+  .first {
+    .intro {
+      //padding: 85px 100px;
+      padding: 50px 60px;
+      text-align: center;
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+      }
+      p {
+        font-size: 0.9rem;
+        line-height: 28px;
+        margin-top: 50px !important;
+        width: 100%;
+      }
+    }
   }
 }
 

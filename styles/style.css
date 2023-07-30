@@ -95,6 +95,7 @@ h6 {
 /*** HOME PAGE ***/
 .first {
   height: 100vh;
+  min-height: 560px;
   background-color: transparent;
 }
 .first .intro {
@@ -149,42 +150,39 @@ main {
   width: 100%;
   height: 200px;
 }
-.home .posts-a,
-.home .posts-b {
+.home .posts-a {
   padding: 20px;
 }
-.home .posts-a a,
-.home .posts-b a {
+.home .posts-a a {
   color: inherit;
   text-decoration: none;
 }
-.home .posts-a .post,
-.home .posts-b .post {
+.home .posts-a .post {
   position: relative;
 }
-.home .posts-a .post img,
-.home .posts-b .post img {
+.home .posts-a .post img {
   max-height: 300px;
   aspect-ratio: 3/3;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.4rem;
 }
-.home .posts-a .post img:hover,
-.home .posts-b .post img:hover {
+.home .posts-a .post img:hover {
   border: 1.5px dashed white;
   opacity: 0.4;
 }
-.home .posts-a .post .body,
-.home .posts-b .post .body {
+.home .posts-a .post img:first-child {
+  -o-object-position: 0 30%;
+     object-position: 0 30%;
+}
+.home .posts-a .post .body {
   position: absolute;
   width: 100%;
   bottom: -18px;
   left: 0;
   padding: 0 12px;
 }
-.home .posts-a .post .body p,
-.home .posts-b .post .body p {
+.home .posts-a .post .body p {
   width: 100%;
   background-color: #161e5e;
   padding: 15px;
@@ -192,22 +190,11 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.home .posts-a .post .body p span:last-child,
-.home .posts-b .post .body p span:last-child {
+.home .posts-a .post .body p span:last-child {
   display: block;
   padding: 4px 0;
   font-size: 13px;
   color: #969696;
-}
-.home .posts-b .post img {
-  max-height: 230px;
-  -o-object-position: center;
-     object-position: center;
-  aspect-ratio: 16/9;
-}
-.home .posts-b .post img:first-child {
-  -o-object-position: 0 30%;
-     object-position: 0 30%;
 }
 .home .seeMore button {
   width: 100%;
@@ -530,6 +517,14 @@ main {
     border-radius: 0;
   }
 }
+@media screen and (max-width: 400px) {
+  .first .intro h2 {
+    font-size: 1.5rem;
+  }
+  .first .intro p {
+    font-size: 0.8rem;
+  }
+}
 @media screen and (max-width: 500px) {
   #switch_btn {
     text-align: left !important;
@@ -540,6 +535,20 @@ main {
   }
   .about {
     padding: 5px 15px;
+  }
+  .first .intro {
+    padding: 50px 60px;
+    text-align: center;
+  }
+  .first .intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+  }
+  .first .intro p {
+    font-size: 0.9rem;
+    line-height: 28px;
+    margin-top: 50px !important;
+    width: 100%;
   }
 }
 /*** FOOTER & Others ***/
