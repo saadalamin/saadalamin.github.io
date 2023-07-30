@@ -137,7 +137,7 @@ function appendProject(imgLink, title, goLink, projectRow, projectObject) {
 }
 
 if (prj) {
-  getJSON("./data/images.json", function (res) {
+  getJSON("./data/works.json", function (res) {
     var projectAObject = [];
     var projectBObject = [];
     var projectARow = prj.querySelectorAll(".project-container-a .row")[0];

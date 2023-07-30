@@ -124,12 +124,17 @@ main {
     width: 100%;
     height: 200px;
   }
-  .posts-a {
+  .posts-a,.posts-b {
     padding: 20px;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
     .post {
       position: relative;
       img {
         max-height: 300px;
+        aspect-ratio: 3 / 3;
         object-fit: cover;
         border-radius: 0.4rem;
         &:hover {
@@ -161,45 +166,24 @@ main {
     }
   }
   .posts-b {
-    padding: 20px;
-    a {
-      color: inherit;
-    }
     .post {
-      position: relative;
       img {
         max-height: 230px;
-        object-fit: cover;
         object-position: center;
-        &:hover {
-          border: 1.5px dashed white;
-          opacity: 0.4;
-        }
+        aspect-ratio: 16 / 9;
       }
       img:first-child {
         object-position: 0 30%;
       }
-      .body {
-        position: absolute;
-        width: 100%;
-        bottom: -18px;
-        left: 0;
-        padding: 0 12px;
-        p {
-          width: 100%;
-          background-color: #161e5e;
-          padding: 15px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          span:last-child {
-            display: block;
-            padding: 4px 0;
-            font-size: 13px;
-            color: #969696;
-          }
-        }
-      }
+    }
+  }
+  .seeMore {
+    button {
+      width: 100%;
+      height: 100%;
+      background-color: $primary-color;
+      color: $primary-text-color;
+      font-size: large;
     }
   }
   .features {
