@@ -27,9 +27,9 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: #0b1347 !important;
   color: $primary-text-color;
-  //@include image-center("../images/interface/saad/bg.jpeg");
-  //background-position: center top;
-  //background-attachment: fixed;
+  @include image-center("../images/interface/saad/bg.jpeg");
+  background-position: center top;
+  background-attachment: fixed;
 }
 .bg-custom {
   background-color: $secondary-color;
@@ -84,14 +84,18 @@ h6 {
 
 /*** HOME PAGE ***/
 
+.first {
+  height: 100vh;
+  background-color: transparent;
+  h1 {font-size: 12rem;}
+}
 main {
   padding-bottom: 50px;
+  background-color: #0b1347 !important;
+  color: $primary-text-color;
 }
 .home {
-  padding-bottom: 40px;
-  .first {
-    height: 100vh;background-color: #333;
-  }
+  padding: 40px 0 !important;
   .profile {
     width: 100%;
     height: 150px;
@@ -245,7 +249,8 @@ main {
     background-color: rgba(22, 31, 94, 0.4);
     margin: 20px 0;
     row-gap: 12px;
-    section {
+    section p {
+      color: #708090;
     }
   }
   .showme {
@@ -362,8 +367,36 @@ main {
 
 /*** ABOUT PAGE ***/
 .about {
+  .opinion {
+    .opinion-list {
+      .item {
+        border-radius: 2rem;
+        background-color: #fff;
+        color: #000;
+        align-items: center;
+        div:last-child {
+          padding: 20px;
+        }
+        h4 {
+          font-weight: bolder;
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100rem;
+        border: 8px solid #eee;
+        object-fit: cover;
+      }
+    }
+  }
   .media-links {
     padding-top: 10px;
+    text-align: center;
     a {
       display: inline-block;
       margin: 10px !important;
@@ -377,7 +410,6 @@ main {
 
 /*** BLOG PAGE ***/
 .blog {
-  
 }
 
 /*** CUSTOM RESPONSIBILITY ***/
@@ -460,6 +492,7 @@ main {
 /*** FOOTER & Others ***/
 footer {
   background-color: #0d1652;
+  color: $primary-text-color;
 }
 #modalMain {
   z-index: 10001;
