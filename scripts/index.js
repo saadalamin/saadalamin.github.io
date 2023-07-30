@@ -43,21 +43,58 @@ var getJSON = function (url, callback) {
 /********* HOME PAGE **********/
 var elm = document.querySelectorAll("p"),
   elm1 = document.querySelectorAll(".post"),
+  elm2 = document.querySelectorAll(".project-container-c .row > div"),
+  elm3 = document.querySelectorAll(".opinion-list > div"),
   box = document.getElementById("modalMain");
-elm.forEach((e) => {
-  e.title = e.innerText;
-}),
-  elm1.forEach((e) => {
-    e.onclick = function () {
-      var t = e.querySelectorAll("p span")[0].innerHTML;
-      (document.querySelectorAll("#modalMain img")[0].src =
-        e.querySelectorAll("img")[0].src),
-        (document.querySelectorAll("#modalMain .title-post")[0].innerHTML = t),
-        (document.querySelectorAll("#modalMain p")[0].innerHTML =
-          t +
-          '.<br/><a href="https://www.linkedin.com/in/saadalamin/recent-activity/" target="_blank">See here all his posts</a>');
-    };
+var modalConfig = function (
+  e,
+  customTitle = undefined,
+  customContent = undefined
+) {
+  e.onclick = function () {
+    var t = customTitle;
+    if (!customTitle && e.querySelectorAll("p")[0])
+      t = e.querySelectorAll("p")[0].innerHTML;
+
+    document.querySelectorAll("#modalMain img")[0].src =
+      e.querySelectorAll("img")[0].src;
+
+    if (document.querySelectorAll("#modalMain .title-post")[0])
+      document.querySelectorAll("#modalMain .title-post")[0].innerHTML = t;
+
+    if (document.querySelectorAll("#modalMain p")[0]) {
+      document.querySelectorAll("#modalMain p")[0].innerHTML = customContent
+        ? customContent
+        : t +
+          '.<br/><a href="https://www.linkedin.com/in/saadalamin/recent-activity/" target="_blank">See here all his posts</a>';
+    }
+  };
+};
+if (elm) {
+  elm.forEach((e) => {
+    e.title = e.innerText;
   });
+}
+if (elm1) {
+  elm1.forEach((e) => {
+    modalConfig(e);
+  });
+}
+if (elm2) {
+  elm2.forEach((e) => {
+    modalConfig(e);
+  });
+}
+if (elm3) {
+  elm3.forEach((e) => {
+    var x = "";
+    if (e.querySelectorAll("span")[0])
+      x = e.querySelectorAll("span")[0].innerHTML;
+    else x = e.querySelectorAll("p")[0].innerHTML;
+    modalConfig(e, e.querySelectorAll("h4")[0].innerHTML, x);
+  });
+}
+
 var a = document.querySelectorAll("#switch_btn button");
 if (a) {
   for (let e = 0; e < a.length; e++)
@@ -109,7 +146,6 @@ var counting = function () {
 };
 
 document.body.onload = counting();
-
 
 /********* PROJECT PAGE **********/
 var prj = document.querySelectorAll(".works > .container")[0];

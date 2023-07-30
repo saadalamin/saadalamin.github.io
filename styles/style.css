@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;800;9001000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 body::-webkit-scrollbar {
   width: 0.25em;
   background-color: rgba(255, 255, 255, 0.2);
@@ -15,7 +15,7 @@ body::-webkit-scrollbar-thumb {
 
 * {
   box-sizing: border-box;
-  font-family: "Ysabeau Office", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -421,6 +421,7 @@ main {
   background-color: #fff;
   color: #000;
   align-items: center;
+  cursor: pointer;
 }
 .about .opinion .opinion-list .item div:last-child {
   padding: 20px;
@@ -435,6 +436,11 @@ main {
 }
 .about .opinion .opinion-list .item p {
   font-size: 0.9rem;
+}
+.about .opinion .opinion-list .item span {
+  display: block;
+  height: 0px !important;
+  visibility: hidden;
 }
 .about .opinion .opinion-list img {
   width: 100px;
@@ -543,7 +549,7 @@ footer {
 }
 
 #modalMain {
-  z-index: 10001;
+  z-index: 10000001;
   border-radius: 1rem 1rem 0 0;
   width: 100%;
 }
