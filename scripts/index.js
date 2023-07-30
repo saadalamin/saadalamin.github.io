@@ -95,7 +95,7 @@ var counting = function () {
       if (localStart < value) {
         localStart += increment;
         if (localStart > value) localStart = value;
-        counters[id].innerHTML = localStart + "+";
+        counters[id].innerHTML = localStart.toLocaleString("en-US") + "+";
         setTimeout(updateCounter, interval);
       }
     };

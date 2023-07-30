@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;500;600;700;800;9001000&display=swap");
 body::-webkit-scrollbar {
   width: 0.25em;
   background-color: rgba(255, 255, 255, 0.2);
@@ -21,7 +21,7 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: #0b1347 !important;
   color: #fff;
-  background-image: url(../images/interface/bg.jpeg);
+  background-image: url(../images/interface/e3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -38,12 +38,12 @@ body {
 }
 
 .navbar {
-  height: 65px;
+  height: 60px;
   background-color: #0d1652;
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 10000;
+  z-index: 10000000;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
   background-image: url(../images/interface/newcover.jpg);
   background-repeat: no-repeat;
@@ -97,8 +97,20 @@ h6 {
   height: 100vh;
   background-color: transparent;
 }
-.first h1 {
-  font-size: 2rem;
+.first .intro {
+  padding: 85px 100px;
+}
+.first .intro h2 {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+}
+.first .intro p {
+  font-size: 1rem;
+  line-height: 32px;
+  width: 60%;
+}
+.first .intro a {
+  margin-top: 25px;
 }
 
 main {
@@ -137,35 +149,42 @@ main {
   width: 100%;
   height: 200px;
 }
-.home .posts-a, .home .posts-b {
+.home .posts-a,
+.home .posts-b {
   padding: 20px;
 }
-.home .posts-a a, .home .posts-b a {
+.home .posts-a a,
+.home .posts-b a {
   color: inherit;
   text-decoration: none;
 }
-.home .posts-a .post, .home .posts-b .post {
+.home .posts-a .post,
+.home .posts-b .post {
   position: relative;
 }
-.home .posts-a .post img, .home .posts-b .post img {
+.home .posts-a .post img,
+.home .posts-b .post img {
   max-height: 300px;
   aspect-ratio: 3/3;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 0.4rem;
 }
-.home .posts-a .post img:hover, .home .posts-b .post img:hover {
+.home .posts-a .post img:hover,
+.home .posts-b .post img:hover {
   border: 1.5px dashed white;
   opacity: 0.4;
 }
-.home .posts-a .post .body, .home .posts-b .post .body {
+.home .posts-a .post .body,
+.home .posts-b .post .body {
   position: absolute;
   width: 100%;
   bottom: -18px;
   left: 0;
   padding: 0 12px;
 }
-.home .posts-a .post .body p, .home .posts-b .post .body p {
+.home .posts-a .post .body p,
+.home .posts-b .post .body p {
   width: 100%;
   background-color: #161e5e;
   padding: 15px;
@@ -173,7 +192,8 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.home .posts-a .post .body p span:last-child, .home .posts-b .post .body p span:last-child {
+.home .posts-a .post .body p span:last-child,
+.home .posts-b .post .body p span:last-child {
   display: block;
   padding: 4px 0;
   font-size: 13px;
@@ -200,7 +220,7 @@ main {
   width: 100%;
   padding: 90px 20px 40px 20px;
   background-color: rgba(22, 31, 94, 0.4);
-  background-image: url(../images/interface/newcover-blur.jpg);
+  background-image: url(../images/interface/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -251,11 +271,24 @@ main {
   width: 100%;
   padding: 40px 20px 40px 20px;
   background-color: rgba(22, 31, 94, 0.4);
+  background-image: url(../images/interface/coverphoto-blur.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   margin: 20px 0;
   row-gap: 12px;
 }
+.home .count section h2 {
+  font-weight: bolder;
+}
 .home .count section p {
-  color: #708090;
+  color: #333;
+  background-color: #fff;
+  padding: 4px 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.4rem;
+  margin: 0 auto;
 }
 .home .showme {
   background-color: rgba(22, 31, 94, 0.4);
@@ -354,6 +387,19 @@ main {
 }
 .works .project-container-a .row div img:hover,
 .works .project-container-b .row div img:hover {
+  border: 1.5px dashed white;
+  opacity: 0.6;
+}
+.works .project-container-c .special img {
+  height: 85% !important;
+}
+.works .project-container-c .row div img {
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.works .project-container-c .row div img:hover {
   border: 1.5px dashed white;
   opacity: 0.6;
 }
@@ -456,6 +502,9 @@ main {
   .home .publications img {
     width: 80px;
     height: 120px;
+  }
+  .works .project-container-c .special img {
+    height: 70% !important;
   }
   .offcanvas {
     width: 50vw;
