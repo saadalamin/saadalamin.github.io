@@ -535,6 +535,11 @@ main {
 }
 
 @media screen and (max-width: 500px) {
+  body {
+  @include image-center("../images/interface/e3-mob.jpg"); // 6, e3, e-2
+  background-position: center top;
+  background-attachment: fixed;
+}
   #switch_btn {
     text-align: left !important;
     padding-left: 10px !important;

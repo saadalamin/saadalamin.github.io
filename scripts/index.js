@@ -117,7 +117,6 @@ if (a) {
 
 var counting = function () {
   var counters = document.querySelectorAll(".count h2");
-  console.log(counters);
   var countersQuantity = counters.length;
   var counter = [];
 
