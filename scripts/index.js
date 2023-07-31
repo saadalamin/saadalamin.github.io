@@ -58,8 +58,9 @@ var modalConfig = function (
     if (!customTitle && e.querySelectorAll("p")[0])
       t = e.querySelectorAll("p")[0].innerHTML;
 
-    if (e.querySelectorAll("img")[0]) document.querySelectorAll("#modalMain img")[0].src =
-      e.querySelectorAll("img")[0].src;
+    if (e.querySelectorAll("img")[0])
+      document.querySelectorAll("#modalMain img")[0].src =
+        e.querySelectorAll("img")[0].src;
     else if (src) document.querySelectorAll("#modalMain img")[0].src = src;
 
     if (document.querySelectorAll("#modalMain .title-post")[0])
@@ -208,4 +209,9 @@ if (prj) {
       }
     }
   });
+
+  /* <div class="col-md-4">
+  <img src="images/projects/mycreations/ashbe-alo-fire.jpeg" width="100%" alt="Saad Al Amin Projects">
+  <p>Ashbe Alo Fire <a href="" class="float-end btn py-0 px-1 btn-success">View</a></p>
+</div> */
 }
