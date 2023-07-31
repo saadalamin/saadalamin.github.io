@@ -58,8 +58,6 @@ var modalConfig = function (
   var t = customTitle;
   if (e.querySelectorAll("p")[0] && customTitle === undefined) t = e.querySelectorAll("p")[0].innerHTML;
 
-  console.log(t);
-
   if (e.querySelectorAll("img")[0])
    document.querySelectorAll("#modalMain img")[0].src =
     e.querySelectorAll("img")[0].src;
@@ -70,9 +68,7 @@ var modalConfig = function (
 
   if (document.querySelectorAll("#modalMain p")[0]) {
    if (customContent == undefined) {
-    document.querySelectorAll("#modalMain p")[0].innerHTML =
-     t +
-     '.<br/><a href="https://www.linkedin.com/in/saadalamin/recent-activity/" target="_blank">See here all his posts</a>';
+    document.querySelectorAll("#modalMain p")[0].innerHTML = t;
    } else
     document.querySelectorAll("#modalMain p")[0].innerHTML = customContent;
   }
@@ -113,7 +109,7 @@ var pressPostsLoad = function () {
     </a>`
     if (e == 6) break;
     }
-    document.querySelectorAll(".posts-a")[0].innerHTML = o+'<hr><div class="seeMore col-12 col-sm-6 col-lg-3"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForPress" onclick="modalPressConfig()"><button class="btn">+ See More</button></a></div>';
+    document.querySelectorAll(".posts-a")[0].innerHTML = o+'<hr><div class="seeMore col-12 col-sm-6 col-lg-3"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForPress" onclick="modalPressConfig()"><button class="btn">Browse More +</button></a></div>';
   });
 };
 pressPostsLoad();
