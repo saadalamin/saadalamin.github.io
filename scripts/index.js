@@ -56,7 +56,7 @@ var modalConfig = function (
 ) {
  e.onclick = function () {
   var t = customTitle;
-  if (e.querySelectorAll("p")[0]) t = e.querySelectorAll("p")[0].innerHTML;
+  if (e.querySelectorAll("p")[0] && customTitle === undefined) t = e.querySelectorAll("p")[0].innerHTML;
 
   console.log(t);
 
