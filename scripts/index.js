@@ -44,7 +44,8 @@ var getJSON = function (url, callback) {
 var elm = document.querySelectorAll("p"),
   elm1 = document.querySelectorAll(".post"),
   elm2 = document.querySelectorAll(".project-container-c .row img"),
-  elm3 = document.querySelectorAll(".opinion-list > div"),
+  elm3 = document.querySelectorAll(".project-container-d .row img"),
+  elm4 = document.querySelectorAll(".opinion-list > div"),
   box = document.getElementById("modalMain");
 var modalConfig = function (
   e,
@@ -89,6 +90,11 @@ if (elm2) {
 }
 if (elm3) {
   elm3.forEach((e) => {
+    modalConfig(e, "", "", e.src);
+  });
+}
+if (elm4) {
+  elm4.forEach((e) => {
     var x = "";
     if (e.querySelectorAll("span")[0])
       x = e.querySelectorAll("span")[0].innerHTML;
