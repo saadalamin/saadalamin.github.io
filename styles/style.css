@@ -419,36 +419,66 @@ main {
 .works .title {
   padding: 20px 0;
 }
-.works .project-container-a p {
+.works .project-container-a p,
+.works .project-container-g p {
   width: 100%;
   background-color: #1e2c83;
   padding: 10px;
 }
-.works .project-container-a .row div img {
+.works .project-container-a .row div img,
+.works .project-container-g .row div img {
+  width: 100%;
   border: 1px dashed rgba(255, 255, 255, 0.15);
 }
-.works .project-container-a .row div img:hover {
+.works .project-container-a .row div img:hover,
+.works .project-container-g .row div img:hover {
   border: 1.5px dashed white;
   opacity: 0.6;
 }
-.works .project-container-b iframe {
+.works .project-container-c iframe {
   width: 100%;
   height: 100%;
   min-height: 215px;
   border: none;
 }
-.works .project-container-c .special img, .works .project-container-d .special img {
+.works .project-container-f .row:first-child iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 415px;
+  border: none;
+}
+.works .project-container-f .row:last-child iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 215px;
+  border: none;
+}
+.works .project-container-d .special img,
+.works .project-container-e .special img {
   height: 85% !important;
 }
-.works .project-container-c .row div img, .works .project-container-d .row div img {
+.works .project-container-d .row div img,
+.works .project-container-e .row div img {
   border: 1px dashed rgba(255, 255, 255, 0.15);
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.works .project-container-c .row div img:hover, .works .project-container-d .row div img:hover {
+.works .project-container-d .row div img:hover,
+.works .project-container-e .row div img:hover {
   border: 1.5px dashed white;
   opacity: 0.6;
+}
+.works .project-container-g img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.works .project-container-g span {
+  display: block;
+  height: 0px !important;
+  visibility: hidden;
 }
 
 /*** ABOUT PAGE ***/
@@ -564,7 +594,7 @@ main {
     width: 80px;
     height: 120px;
   }
-  .works .project-container-c .special img {
+  .works .project-container-d .special img {
     height: 70% !important;
   }
   .offcanvas {
@@ -638,15 +668,18 @@ footer {
   color: #fff;
 }
 
-#modalMain {
+#modalMain,
+#modalForPress {
   z-index: 10000001;
   border-radius: 1rem 1rem 0 0;
   width: 100%;
 }
-#modalMain .title-post {
+#modalMain .title-post,
+#modalForPress .title-post {
   margin: 0;
 }
-#modalMain img {
+#modalMain img,
+#modalForPress img {
   width: 100%;
   max-width: 400px;
   border: 1px dashed #fff;

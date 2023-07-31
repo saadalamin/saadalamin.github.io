@@ -42,11 +42,12 @@ var getJSON = function (url, callback) {
 
 /********* HOME PAGE **********/
 var elm = document.querySelectorAll("p"),
-  elm1 = document.querySelectorAll(".post"),
-  elm2 = document.querySelectorAll(".project-container-c .row img"),
-  elm3 = document.querySelectorAll(".project-container-d .row img"),
-  elm4 = document.querySelectorAll(".opinion-list > div"),
+  elm1 = document.querySelectorAll(".project-container-d .row img"),
+  elm2 = document.querySelectorAll(".project-container-e .row img"),
+  elm3 = document.querySelectorAll(".opinion-list > div"),
+  elm4 = document.querySelectorAll(".project-container-g .row img"),
   box = document.getElementById("modalMain");
+var modalPress = document.getElementById("modalForPress");
 var modalConfig = function (
   e,
   customTitle = undefined,
@@ -55,8 +56,9 @@ var modalConfig = function (
 ) {
   e.onclick = function () {
     var t = customTitle;
-    if (!customTitle && e.querySelectorAll("p")[0])
-      t = e.querySelectorAll("p")[0].innerHTML;
+    if (e.querySelectorAll("p")[0]) t = e.querySelectorAll("p")[0].innerHTML;
+
+    console.log(t);
 
     if (e.querySelectorAll("img")[0])
       document.querySelectorAll("#modalMain img")[0].src =
@@ -67,10 +69,12 @@ var modalConfig = function (
       document.querySelectorAll("#modalMain .title-post")[0].innerHTML = t;
 
     if (document.querySelectorAll("#modalMain p")[0]) {
-      document.querySelectorAll("#modalMain p")[0].innerHTML = customContent
-        ? customContent
-        : t +
+      if (customContent == undefined) {
+        document.querySelectorAll("#modalMain p")[0].innerHTML =
+          t +
           '.<br/><a href="https://www.linkedin.com/in/saadalamin/recent-activity/" target="_blank">See here all his posts</a>';
+      } else
+        document.querySelectorAll("#modalMain p")[0].innerHTML = customContent;
     }
   };
 };
@@ -81,7 +85,7 @@ if (elm) {
 }
 if (elm1) {
   elm1.forEach((e) => {
-    modalConfig(e);
+    modalConfig(e, "", "", e.src);
   });
 }
 if (elm2) {
@@ -91,16 +95,17 @@ if (elm2) {
 }
 if (elm3) {
   elm3.forEach((e) => {
-    modalConfig(e, "", "", e.src);
-  });
-}
-if (elm4) {
-  elm4.forEach((e) => {
     var x = "";
     if (e.querySelectorAll("span")[0])
       x = e.querySelectorAll("span")[0].innerHTML;
     else x = e.querySelectorAll("p")[0].innerHTML;
     modalConfig(e, e.querySelectorAll("h4")[0].innerHTML, x);
+  });
+}
+if (elm4) {
+  elm4.forEach((e) => {
+    console.log(e);
+    modalConfig(e, e.parentElement.querySelectorAll("span")[0].innerHTML, e.parentElement.querySelectorAll("span")[1].innerHTML, e.src);
   });
 }
 
