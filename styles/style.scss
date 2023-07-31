@@ -341,6 +341,44 @@ main {
       list-style-type: square;
     }
   }
+  .workedwith {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: rgba(22, 31, 94, 0.4);
+    .wrapper {
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+      padding: 1rem;
+    }
+    .item {
+      margin: 0 10px;
+      animation: animate 25s alternate linear infinite;
+      img {
+        height: 60px;
+        border-radius: .7rem;
+      }
+    }
+    .container:hover .item {
+      animation-play-state: paused;
+    }
+    @keyframes animate {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-1100px, 0, 0);
+      }
+    }
+    @media (max-width:767px) {
+      .wrapper {
+        width: 95%;
+        border-radius: 0;
+        padding: 0;
+      }
+    }
+  }
 }
 
 /*** WORKS PAGE ***/
@@ -536,10 +574,10 @@ main {
 
 @media screen and (max-width: 500px) {
   body {
-  @include image-center("../images/interface/e3-mob.jpg"); // 6, e3, e-2
-  background-position: center top;
-  background-attachment: fixed;
-}
+    @include image-center("../images/interface/e3-mob.jpg"); // 6, e3, e-2
+    background-position: center top;
+    background-attachment: fixed;
+  }
   #switch_btn {
     text-align: left !important;
     padding-left: 10px !important;

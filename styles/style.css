@@ -349,6 +349,44 @@ main {
   padding: 8px 0;
   list-style-type: square;
 }
+.home .workedwith {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: rgba(22, 31, 94, 0.4);
+}
+.home .workedwith .wrapper {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1rem;
+}
+.home .workedwith .item {
+  margin: 0 10px;
+  animation: animate 25s alternate linear infinite;
+}
+.home .workedwith .item img {
+  height: 60px;
+  border-radius: 0.7rem;
+}
+.home .workedwith .container:hover .item {
+  animation-play-state: paused;
+}
+@keyframes animate {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1100px, 0, 0);
+  }
+}
+@media (max-width: 767px) {
+  .home .workedwith .wrapper {
+    width: 95%;
+    border-radius: 0;
+    padding: 0;
+  }
+}
 
 /*** WORKS PAGE ***/
 .works .banner {
