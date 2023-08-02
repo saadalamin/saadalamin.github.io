@@ -29,6 +29,11 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: #0b1347 !important;
   color: #fff;
+  background-image: url(../images/interface/e3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /*** Common Things ***/
@@ -107,11 +112,6 @@ h6 {
   height: 100vh;
   min-height: 500px;
   background-color: rgba(11, 19, 71, 0.5);
-  background-image: url(../images/interface/e3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 .first .intro {
   padding: 85px 0;

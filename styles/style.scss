@@ -34,6 +34,8 @@ body::-webkit-scrollbar-thumb {
 body {
  background-color: $primary-color !important;
  color: $primary-text-color;
+ @include image-center("../images/interface/e3.jpg");
+ background-attachment: fixed;
 }
 
 /*** Common Things ***/
@@ -103,8 +105,6 @@ h6 {
  height: 100vh;
  min-height: 500px;
  background-color: rgba($primary-color, 0.5);
- @include image-center("../images/interface/e3.jpg");
- background-attachment: fixed;
  .intro {
   padding: 85px 0;
   h2 {
