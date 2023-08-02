@@ -152,7 +152,9 @@ main {
   max-height: 300px;
   aspect-ratio: 3/3;
   object-fit: cover;
-  border-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
 }
 .home .posts-a .post img:hover {
   border: 1.5px dashed white;
@@ -160,13 +162,6 @@ main {
 }
 .home .posts-a .post img:first-child {
   object-position: 0 30%;
-}
-.home .posts-a .post .body {
-  position: absolute;
-  width: 100%;
-  bottom: -18px;
-  left: 0;
-  padding: 0 12px;
 }
 .home .posts-a .post .body p {
   width: 100%;
@@ -716,4 +711,10 @@ footer {
   #modalForPress li h4 {
     font-size: 0.7rem;
   }
+}
+.support {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  padding: 10px;
 }
