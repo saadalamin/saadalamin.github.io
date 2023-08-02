@@ -520,6 +520,22 @@ main {
 
 /*** BLOG PAGE ***/
 /*** CUSTOM RESPONSIBILITY ***/
+@media (hover: none) {
+  body {
+    background-attachment: initial;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .first .intro {
+    padding-top: 200px !important;
+  }
+  .first .intro p {
+    padding-top: 20px;
+  }
+  .navbar {
+    height: 65px;
+  }
+}
 @media screen and (min-width: 993px) {
   .navbar {
     background: rgba(11, 19, 71, 0.8);
@@ -560,17 +576,6 @@ main {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 1500px) {
-  .first .intro {
-    padding-top: 200px !important;
-  }
-  .first .intro p {
-    padding-top: 20px;
-  }
-  .navbar {
-    height: 65px;
-  }
-}
 @media screen and (max-width: 993px) {
   .count h2 {
     font-size: 1.2rem;
@@ -604,8 +609,6 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-position: center top;
-    background-attachment: fixed;
   }
   #switch_btn {
     text-align: left !important;

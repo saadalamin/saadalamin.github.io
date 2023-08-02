@@ -533,6 +533,22 @@ main {
 
 /*** CUSTOM RESPONSIBILITY ***/
 
+@media (hover: none) {
+    body {
+        background-attachment: initial;
+    }
+ }
+@media screen and (min-width: 1500px) {
+ .first .intro {
+  padding-top: 200px !important;
+  p {
+   padding-top: 20px;
+  }
+ }
+ .navbar {
+  height: 65px;
+ }
+}
 @media screen and (min-width: 993px) {
  .navbar {
   background: rgba($primary-color, 0.8);
@@ -583,18 +599,6 @@ main {
   margin: 0 auto;
  }
 }
-
-@media screen and (min-width: 1500px) {
- .first .intro {
-  padding-top: 200px !important;
-  p {
-   padding-top: 20px;
-  }
- }
- .navbar {
-  height: 65px;
- }
-}
 @media screen and (max-width: 993px) {
  .count {
   h2 {
@@ -628,9 +632,7 @@ main {
 }
 @media screen and (max-width: 500px) {
  body {
-  @include image-center("../images/interface/e3-mob.jpg"); // 6, e3, e-2
-  background-position: center top;
-  background-attachment: fixed;
+  @include image-center("../images/interface/e3-mob.jpg");
  }
  #switch_btn {
   text-align: left !important;
