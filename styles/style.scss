@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
-$primary-color: #151d52;
-$secondary-color: #1e2c83;
+$primary-color: #0b1347;
+$secondary-color: #1e2a7c;
 $primary-text-color: #fff;
 $primary-font: "Montserrat", sans-serif;
 @mixin image-center($url) {
@@ -12,7 +12,7 @@ $primary-font: "Montserrat", sans-serif;
 ::-moz-selection,
 ::selection {
  color: #fff;
- background: #0b1347;
+ background: $primary-color;
  padding: 10px;
 }
 body::-webkit-scrollbar {
@@ -28,15 +28,19 @@ body::-webkit-scrollbar-thumb {
 }
 * {
  box-sizing: border-box;
+ scroll-behavior: smooth;
  font-family: $primary-font;
 }
 body {
- background-color: #0b1347 !important;
+ background-color: $primary-color !important;
  color: $primary-text-color;
- @include image-center("../images/interface/e3.jpg"); // 6, e3, e-2
+ background-repeat: no-repeat;
+ background-size: cover;
  background-position: 60% top;
  background-attachment: fixed;
 }
+
+/*** Common Things ***/
 .bg-custom {
  background-color: $secondary-color;
 }
@@ -45,7 +49,7 @@ body {
 }
 .navbar {
  height: 60px;
- background-color: #0d1652;
+ background-color: $primary-color;
  position: sticky;
  top: 0;
  left: 0;
@@ -94,7 +98,7 @@ h6 {
  display: block;
  visibility: hidden;
  width: 100%;
- height: 200px;
+ height: 150px;
 }
 
 /*** HOME PAGE ***/
@@ -104,7 +108,7 @@ h6 {
  min-height: 560px;
  background-color: transparent;
  .intro {
-  padding: 85px 100px;
+  padding: 85px 0;
   h2 {
    font-size: 3.5rem;
    margin-bottom: 0;
@@ -121,29 +125,12 @@ h6 {
 }
 main {
  padding-bottom: 50px;
- background-color: #0b1347 !important;
+ background-color: $primary-color !important;
  color: $primary-text-color;
 }
 .home {
  padding: 40px 0 !important;
  position: relative;
- .profile {
-  width: 100%;
-  height: 150px;
-  align-items: center;
-  @include image-center("../images/interface/coverphoto-blur.jpg");
-  &-details {
-   width: 80%;
-   margin: 0 auto;
-   padding-top: 300px;
-   text-shadow: 0 0 1px #000;
-  }
-  .profile-image {
-   object-fit: cover;
-   border-radius: 100rem;
-   border: 2px solid white;
-  }
- }
  .posts-a {
   padding: 20px;
   a {
@@ -173,7 +160,7 @@ main {
     padding: 0 12px;
     p {
      width: 100%;
-     background-color: #161e5e;
+     background-color: $secondary-color;
      padding: 15px;
      white-space: nowrap;
      overflow: hidden;
@@ -192,15 +179,23 @@ main {
   button {
    width: 100%;
    height: 100%;
-   background-color: $primary-color;
+   background-color: $secondary-color;
    color: $primary-text-color;
    font-size: large;
   }
  }
+ .parallax {
+  background-image: url("../images/interface/e-2-blur.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
  .features {
   width: 100%;
   padding: 90px 20px 40px 20px;
-  background-color: rgba(22, 31, 94, 0.4);
+  background-color: rgba($primary-color, 0.4);
+  border-radius: 0.8rem;
   @include image-center("../images/interface/banner.jpg");
   margin: 20px 0;
   row-gap: 12px;
@@ -247,7 +242,8 @@ main {
  .count {
   width: 100%;
   padding: 40px 20px 40px 20px;
-  background-color: rgba(22, 31, 94, 0.4);
+  background-color: rgba($primary-color, 0.4);
+  border-radius: 0.8rem;
   @include image-center("../images/interface/coverphoto-blur.jpg");
   margin: 20px 0;
   row-gap: 12px;
@@ -265,32 +261,6 @@ main {
    }
   }
  }
- .showme {
-  background-color: rgba(22, 31, 94, 0.4);
-  .carousel {
-   .carousel-item {
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 12px;
-    img {
-     width: 48px;
-     height: 48px;
-     border-radius: 100rem;
-     border: 2px solid rgba(255, 255, 255, 0.5);
-     padding: 10px;
-     margin-bottom: 10px;
-    }
-    p {
-     color: #c0c0c0;
-    }
-   }
-   .carousel-item > div:first-child {
-    padding: 50px;
-    border-radius: 0.3rem;
-   }
-  }
- }
  .skills,
  .experience,
  .education,
@@ -300,7 +270,7 @@ main {
  .languages {
   width: 100%;
   padding: 20px 40px;
-  background-color: rgba(22, 31, 94, 0.4);
+  background-color: rgba($secondary-color, 0.4);
   border-radius: 0.3rem;
   margin: 20px 0;
  }
@@ -348,9 +318,7 @@ main {
   }
  }
  .workedwith {
-  margin-top: 40px;
-  padding: 15px;
-  background-color: rgba(22, 31, 94, 0.4);
+  margin-top: 20px;
   .wrapper {
    display: flex;
    width: 100%;
@@ -362,8 +330,8 @@ main {
    margin: 0 10px;
    animation: animate 25s alternate linear infinite;
    img {
-    height: 60px;
-    border-radius: 0.7rem;
+    height: 55px;
+    border-radius: 0.5rem;
    }
   }
   .container:hover .item {
@@ -382,6 +350,32 @@ main {
     width: 95%;
     border-radius: 0;
     padding: 0;
+   }
+  }
+ }
+ .showme {
+  background-color: rgba($secondary-color, 0.4);
+  .carousel {
+   .carousel-item {
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+    img {
+     width: 48px;
+     height: 48px;
+     border-radius: 100rem;
+     border: 2px solid rgba(255, 255, 255, 0.5);
+     padding: 10px;
+     margin-bottom: 10px;
+    }
+    p {
+     color: #c0c0c0;
+    }
+   }
+   .carousel-item > div:first-child {
+    padding: 50px;
+    border-radius: 0.3rem;
    }
   }
  }
@@ -407,7 +401,7 @@ main {
  .project-container-g {
   p {
    width: 100%;
-   background-color: #1e2c83;
+   background-color: $secondary-color;
    padding: 10px;
   }
   .row div img {
@@ -546,22 +540,11 @@ main {
 
 @media screen and (min-width: 993px) {
  .navbar {
-  background: rgba(13, 22, 82, 0.8);
+  background: rgba($primary-color, 0.8);
   backdrop-filter: blur(20px);
  }
  .home {
   padding-top: 10px;
-  .profile {
-   height: 250px;
-   border-radius: 0.7rem;
-   margin-bottom: 40px;
-   .descrpt {
-    font-weight: 700;
-   }
-  }
-  .divide {
-   display: none;
-  }
   .box {
    img {
     width: 60px;
@@ -605,34 +588,28 @@ main {
   margin: 0 auto;
  }
 }
-@media screen and (min-width: 1200px) {
- .home {
-  .profile {
-   position: sticky;
-   top: 0;
-   left: 0;
-   height: 100vh;
-   padding-top: 60px;
-   margin: 0px !important;
-   align-items: flex-start;
-   background: #0e195c;
-   border-radius: 0;
-  }
- }
-}
 
 @media screen and (min-width: 1500px) {
  .first .intro {
   padding-top: 200px !important;
   p {
-    padding-top: 20px;
+   padding-top: 20px;
   }
  }
  .navbar {
   height: 65px;
  }
 }
-
+@media screen and (max-width: 993px) {
+ .count {
+  h2 {
+   font-size: 1.2rem;
+  }
+  p {
+   font-size: 0.8rem;
+  }
+ }
+}
 @media screen and (max-width: 500px) {
  body {
   @include image-center("../images/interface/e3-mob.jpg"); // 6, e3, e-2
@@ -645,21 +622,29 @@ main {
  }
  .features {
   h5 {
-    font-size: 1rem;
+   font-size: 1rem;
   }
   p {
    font-size: 0.7rem !important;
   }
  }
- .certifications,.publications,.education,.experience,.awards,.languages {
+ .count p {
+  font-size: 0.6rem;
+ }
+ .certifications,
+ .publications,
+ .education,
+ .experience,
+ .awards,
+ .languages {
   h3 {
-    font-size: 0.8rem !important;
+   font-size: 0.8rem !important;
   }
   p {
-    font-size: 0.6rem !important;
+   font-size: 0.6rem !important;
   }
   a {
-    font-size: 0.6rem !important;
+   font-size: 0.6rem !important;
   }
  }
  .about {
@@ -669,7 +654,7 @@ main {
 @media screen and (max-width: 700px) {
  .first {
   .intro {
-   padding: 50px 60px;
+   padding: 50px 20px;
    text-align: center;
    h2 {
     font-size: 2.3rem;
@@ -702,7 +687,8 @@ main {
 
 /*** FOOTER & Others ***/
 footer {
- background-color: #0d1652;
+ background-color: $primary-color;
+ border-top: 1px dashed rgba(255, 255, 255, 0.15);
  color: $primary-text-color;
 }
 #modalMain,
@@ -721,22 +707,38 @@ footer {
  }
 }
 #modalForPress {
+ li {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  div {
+   padding: 15px 15px 15px 25px;
+   h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+   }
+  }
+ }
+ img {
+  width: 150px !important;
+  border-radius: 0.6rem;
+  object-fit: cover;
+ }
+}
+@media screen and (max-width: 500px) {
+ #modalForPress {
   li {
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: left;
-    div {
-      padding: 15px 15px 15px 25px;
-      h4 {
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-      }
-    }
+   flex-direction: column;
+   div {
+    padding-left: 5px;
+   }
+   img {
+    width: 100% !important;
+   }
+   h4 {
+    font-size: 0.7rem;
+   }
   }
-  img {
-    width: 200px !important;
-    border-radius: .6rem;
-    object-fit: cover;
-  }
+ }
 }

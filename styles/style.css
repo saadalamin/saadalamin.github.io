@@ -22,22 +22,22 @@ body::-webkit-scrollbar-thumb {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
 }
 
 body {
   background-color: #0b1347 !important;
   color: #fff;
-  background-image: url(../images/interface/e3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
   background-position: 60% top;
   background-attachment: fixed;
 }
 
+/*** Common Things ***/
 .bg-custom {
-  background-color: #1e2c83;
+  background-color: #1e2a7c;
 }
 
 .dn {
@@ -46,7 +46,7 @@ body {
 
 .navbar {
   height: 60px;
-  background-color: #0d1652;
+  background-color: #0b1347;
   position: sticky;
   top: 0;
   left: 0;
@@ -103,7 +103,7 @@ h6 {
   display: block;
   visibility: hidden;
   width: 100%;
-  height: 200px;
+  height: 150px;
 }
 
 /*** HOME PAGE ***/
@@ -113,7 +113,7 @@ h6 {
   background-color: transparent;
 }
 .first .intro {
-  padding: 85px 100px;
+  padding: 85px 0;
 }
 .first .intro h2 {
   font-size: 3.5rem;
@@ -137,26 +137,6 @@ main {
 .home {
   padding: 40px 0 !important;
   position: relative;
-}
-.home .profile {
-  width: 100%;
-  height: 150px;
-  align-items: center;
-  background-image: url(../images/interface/coverphoto-blur.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.home .profile-details {
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 300px;
-  text-shadow: 0 0 1px #000;
-}
-.home .profile .profile-image {
-  object-fit: cover;
-  border-radius: 100rem;
-  border: 2px solid white;
 }
 .home .posts-a {
   padding: 20px;
@@ -190,7 +170,7 @@ main {
 }
 .home .posts-a .post .body p {
   width: 100%;
-  background-color: #161e5e;
+  background-color: #1e2a7c;
   padding: 15px;
   white-space: nowrap;
   overflow: hidden;
@@ -205,14 +185,22 @@ main {
 .home .seeMore button {
   width: 100%;
   height: 100%;
-  background-color: #151d52;
+  background-color: #1e2a7c;
   color: #fff;
   font-size: large;
+}
+.home .parallax {
+  background-image: url("../images/interface/e-2-blur.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .home .features {
   width: 100%;
   padding: 90px 20px 40px 20px;
-  background-color: rgba(22, 31, 94, 0.4);
+  background-color: rgba(11, 19, 71, 0.4);
+  border-radius: 0.8rem;
   background-image: url(../images/interface/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -262,7 +250,8 @@ main {
 .home .count {
   width: 100%;
   padding: 40px 20px 40px 20px;
-  background-color: rgba(22, 31, 94, 0.4);
+  background-color: rgba(11, 19, 71, 0.4);
+  border-radius: 0.8rem;
   background-image: url(../images/interface/coverphoto-blur.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -281,30 +270,6 @@ main {
   border-radius: 0.4rem;
   margin: 0 auto;
 }
-.home .showme {
-  background-color: rgba(22, 31, 94, 0.4);
-}
-.home .showme .carousel .carousel-item {
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 12px;
-}
-.home .showme .carousel .carousel-item img {
-  width: 48px;
-  height: 48px;
-  border-radius: 100rem;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  padding: 10px;
-  margin-bottom: 10px;
-}
-.home .showme .carousel .carousel-item p {
-  color: #c0c0c0;
-}
-.home .showme .carousel .carousel-item > div:first-child {
-  padding: 50px;
-  border-radius: 0.3rem;
-}
 .home .skills,
 .home .experience,
 .home .education,
@@ -314,7 +279,7 @@ main {
 .home .languages {
   width: 100%;
   padding: 20px 40px;
-  background-color: rgba(22, 31, 94, 0.4);
+  background-color: rgba(30, 42, 124, 0.4);
   border-radius: 0.3rem;
   margin: 20px 0;
 }
@@ -354,9 +319,7 @@ main {
   list-style-type: square;
 }
 .home .workedwith {
-  margin-top: 40px;
-  padding: 15px;
-  background-color: rgba(22, 31, 94, 0.4);
+  margin-top: 20px;
 }
 .home .workedwith .wrapper {
   display: flex;
@@ -370,8 +333,8 @@ main {
   animation: animate 25s alternate linear infinite;
 }
 .home .workedwith .item img {
-  height: 60px;
-  border-radius: 0.7rem;
+  height: 55px;
+  border-radius: 0.5rem;
 }
 .home .workedwith .container:hover .item {
   animation-play-state: paused;
@@ -390,6 +353,30 @@ main {
     border-radius: 0;
     padding: 0;
   }
+}
+.home .showme {
+  background-color: rgba(30, 42, 124, 0.4);
+}
+.home .showme .carousel .carousel-item {
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 12px;
+}
+.home .showme .carousel .carousel-item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 100rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.home .showme .carousel .carousel-item p {
+  color: #c0c0c0;
+}
+.home .showme .carousel .carousel-item > div:first-child {
+  padding: 50px;
+  border-radius: 0.3rem;
 }
 
 /*** WORKS PAGE ***/
@@ -412,7 +399,7 @@ main {
 .works .project-container-a p,
 .works .project-container-g p {
   width: 100%;
-  background-color: #1e2c83;
+  background-color: #1e2a7c;
   padding: 10px;
 }
 .works .project-container-a .row div img,
@@ -539,22 +526,11 @@ main {
 /*** CUSTOM RESPONSIBILITY ***/
 @media screen and (min-width: 993px) {
   .navbar {
-    background: rgba(13, 22, 82, 0.8);
+    background: rgba(11, 19, 71, 0.8);
     backdrop-filter: blur(20px);
   }
   .home {
     padding-top: 10px;
-  }
-  .home .profile {
-    height: 250px;
-    border-radius: 0.7rem;
-    margin-bottom: 40px;
-  }
-  .home .profile .descrpt {
-    font-weight: 700;
-  }
-  .home .divide {
-    display: none;
   }
   .home .box img {
     width: 60px;
@@ -588,19 +564,6 @@ main {
     margin: 0 auto;
   }
 }
-@media screen and (min-width: 1200px) {
-  .home .profile {
-    position: sticky;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    padding-top: 60px;
-    margin: 0px !important;
-    align-items: flex-start;
-    background: #0e195c;
-    border-radius: 0;
-  }
-}
 @media screen and (min-width: 1500px) {
   .first .intro {
     padding-top: 200px !important;
@@ -610,6 +573,14 @@ main {
   }
   .navbar {
     height: 65px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .count h2 {
+    font-size: 1.2rem;
+  }
+  .count p {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -631,13 +602,31 @@ main {
   .features p {
     font-size: 0.7rem !important;
   }
-  .certifications h3, .publications h3, .education h3, .experience h3, .awards h3, .languages h3 {
+  .count p {
+    font-size: 0.6rem;
+  }
+  .certifications h3,
+  .publications h3,
+  .education h3,
+  .experience h3,
+  .awards h3,
+  .languages h3 {
     font-size: 0.8rem !important;
   }
-  .certifications p, .publications p, .education p, .experience p, .awards p, .languages p {
+  .certifications p,
+  .publications p,
+  .education p,
+  .experience p,
+  .awards p,
+  .languages p {
     font-size: 0.6rem !important;
   }
-  .certifications a, .publications a, .education a, .experience a, .awards a, .languages a {
+  .certifications a,
+  .publications a,
+  .education a,
+  .experience a,
+  .awards a,
+  .languages a {
     font-size: 0.6rem !important;
   }
   .about {
@@ -646,7 +635,7 @@ main {
 }
 @media screen and (max-width: 700px) {
   .first .intro {
-    padding: 50px 60px;
+    padding: 50px 20px;
     text-align: center;
   }
   .first .intro h2 {
@@ -673,7 +662,8 @@ main {
 }
 /*** FOOTER & Others ***/
 footer {
-  background-color: #0d1652;
+  background-color: #0b1347;
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
   color: #fff;
 }
 
@@ -705,11 +695,26 @@ footer {
   padding: 15px 15px 15px 25px;
 }
 #modalForPress li div h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 5px;
 }
 #modalForPress img {
-  width: 200px !important;
+  width: 150px !important;
   border-radius: 0.6rem;
   object-fit: cover;
+}
+
+@media screen and (max-width: 500px) {
+  #modalForPress li {
+    flex-direction: column;
+  }
+  #modalForPress li div {
+    padding-left: 5px;
+  }
+  #modalForPress li img {
+    width: 100% !important;
+  }
+  #modalForPress li h4 {
+    font-size: 0.7rem;
+  }
 }
