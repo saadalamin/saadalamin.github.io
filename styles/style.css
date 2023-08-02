@@ -29,6 +29,8 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: #0b1347 !important;
   color: #fff;
+}
+body.bgImage {
   background-image: url(../images/interface/e3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -604,7 +606,7 @@ main {
   }
 }
 @media screen and (max-width: 500px) {
-  body {
+  body.bgImage {
     background-image: url(../images/interface/e3-mob.jpg);
     background-repeat: no-repeat;
     background-size: cover;

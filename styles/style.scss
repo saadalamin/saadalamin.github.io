@@ -34,8 +34,10 @@ body::-webkit-scrollbar-thumb {
 body {
  background-color: $primary-color !important;
  color: $primary-text-color;
- @include image-center("../images/interface/e3.jpg");
- background-attachment: fixed;
+ &.bgImage {
+  @include image-center("../images/interface/e3.jpg");
+  background-attachment: fixed;
+ }
 }
 
 /*** Common Things ***/
@@ -534,10 +536,10 @@ main {
 /*** CUSTOM RESPONSIBILITY ***/
 
 @media (hover: none) {
-    body {
-        background-attachment: initial;
-    }
+ body {
+  background-attachment: initial;
  }
+}
 @media screen and (min-width: 1500px) {
  .first .intro {
   padding-top: 200px !important;
@@ -631,7 +633,7 @@ main {
  }
 }
 @media screen and (max-width: 500px) {
- body {
+ body.bgImage {
   @include image-center("../images/interface/e3-mob.jpg");
  }
  #switch_btn {
