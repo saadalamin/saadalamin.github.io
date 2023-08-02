@@ -109,7 +109,7 @@ h6 {
 /*** HOME PAGE ***/
 .first {
   height: 100vh;
-  min-height: 560px;
+  min-height: 500px;
   background-color: transparent;
 }
 .first .intro {
@@ -130,7 +130,7 @@ h6 {
 
 main {
   padding-bottom: 50px;
-  background-color: rgba(11, 19, 71, 0.95) !important;
+  background-color: #0b1347 !important;
   color: #fff;
 }
 
@@ -578,6 +578,25 @@ main {
     font-size: 0.8rem;
   }
 }
+@media screen and (max-width: 700px) {
+  .first .intro {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .first .intro h2 {
+    font-size: 2.3rem;
+    margin-bottom: 5px;
+  }
+  .first .intro p {
+    font-size: 0.9rem;
+    line-height: 28px;
+    margin-top: 50px !important;
+    width: 100%;
+  }
+  .break {
+    height: 50px;
+  }
+}
 @media screen and (max-width: 500px) {
   body {
     background-image: url(../images/interface/e3-mob.jpg);
@@ -627,24 +646,8 @@ main {
   .about {
     padding: 5px 15px;
   }
-}
-@media screen and (max-width: 700px) {
-  .first .intro {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  .first .intro h2 {
-    font-size: 2.3rem;
-    margin-bottom: 5px;
-  }
-  .first .intro p {
-    font-size: 0.9rem;
-    line-height: 28px;
-    margin-top: 50px !important;
-    width: 100%;
-  }
-  .break {
-    height: 50px;
+  .first {
+    height: 75vh !important;
   }
 }
 @media screen and (max-width: 400px) {
