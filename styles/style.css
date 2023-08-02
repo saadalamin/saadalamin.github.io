@@ -110,7 +110,7 @@ h6 {
 /*** HOME PAGE ***/
 .first {
   height: 100vh;
-  min-height: 500px;
+  min-height: 600px;
   background-color: rgba(11, 19, 71, 0.5);
 }
 .first .intro {
