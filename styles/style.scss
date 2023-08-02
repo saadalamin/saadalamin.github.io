@@ -34,10 +34,6 @@ body::-webkit-scrollbar-thumb {
 body {
  background-color: $primary-color !important;
  color: $primary-text-color;
- background-repeat: no-repeat;
- background-size: cover;
- background-position: 60% top;
- background-attachment: fixed;
 }
 
 /*** Common Things ***/
@@ -106,7 +102,9 @@ h6 {
 .first {
  height: 100vh;
  min-height: 500px;
- background-color: transparent;
+ background-color: rgba($primary-color, 0.5);
+ @include image-center("../images/interface/e3.jpg");
+ background-attachment: fixed;
  .intro {
   padding: 85px 0;
   h2 {
@@ -145,7 +143,7 @@ main {
     object-fit: cover;
     border-top-left-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
-    border-bottom: 1px dashed rgba(white, .5);
+    border-bottom: 1px dashed rgba(white, 0.5);
     &:hover {
      border: 1.5px dashed white;
      opacity: 0.4;
@@ -687,7 +685,7 @@ main {
 
 /*** FOOTER & Others ***/
 footer {
- background-color: rgba($primary-color, .5);
+ background-color: rgba($primary-color, 0.5);
  color: $primary-text-color;
 }
 #modalMain,
@@ -742,8 +740,8 @@ footer {
  }
 }
 .support {
-  position: fixed;
-  right: 0px;
-  bottom: 0px;
-  padding: 10px;
+ position: fixed;
+ right: 0px;
+ bottom: 0px;
+ padding: 10px;
 }
