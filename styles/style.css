@@ -2,7 +2,7 @@
 ::-moz-selection,
 ::selection {
   color: #fff;
-  background: #0b1347;
+  background: #121e69;
   padding: 10px;
 }
 
@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #0b1347 !important;
+  background-color: #273699 !important;
   color: #fff;
 }
 body.bgImage {
@@ -40,35 +40,11 @@ body.bgImage {
 
 /*** Common Things ***/
 .bg-custom {
-  background-color: #1e2a7c;
+  background-color: #273699;
 }
 
 .dn {
   display: none;
-}
-
-.navbar {
-  height: 60px;
-  background-color: #0b1347;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 10000000;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
-  background-image: url(../images/interface/newcover.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.navbar ul {
-  padding: 0 !important;
-}
-.navbar a {
-  text-decoration: none;
-  color: inherit;
-}
-.navbar .desktop a.active {
-  border-bottom: 1px solid #fff;
 }
 
 mark {
@@ -109,11 +85,42 @@ h6 {
   height: 150px;
 }
 
+/*** Navbar ***/
+.navbar {
+  height: 60px;
+  background-color: #007fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-image: url(../images/interface/newcover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.navbar ul {
+  padding: 0 !important;
+}
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+.navbar .desktop a.active {
+  border-bottom: 1px solid #fff;
+}
+
+main {
+  padding-bottom: 50px;
+  background-color: #121e69 !important;
+  color: #fff;
+}
+
 /*** HOME PAGE ***/
 .first {
   height: 100vh;
   min-height: 600px;
-  background-color: rgba(11, 19, 71, 0.5);
+  background-color: rgba(18, 30, 105, 0.5);
 }
 .first .intro {
   padding: 85px 0;
@@ -129,12 +136,6 @@ h6 {
 }
 .first .intro a {
   margin-top: 25px;
-}
-
-main {
-  padding-bottom: 50px;
-  background-color: #0b1347 !important;
-  color: #fff;
 }
 
 .home {
@@ -157,7 +158,6 @@ main {
   object-fit: cover;
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
 }
 .home .posts-a .post img:hover {
   border: 1.5px dashed white;
@@ -168,7 +168,7 @@ main {
 }
 .home .posts-a .post .body p {
   width: 100%;
-  background-color: #1e2a7c;
+  background-color: #273699;
   padding: 15px;
   white-space: nowrap;
   overflow: hidden;
@@ -183,7 +183,7 @@ main {
 .home .seeMore button {
   width: 100%;
   height: 100%;
-  background-color: #1e2a7c;
+  background-color: #273699;
   color: #fff;
   font-size: large;
 }
@@ -197,7 +197,7 @@ main {
 .home .features {
   width: 100%;
   padding: 90px 20px 40px 20px;
-  background-color: rgba(11, 19, 71, 0.4);
+  background-color: rgba(18, 30, 105, 0.4);
   border-radius: 0.8rem;
   background-image: url(../images/interface/banner.jpg);
   background-repeat: no-repeat;
@@ -248,7 +248,7 @@ main {
 .home .count {
   width: 100%;
   padding: 40px 20px 40px 20px;
-  background-color: rgba(11, 19, 71, 0.4);
+  background-color: rgba(18, 30, 105, 0.4);
   border-radius: 0.8rem;
   background-image: url(../images/interface/coverphoto-blur.jpg);
   background-repeat: no-repeat;
@@ -277,7 +277,7 @@ main {
 .home .languages {
   width: 100%;
   padding: 20px 40px;
-  background-color: rgba(30, 42, 124, 0.4);
+  background-color: rgba(39, 54, 153, 0.4);
   border-radius: 0.3rem;
   margin: 20px 0;
 }
@@ -353,7 +353,7 @@ main {
   }
 }
 .home .showme {
-  background-color: rgba(30, 42, 124, 0.4);
+  background-color: rgba(39, 54, 153, 0.4);
 }
 .home .showme .carousel .carousel-item {
   justify-content: center;
@@ -397,7 +397,7 @@ main {
 .works .project-container-a p,
 .works .project-container-g p {
   width: 100%;
-  background-color: #1e2a7c;
+  background-color: #273699;
   padding: 10px;
 }
 .works .project-container-a .row div img,
@@ -535,12 +535,12 @@ main {
     padding-top: 20px;
   }
   .navbar {
-    height: 65px;
+    height: 75px;
   }
 }
 @media screen and (min-width: 993px) {
   .navbar {
-    background: rgba(11, 19, 71, 0.8);
+    background: rgba(18, 30, 105, 0.8);
     backdrop-filter: blur(20px);
   }
   .home {
@@ -666,7 +666,7 @@ main {
 }
 /*** FOOTER & Others ***/
 footer {
-  background-color: rgba(11, 19, 71, 0.5);
+  background-color: rgba(18, 30, 105, 0.5);
   color: #fff;
 }
 

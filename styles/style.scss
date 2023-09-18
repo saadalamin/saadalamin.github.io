@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
-$primary-color: #0b1347;
-$secondary-color: #1e2a7c;
+$primary-color: #121e69;
+$secondary-color: #273699;
 $primary-text-color: #fff;
 $primary-font: "Montserrat", sans-serif;
+$third-color: #007fff;
 @mixin image-center($url) {
  background-image: url(unquote($url));
  background-repeat: no-repeat;
@@ -32,7 +33,7 @@ body::-webkit-scrollbar-thumb {
  font-family: $primary-font;
 }
 body {
- background-color: $primary-color !important;
+ background-color: $secondary-color !important;
  color: $primary-text-color;
  &.bgImage {
   @include image-center("../images/interface/e3.jpg");
@@ -47,26 +48,7 @@ body {
 .dn {
  display: none;
 }
-.navbar {
- height: 60px;
- background-color: $primary-color;
- position: sticky;
- top: 0;
- left: 0;
- z-index: 10000000;
- border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
- @include image-center("../images/interface/newcover.jpg");
- ul {
-  padding: 0 !important;
- }
- a {
-  text-decoration: none;
-  color: inherit;
- }
- .desktop a.active {
-  border-bottom: 1px solid #fff;
- }
-}
+
 mark {
  border-radius: 0.4rem;
 }
@@ -101,8 +83,35 @@ h6 {
  height: 150px;
 }
 
-/*** HOME PAGE ***/
+/*** Navbar ***/
+.navbar {
+ height: 60px;
+ background-color: $third-color;
+ position: sticky;
+ top: 0;
+ left: 0;
+ z-index: 10000000;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ @include image-center("../images/interface/newcover.jpg");
+ ul {
+  padding: 0 !important;
+ }
+ a {
+  text-decoration: none;
+  color: inherit;
+ }
+ .desktop a.active {
+  border-bottom: 1px solid #fff;
+ }
+}
 
+main {
+ padding-bottom: 50px;
+ background-color: $primary-color !important;
+ color: $primary-text-color;
+}
+
+/*** HOME PAGE ***/
 .first {
  height: 100vh;
  min-height: 600px;
@@ -123,11 +132,6 @@ h6 {
   }
  }
 }
-main {
- padding-bottom: 50px;
- background-color: $primary-color !important;
- color: $primary-text-color;
-}
 .home {
  padding: 40px 0 !important;
  position: relative;
@@ -145,7 +149,6 @@ main {
     object-fit: cover;
     border-top-left-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
-    border-bottom: 1px dashed rgba(white, 0.5);
     &:hover {
      border: 1.5px dashed white;
      opacity: 0.4;
@@ -548,7 +551,7 @@ main {
   }
  }
  .navbar {
-  height: 65px;
+  height: 75px;
  }
 }
 @media screen and (min-width: 993px) {
