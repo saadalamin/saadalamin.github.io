@@ -162,7 +162,7 @@ main {
   border-top-right-radius: 0.4rem;
 }
 .home .posts-a .post img:hover {
-  border: 1.5px dashed white;
+  border: 1.5px solid white;
   opacity: 0.4;
 }
 .home .posts-a .post img:first-child {
