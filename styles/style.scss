@@ -113,8 +113,9 @@ main {
 
 /*** HOME PAGE ***/
 .first {
- height: 100vh;
- min-height: 600px;
+ width: 100%;
+ height: fit-content;
+ min-height: 100vh;
  background-color: rgba($primary-color, 0.5);
  .intro {
   padding: 85px 0;
@@ -130,6 +131,13 @@ main {
   a {
    margin-top: 25px;
   }
+ }
+ .boxes {
+    width: 100%;
+    padding: 0 2rem;
+    .card {
+        padding: 2rem;
+    }
  }
 }
 .home {
@@ -532,10 +540,6 @@ main {
  }
 }
 
-/*** BLOG PAGE ***/
-.blog {
-}
-
 /*** CUSTOM RESPONSIBILITY ***/
 
 @media (hover: none) {
@@ -545,7 +549,7 @@ main {
 }
 @media screen and (min-width: 1500px) {
  .first .intro {
-  padding-top: 200px !important;
+  padding-top: 100px !important;
   p {
    padding-top: 20px;
   }
@@ -674,7 +678,7 @@ main {
   padding: 5px 15px;
  }
  .first {
-  height: 75vh !important;
+    padding-bottom: 2rem;
  }
 }
 @media screen and (max-width: 400px) {
