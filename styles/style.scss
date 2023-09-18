@@ -1,20 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 $primary-color: #121e69;
-$secondary-color: #273699;
 $primary-text-color: #fff;
 $primary-font: "Montserrat", sans-serif;
+$secondary-color: #273699;
 $third-color: #007fff;
+
 @mixin image-center($url) {
  background-image: url(unquote($url));
  background-repeat: no-repeat;
  background-size: cover;
  background-position: center;
-}
-::-moz-selection,
-::selection {
- color: #fff;
- background: $primary-color;
- padding: 10px;
 }
 body::-webkit-scrollbar {
  width: 0.25em;
@@ -48,7 +43,6 @@ body {
 .dn {
  display: none;
 }
-
 mark {
  border-radius: 0.4rem;
 }

@@ -1,11 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
-::-moz-selection,
-::selection {
-  color: #fff;
-  background: #121e69;
-  padding: 10px;
-}
-
 body::-webkit-scrollbar {
   width: 0.25em;
   background-color: rgba(255, 255, 255, 0.2);
