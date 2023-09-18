@@ -135,6 +135,7 @@ main {
  .boxes {
     width: 100%;
     padding: 0 2rem;
+    padding-bottom: 5rem;
     .card {
         padding: 2rem;
     }
@@ -676,9 +677,6 @@ main {
  }
  .about {
   padding: 5px 15px;
- }
- .first {
-    padding-bottom: 2rem;
  }
 }
 @media screen and (max-width: 400px) {
