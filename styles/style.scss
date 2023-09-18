@@ -154,7 +154,7 @@ main {
    position: relative;
    img {
     max-height: 300px;
-    aspect-ratio: 3 / 3;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     border-top-left-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
@@ -727,8 +727,9 @@ footer {
   }
  }
  img {
-  width: 150px !important;
-  border-radius: 0.6rem;
+  width: 200px !important;
+  border-radius: 0.3rem;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
  }
 }
@@ -747,10 +748,4 @@ footer {
    }
   }
  }
-}
-.support {
- position: fixed;
- right: 0px;
- bottom: 0px;
- padding: 10px;
 }
