@@ -81,16 +81,13 @@ h6 {
 /*** Navbar ***/
 .navbar {
   height: 60px;
-  background-color: #007fff;
+  background-color: rgba(18, 30, 105, 0.8);
+  backdrop-filter: blur(20px);
   position: sticky;
   top: 0;
   left: 0;
   z-index: 10000000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-image: url(../images/interface/newcover.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 .navbar ul {
   padding: 0 !important;

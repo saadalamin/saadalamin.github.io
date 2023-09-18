@@ -80,13 +80,13 @@ h6 {
 /*** Navbar ***/
 .navbar {
  height: 60px;
- background-color: $third-color;
+ background-color: rgba($primary-color, 0.8);
+ backdrop-filter: blur(20px);
  position: sticky;
  top: 0;
  left: 0;
  z-index: 10000000;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
- @include image-center("../images/interface/newcover.jpg");
  ul {
   padding: 0 !important;
  }
@@ -127,12 +127,12 @@ main {
   }
  }
  .boxes {
-    width: 100%;
-    padding: 0 2rem;
-    padding-bottom: 5rem;
-    .card {
-        padding: 2rem;
-    }
+  width: 100%;
+  padding: 0 2rem;
+  padding-bottom: 5rem;
+  .card {
+   padding: 2rem;
+  }
  }
 }
 .home {
