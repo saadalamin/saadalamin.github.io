@@ -119,19 +119,12 @@ main {
   }
   p {
    font-size: 1rem;
-   line-height: 32px;
+   line-height: 38px;
    width: 60%;
+   margin-top: 50px !important;
   }
   a {
-   margin-top: 25px;
-  }
- }
- .boxes {
-  width: 100%;
-  padding: 0 2rem;
-  padding-bottom: 5rem;
-  .card {
-   padding: 2rem;
+   margin-top: 40px;
   }
  }
 }
@@ -544,7 +537,7 @@ main {
 }
 @media screen and (min-width: 1500px) {
  .first .intro {
-  padding-top: 100px !important;
+  padding-top: 150px !important;
   p {
    padding-top: 20px;
   }
@@ -621,7 +614,6 @@ main {
    p {
     font-size: 0.9rem;
     line-height: 28px;
-    margin-top: 50px !important;
     width: 100%;
    }
   }
