@@ -82,6 +82,7 @@ h6 {
  height: 60px;
  background-color: rgba($primary-color, 0.8);
  backdrop-filter: blur(20px);
+ -webkit-backdrop-filter: blur(20px);
  position: sticky;
  top: 0;
  left: 0;
