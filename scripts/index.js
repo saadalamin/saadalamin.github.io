@@ -1,18 +1,3 @@
-/* Preloader */
-// const interval = setInterval(() => {
-//   const allImagesLoaded = [...document.querySelectorAll('img')]
-//     .map(x => x.complete)
-//     .indexOf(false) === -1;
-//   if (allImagesLoaded) {
-//     console.log('All images loaded');
-//     clearInterval(interval);
-//   } else {
-//     window.location.reload();
-//   }
-// }, 1000);
-
-/* Scroll to top */
-
 /****** BUILT-IN FUNCTIONS ******/
 
 var getJSON = function (url, callback) {
@@ -246,7 +231,7 @@ function appendProject(imgLink, title, goLink, projectRow, projectObject) {
 }
 
 if (prj) {
-  getJSON("./data/works.json", function (res) {
+  getJSON("./data/works-music.json", function (res) {
     var projectAObject = [];
     var projectBObject = [];
     var projectARow = prj.querySelectorAll(".project-container-a .row")[0];
