@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Roboto:wght@400&display=swap");
 body::-webkit-scrollbar {
   width: 0.25em;
   background-color: rgba(255, 255, 255, 0.2);
@@ -20,7 +20,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #273699 !important;
+  background-color: #242526 !important;
   color: #fff;
 }
 body.bgImage {
@@ -33,7 +33,7 @@ body.bgImage {
 
 /*** Common Things ***/
 .bg-custom {
-  background-color: #273699;
+  background-color: #242526;
 }
 
 .dn {
@@ -81,7 +81,7 @@ h6 {
 /*** Navbar ***/
 .navbar {
   height: 60px;
-  background-color: rgba(18, 30, 105, 0.8);
+  background-color: rgba(24, 25, 26, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   position: sticky;
@@ -94,6 +94,7 @@ h6 {
   padding: 0 !important;
 }
 .navbar a {
+  font-family: Roboto;
   text-decoration: none;
   color: inherit;
 }
@@ -103,7 +104,7 @@ h6 {
 
 main {
   padding-bottom: 50px;
-  background-color: #121e69 !important;
+  background-color: #18191a !important;
   color: #fff;
 }
 
@@ -112,7 +113,7 @@ main {
   width: 100%;
   height: fit-content;
   min-height: 100vh;
-  background-color: rgba(18, 30, 105, 0.4);
+  background-color: rgba(24, 25, 26, 0.4);
 }
 .first .intro {
   padding: 85px 0;
@@ -161,7 +162,7 @@ main {
 }
 .home .posts-a .post .body p {
   width: 100%;
-  background-color: #273699;
+  background-color: #242526;
   padding: 15px;
   white-space: nowrap;
   overflow: hidden;
@@ -176,7 +177,7 @@ main {
 .home .seeMore button {
   width: 100%;
   height: 100%;
-  background-color: #273699;
+  background-color: #242526;
   color: #fff;
   font-size: large;
 }
@@ -190,7 +191,7 @@ main {
 .home .features {
   width: 100%;
   padding: 90px 20px 40px 20px;
-  background-color: rgba(18, 30, 105, 0.4);
+  background-color: rgba(24, 25, 26, 0.4);
   border-radius: 0.8rem;
   background-image: url(../images/interface/banner.jpg);
   background-repeat: no-repeat;
@@ -241,7 +242,7 @@ main {
 .home .count {
   width: 100%;
   padding: 40px 20px 40px 20px;
-  background-color: rgba(18, 30, 105, 0.4);
+  background-color: rgba(24, 25, 26, 0.4);
   border-radius: 0.8rem;
   background-image: url(../images/interface/coverphoto-blur.jpg);
   background-repeat: no-repeat;
@@ -270,7 +271,7 @@ main {
 .home .languages {
   width: 100%;
   padding: 20px 40px;
-  background-color: rgba(39, 54, 153, 0.4);
+  background-color: rgba(36, 37, 38, 0.4);
   border-radius: 0.3rem;
   margin: 20px 0;
 }
@@ -346,7 +347,7 @@ main {
   }
 }
 .home .showme {
-  background-color: rgba(39, 54, 153, 0.4);
+  background-color: rgba(36, 37, 38, 0.4);
 }
 .home .showme .carousel .carousel-item {
   justify-content: center;
@@ -390,7 +391,7 @@ main {
 .works .project-container-a p,
 .works .project-container-g p {
   width: 100%;
-  background-color: #273699;
+  background-color: #242526;
   padding: 10px;
 }
 .works .project-container-a .row div img,
@@ -650,7 +651,7 @@ main {
 }
 /*** FOOTER & Others ***/
 footer {
-  background-color: rgba(18, 30, 105, 0.5);
+  background-color: rgba(24, 25, 26, 0.5);
   color: #fff;
 }
 

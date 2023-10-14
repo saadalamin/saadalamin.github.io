@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
-$primary-color: #121e69;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Roboto:wght@400&display=swap");
+$primary-color: #18191a;
 $primary-text-color: #fff;
 $primary-font: "Montserrat", sans-serif;
-$secondary-color: #273699;
+$secondary-color: #242526;
 $third-color: #007fff;
 
 @mixin image-center($url) {
@@ -92,6 +92,7 @@ h6 {
   padding: 0 !important;
  }
  a {
+  font-family: Roboto;
   text-decoration: none;
   color: inherit;
  }
