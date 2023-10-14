@@ -89,8 +89,8 @@ h6 {
  z-index: 10000000;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
  .navbar-brand img {
-    border-radius: 0.2rem;
-    object-fit: cover;
+  border-radius: 0.2rem;
+  object-fit: cover;
  }
  .dropdown-menu {
   background-color: $secondary-color;
@@ -99,9 +99,9 @@ h6 {
   }
  }
  .dropdown {
-    img {
-        transform: scaleX(1.4);
-    }
+  img {
+   transform: scaleX(1.4);
+  }
  }
  ul {
   padding: 0 !important;
@@ -649,6 +649,9 @@ main {
 @media screen and (max-width: 500px) {
  body.bgImage {
   @include image-center("../images/interface/e3-mob.jpg");
+  background-attachment: initial;
+  background-size: 100% !important;
+  background-position: top right !important;
  }
  #switch_btn {
   text-align: left !important;

@@ -617,6 +617,9 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: initial;
+    background-size: 100% !important;
+    background-position: top right !important;
   }
   #switch_btn {
     text-align: left !important;
