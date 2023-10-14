@@ -81,7 +81,7 @@ h6 {
 /*** Navbar ***/
 .navbar {
   height: 60px;
-  background-color: rgba(24, 25, 26, 0.8);
+  background-color: rgba(36, 37, 38, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   position: sticky;
@@ -89,6 +89,12 @@ h6 {
   left: 0;
   z-index: 10000000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.navbar .dropdown-menu {
+  background-color: #242526;
+}
+.navbar .dropdown-menu .dropdown-item {
+  padding: 0.5rem 1rem;
 }
 .navbar ul {
   padding: 0 !important;
@@ -112,7 +118,7 @@ main {
 .first {
   width: 100%;
   height: fit-content;
-  min-height: 100vh;
+  min-height: 95vh;
   background-color: rgba(24, 25, 26, 0.4);
 }
 .first .intro {
@@ -531,6 +537,11 @@ main {
     height: 75px;
   }
 }
+@media screen and (max-width: 1500px) {
+  .first {
+    min-height: auto;
+  }
+}
 @media screen and (min-width: 993px) {
   .home {
     padding-top: 10px;
@@ -577,7 +588,7 @@ main {
 }
 @media screen and (max-width: 700px) {
   .first .intro {
-    padding: 50px 20px;
+    padding: 100px 20px;
     text-align: center;
   }
   .first .intro h2 {
@@ -586,7 +597,7 @@ main {
   }
   .first .intro p {
     font-size: 0.9rem;
-    line-height: 28px;
+    line-height: 30px;
     width: 100%;
   }
   .break {

@@ -80,7 +80,7 @@ h6 {
 /*** Navbar ***/
 .navbar {
  height: 60px;
- background-color: rgba($primary-color, 0.8);
+ background-color: rgba($secondary-color, 0.8);
  backdrop-filter: blur(20px);
  -webkit-backdrop-filter: blur(20px);
  position: sticky;
@@ -88,6 +88,12 @@ h6 {
  left: 0;
  z-index: 10000000;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ .dropdown-menu {
+  background-color: $secondary-color;
+  .dropdown-item {
+   padding: 0.5rem 1rem;
+  }
+ }
  ul {
   padding: 0 !important;
  }
@@ -111,7 +117,7 @@ main {
 .first {
  width: 100%;
  height: fit-content;
- min-height: 100vh;
+ min-height: 95vh;
  background-color: rgba($primary-color, 0.4);
  .intro {
   padding: 85px 0;
@@ -538,14 +544,21 @@ main {
  }
 }
 @media screen and (min-width: 1500px) {
- .first .intro {
-  padding-top: 150px !important;
-  p {
-   padding-top: 20px;
+ .first {
+  .intro {
+   padding-top: 150px !important;
+   p {
+    padding-top: 20px;
+   }
   }
  }
  .navbar {
   height: 75px;
+ }
+}
+@media screen and (max-width: 1500px) {
+ .first {
+  min-height: auto;
  }
 }
 @media screen and (min-width: 993px) {
@@ -607,7 +620,7 @@ main {
 @media screen and (max-width: 700px) {
  .first {
   .intro {
-   padding: 50px 20px;
+   padding: 100px 20px;
    text-align: center;
    h2 {
     font-size: 2.3rem;
@@ -615,7 +628,7 @@ main {
    }
    p {
     font-size: 0.9rem;
-    line-height: 28px;
+    line-height: 30px;
     width: 100%;
    }
   }
