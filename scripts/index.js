@@ -153,7 +153,7 @@ if (a) {
 }
 
 var counting = function () {
-  var counters = document.querySelectorAll(".count h2");
+  var counters = document.querySelectorAll(".count .counting");
   var countersQuantity = counters.length;
   var counter = [];
 
