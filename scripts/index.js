@@ -41,7 +41,8 @@ var modalConfig = function (
 ) {
   e.onclick = function () {
     var t = customTitle;
-    if (e.querySelectorAll("p")[0] && customTitle === undefined) t = e.querySelectorAll("p")[0].innerHTML;
+    if (e.querySelectorAll("p")[0] && customTitle === undefined)
+      t = e.querySelectorAll("p")[0].innerHTML;
 
     if (e.querySelectorAll("img")[0])
       document.querySelectorAll("#modalMain img")[0].src =
@@ -81,20 +82,31 @@ var pressPostsLoad = function () {
     var t = data;
     var o = "";
     for (let e = 0; e < t.length; e++) {
-      o += `<a class="post col-12 col-sm-6 col-lg-3"
-      href="`+ t[e].link + `"
+      o +=
+        `<a class="post col-12 col-sm-6 col-lg-3"
+      href="` +
+        t[e].link +
+        `"
       target="_blank">
-      <img src="images/posts/press/`+ t[e].img + `" class="card-img-top" alt="Saad Al Amin">
+      <img src="images/posts/press/` +
+        t[e].img +
+        `" class="card-img-top" alt="Saad Al Amin">
       <div class="body">
         <p>
-          <span>`+ t[e].title + `</span>
-          <span>`+ t[e].date + `</span>
+          <span>` +
+        t[e].title +
+        `</span>
+          <span>` +
+        t[e].date +
+        `</span>
         </p>
       </div>
-    </a>`
+    </a>`;
       if (e == 6) break;
     }
-    document.querySelectorAll(".posts-a")[0].innerHTML = o + '<hr><div class="seeMore col-12 col-sm-6 col-lg-3"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForPress" onclick="modalPressConfig()"><button class="btn">Browse More +</button></a></div>';
+    document.querySelectorAll(".posts-a")[0].innerHTML =
+      o +
+      '<hr><div class="seeMore col-12 col-sm-6 col-lg-3"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForPress" onclick="modalPressConfig()"><button class="btn">Browse More +</button></a></div>';
   });
 };
 pressPostsLoad();
@@ -191,8 +203,8 @@ window.onload = function () {
   if (btn) {
     window.addEventListener("scroll", () => {
       if (
-        document.body.scrollTop > 20 ||
-        document.documentElement.scrollTop > 20
+        document.body.scrollTop > 290 ||
+        document.documentElement.scrollTop > 290
       ) {
         btn.style.display = "block";
       } else {

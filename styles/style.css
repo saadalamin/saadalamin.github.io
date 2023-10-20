@@ -475,9 +475,9 @@ main {
 .about .title {
   margin-left: 0;
 }
-.about .main .card-text {
+.about .card-text {
   font-size: 0.9rem;
-  line-height: 1.5rem;
+  line-height: 1.7rem;
 }
 .about .opinion {
   padding: 0 10px;
