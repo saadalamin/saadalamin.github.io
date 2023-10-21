@@ -1,18 +1,3 @@
-/* Preloader */
-// const interval = setInterval(() => {
-//   const allImagesLoaded = [...document.querySelectorAll('img')]
-//     .map(x => x.complete)
-//     .indexOf(false) === -1;
-//   if (allImagesLoaded) {
-//     console.log('All images loaded');
-//     clearInterval(interval);
-//   } else {
-//     window.location.reload();
-//   }
-// }, 1000);
-
-/* Scroll to top */
-
 /****** BUILT-IN FUNCTIONS ******/
 
 var getJSON = function (url, callback) {
@@ -56,9 +41,8 @@ var modalConfig = function (
 ) {
   e.onclick = function () {
     var t = customTitle;
-    if (e.querySelectorAll("p")[0]) t = e.querySelectorAll("p")[0].innerHTML;
-
-    console.log(t);
+    if (e.querySelectorAll("p")[0] && customTitle === undefined)
+      t = e.querySelectorAll("p")[0].innerHTML;
 
     if (e.querySelectorAll("img")[0])
       document.querySelectorAll("#modalMain img")[0].src =
@@ -70,14 +54,62 @@ var modalConfig = function (
 
     if (document.querySelectorAll("#modalMain p")[0]) {
       if (customContent == undefined) {
-        document.querySelectorAll("#modalMain p")[0].innerHTML =
-          t +
-          '.<br/><a href="https://www.linkedin.com/in/saadalamin/recent-activity/" target="_blank">See here all his posts</a>';
+        document.querySelectorAll("#modalMain p")[0].innerHTML = t;
       } else
         document.querySelectorAll("#modalMain p")[0].innerHTML = customContent;
     }
   };
 };
+var modalPressConfig = function () {
+  getJSON("./data/press.json", function (data) {
+    var t = data;
+    var o = "";
+    for (let e = 0; e < t.length; e++) {
+      o +=
+        '<li class="list-group-item"><img src="images/posts/press/' +
+        t[e].img +
+        '" alt="press" /><div><h4>' +
+        t[e].title +
+        "</h4><a href='" +
+        t[e].link +
+        "' target='_blank'>See More</a></div></li>";
+    }
+    modalPress.querySelectorAll(".modal-body")[0].innerHTML = o;
+  });
+};
+var pressPostsLoad = function () {
+  getJSON("./data/press.json", function (data) {
+    var t = data;
+    var o = "";
+    for (let e = 0; e < t.length; e++) {
+      o +=
+        `<a class="post col-12 col-sm-6 col-lg-3"
+      href="` +
+        t[e].link +
+        `"
+      target="_blank">
+      <img src="images/posts/press/` +
+        t[e].img +
+        `" class="card-img-top" alt="Saad Al Amin">
+      <div class="body">
+        <p>
+          <span>` +
+        t[e].title +
+        `</span>
+          <span>` +
+        t[e].date +
+        `</span>
+        </p>
+      </div>
+    </a>`;
+      if (e == 6) break;
+    }
+    document.querySelectorAll(".posts-a")[0].innerHTML =
+      o +
+      '<hr><div class="seeMore col-12 col-sm-6 col-lg-3"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForPress" onclick="modalPressConfig()"><button class="btn">Browse More +</button></a></div>';
+  });
+};
+pressPostsLoad();
 if (elm) {
   elm.forEach((e) => {
     e.title = e.innerText;
@@ -105,7 +137,12 @@ if (elm3) {
 if (elm4) {
   elm4.forEach((e) => {
     console.log(e);
-    modalConfig(e, e.parentElement.querySelectorAll("span")[0].innerHTML, e.parentElement.querySelectorAll("span")[1].innerHTML, e.src);
+    modalConfig(
+      e,
+      e.parentElement.querySelectorAll("span")[0].innerHTML,
+      e.parentElement.querySelectorAll("span")[1].innerHTML,
+      e.src
+    );
   });
 }
 
@@ -128,7 +165,7 @@ if (a) {
 }
 
 var counting = function () {
-  var counters = document.querySelectorAll(".count h2");
+  var counters = document.querySelectorAll(".count .counting");
   var countersQuantity = counters.length;
   var counter = [];
 
@@ -160,6 +197,26 @@ var counting = function () {
 
 document.body.onload = counting();
 
+/*@ Bottom to Top Implementation*/
+window.onload = function () {
+  let btn = document.querySelector(".__b2top");
+  if (btn) {
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 290 ||
+        document.documentElement.scrollTop > 290
+      ) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    });
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+};
+
 /********* PROJECT PAGE **********/
 var prj = document.querySelectorAll(".works > .container")[0];
 
@@ -186,7 +243,7 @@ function appendProject(imgLink, title, goLink, projectRow, projectObject) {
 }
 
 if (prj) {
-  getJSON("./data/works.json", function (res) {
+  getJSON("./data/works-music.json", function (res) {
     var projectAObject = [];
     var projectBObject = [];
     var projectARow = prj.querySelectorAll(".project-container-a .row")[0];
@@ -216,7 +273,7 @@ if (prj) {
   });
 
   /* <div class="col-md-4">
-  <img src="images/projects/mycreations/ashbe-alo-fire.jpeg" width="100%" alt="Saad Al Amin Projects">
-  <p>Ashbe Alo Fire <a href="" class="float-end btn py-0 px-1 btn-success">View</a></p>
-</div> */
+   <img src="images/projects/mycreations/ashbe-alo-fire.jpeg" width="100%" alt="Saad Al Amin Projects">
+   <p>Ashbe Alo Fire <a href="" class="float-end btn py-0 px-1 btn-success">View</a></p>
+ </div> */
 }
