@@ -4,7 +4,7 @@
 
 Website of Saad Al Amin  
 `Developed by Mohammad Sefatullah`  
-`Last updated: 2023-10-05 (YYYY-MM-DD)`  
+`Last updated: 2023-11-24 (YYYY-MM-DD)`  
 [Visit Website](https://saadalamin.github.io/)
 
 ## For Developers
@@ -15,32 +15,31 @@ Written by Mohammad Sefatullah for Future Developers as a reference. As they can
 
 > - styles
 
-    &emsp; |__ style.css
-    &emsp; |__ bootstrap.min.css
+    --------- |__ style.css
+    --------- |__ bootstrap.min.css
 
 > - scripts
 
-    &emsp; |__ script.js
+    --------- |__ script.js
 
 > - images
 
-    &emsp; |__ icons
-    &emsp; |__ persons
-    &emsp; |__ companies
-    &emsp; |__ posts
-    &emsp; |__ works
-    &emsp; |__ interface
+    --------- |__ icons
+    --------- |__ persons
+    --------- |__ companies
+    --------- |__ posts
+    --------- |__ works
+    --------- |__ interface
 
 > - data
 
-    &emsp; |__ press.json
-    &emsp; |__ works-music.json
+    --------- |__ press.json
+    --------- |__ works-music.json
 
 > - index.html
 > - about.html
 > - works.html
 > - blog.html
-> - contact.html
 
 ### Construction of Head Tag
 
@@ -62,16 +61,16 @@ Written by Mohammad Sefatullah for Future Developers as a reference. As they can
 > - Hero Section `(.first)`
 > - Main Page `(.home)`
 
-     &emsp; |__ Press Release `()`
-     &emsp; |__ Features `(.features)`
-     &emsp; |__ Counting `(.count)`
-     &emsp; |__ Others in One `()`
-     &emsp;&emsp;&emsp; |__ Experience `(.experience-container)`
-     &emsp;&emsp;&emsp; |__ Skills `(.skills-container)`
-     &emsp;&emsp;&emsp; |__ Education `(.education-container)`
-     &emsp;&emsp;&emsp; |__ Certifications `(.certifications-container)`
-     &emsp;&emsp;&emsp; |__ Publications `(.publications-container)`
-     &emsp;&emsp;&emsp; |__ Awards `(.awards-container)`
+     --------- |__ Press Release `()`
+     --------- |__ Features `(.features)`
+     --------- |__ Counting `(.count)`
+     --------- |__ Others in One `()`
+     --------------------------- |__ Experience `(.experience-container)`
+     --------------------------- |__ Skills `(.skills-container)`
+     --------------------------- |__ Education `(.education-container)`
+     --------------------------- |__ Certifications `(.certifications-container)`
+     --------------------------- |__ Publications `(.publications-container)`
+     --------------------------- |__ Awards `(.awards-container)`
 
 > - Footer `()`
 
