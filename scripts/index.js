@@ -80,8 +80,12 @@ var modalPressConfig = function () {
 var pressPostsLoad = function () {
   getJSON("./data/press.json", function (data) {
     var t = data;
+    t = t.sort(
+      // format accepted : '24 Dec 2023'
+      (a, b) => new Date(b.date.split(" ").reverse().join(" ")) - new Date(a.date.split(" ").reverse().join(" "))
+    );
     var o = "";
-    for (let e = 0; e < t.length; e++) {
+    for (let e = 0; e < 4; e++) {
       o +=
         `<a class="post col-12 col-sm-6 col-lg-3"
       href="` +
