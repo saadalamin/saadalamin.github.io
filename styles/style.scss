@@ -750,3 +750,22 @@ footer {
     }
   }
 }
+.__alert {
+  position: fixed;
+  bottom: 10px;
+  left: 15px;
+  width: fit-content;
+  background-color: rgba($primary-color, 0.5);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 10px 0 rgba(150,144,162,.1);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  z-index: 10000000;
+  border-radius: 0.7rem;
+  p,a{
+    margin: 0;
+    color: inherit;
+    font-family: Roboto, sans-serif;
+  }
+}
