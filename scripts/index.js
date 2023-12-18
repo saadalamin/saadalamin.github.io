@@ -82,7 +82,9 @@ var pressPostsLoad = function () {
     var t = data;
     t = t.sort(
       // format accepted : '24 Dec 2023'
-      (a, b) => new Date(b.date.split(" ").reverse().join(" ")) - new Date(a.date.split(" ").reverse().join(" "))
+      (a, b) =>
+        new Date(b.date.split(" ").reverse().join(" ")) -
+        new Date(a.date.split(" ").reverse().join(" "))
     );
     var o = "";
     for (let e = 0; e < 4; e++) {
@@ -113,7 +115,7 @@ var pressPostsLoad = function () {
       '<hr><div class="seeMore col-12 col-sm-6 col-lg-3"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForPress" onclick="modalPressConfig()"><button class="btn">Browse More +</button></a></div>';
   });
 };
-pressPostsLoad();
+if (document.querySelectorAll(".posts-a")[0]) pressPostsLoad();
 if (elm) {
   elm.forEach((e) => {
     e.title = e.innerText;
