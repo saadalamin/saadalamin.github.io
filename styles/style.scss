@@ -127,9 +127,24 @@ main {
   width: 100%;
   height: fit-content;
   min-height: 95vh;
-  background-color: rgba($primary-color, 0.4);
+  background-color: rgba($primary-color, 0.45);
   .intro {
     padding: 85px 0;
+    animation: animate1 0.56s ease;
+    @keyframes animate1 {
+      0% {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(50px);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
     h2 {
       font-size: 3.5rem;
       margin-bottom: 0;
@@ -480,6 +495,9 @@ main {
 
 /*** ABOUT PAGE ***/
 .about {
+  & * {
+    font-family: "Roboto", sans-serif !important;
+  }
   .title {
     margin-left: 0;
   }

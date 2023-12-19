@@ -203,8 +203,8 @@ var counting = function () {
 
 document.body.onload = counting();
 
-/*@ Bottom to Top Implementation*/
 window.onload = function () {
+  /*@ Bottom to Top Implementation*/
   let btn = document.querySelector(".__b2top");
   if (btn) {
     window.addEventListener("scroll", () => {

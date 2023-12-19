@@ -128,10 +128,25 @@ main {
   height: -moz-fit-content;
   height: fit-content;
   min-height: 95vh;
-  background-color: rgba(24, 25, 26, 0.4);
+  background-color: rgba(24, 25, 26, 0.45);
 }
 .first .intro {
   padding: 85px 0;
+  animation: animate1 0.56s ease;
+}
+@keyframes animate1 {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 .first .intro h2 {
   font-size: 3.5rem;
@@ -472,6 +487,9 @@ main {
 }
 
 /*** ABOUT PAGE ***/
+.about * {
+  font-family: "Roboto", sans-serif !important;
+}
 .about .title {
   margin-left: 0;
 }
