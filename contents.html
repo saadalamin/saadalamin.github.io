@@ -24,17 +24,7 @@
     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script>
-        const token = "EAAFc1qSZApA0BO82tGKy8h3TgRqZBzFvliGl4sgHhclIZAIzcl1wUo7MS5igxv2O5sqmJ34aBxuEDVLSdFY6yK14xC0jwfxkI9h1Hj3AcrQNG1Ssc56rBCgA8DkxchjKe3tCMiZAFmSlyPn9xSszeL72Sj2MhRLv3yZBe38jPZBn2cxIiZBNlSZAo07IbJBBErbCGRiJ7bGIH21H4FYJ";
-        fetch(`https://graph.facebook.com/me/videos?access_token=${token}`)
-            .then((res) => res.json())
-            .then((d) => {
-                console.log(d);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    </script>
+        <script src="scripts/contents.js"></script>
 </head>
 
 <body>
@@ -95,8 +85,16 @@
     </nav>
 
     <!-- __MAIN_CONTAINER -->
-    <main class="contents">
-        <!-- https://graph.facebook.com/v2.8/203511053776284/feed?fields=id,name,message,story,created_time,link,description,caption,attachments{media,type,subattachments}&limit=100&access_token=XXXXXXXXXXX&format=json -->
+    <main class="contents" style="min-height: 95vh;">
+        <div class="container py-5">
+            <div id="loading" class="text-center pt-5">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <div class="row" id="contents">
+            </div>
+        </div>
     </main>
 
     <!-- __FOOTER_CONTAINER -->
@@ -120,18 +118,20 @@
     </footer>
 
     <!-- __MODAL -->
-    <div class="modal fade" id="modalMain" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" style="width: fit-content;">
+    <div class="modal fade modal-lg" id="modalMain" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel"
+        onclick="document.getElementById('modalMain').querySelector('video').pause();" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" style="width: fit-content;">
             <div class="modal-content bg-light">
                 <div class="modal-header">
                     <button type="button" class="btn-close bg-white p-1" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center text-black p-0">
-                    <img loading="lazy" alt="works" class="image" style="max-width: 400px;">
-                    <h5 class="title-post mt-3 mb-3 px-4 text-start">Name</h5>
-                    <p class="px-4 text-start">Description</p>
+                    <h5 class="title-post mt-3 mb-3 px-4 text-start">Untitled</h5>
+                    <div style="background-color: #000;">
+                        <video src="" controls style="height: 85vh;min-height: 500px;max-width: 450px;"
+                            autoplay></video>
+                    </div>
                 </div>
             </div>
         </div>
