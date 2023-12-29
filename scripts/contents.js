@@ -6,9 +6,9 @@ fetch(
  .then((res) => res.json())
  .then((d) => {
   let contents = "";
-  console.log(d);
   d.data.map((e) => {
-   if (!e.source || !e.views) return;
+   if (!e.source) return;
+   if(!e.title && !e.description && !e.views) return;
    let title = e.title?.replace(/"/g, "&quot;") || "Untitled";
    contents += `
             <div class="col-md-6 col-lg-4 mb-3">
@@ -37,7 +37,7 @@ fetch(
                               : ""
                             } 
                             <p class="card-text m-0"><small>${
-                             e.description.replace(
+                             e.description?.replace(
                               /#(\w+)/g,
                               '<a href="https://www.facebook.com/hashtag/$1" target="_blank" class="text-decoration-none">#$1</a>'
                              ) || "No description"
