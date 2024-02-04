@@ -1,6 +1,67 @@
 import React from "react";
+import getJSON from "../../utils/getJSON";
 
 function Projects() {
+ React.useEffect(() => {
+  function configProjects() {
+   var prj = document.querySelectorAll(".works > .container")[0];
+
+   function appendProject(imgLink, title, goLink, projectRow, projectObject) {
+    var a = document.createElement("div");
+    var b = document.createElement("img");
+    var c = document.createElement("p");
+    var d = document.createElement("a");
+    a.classList.add("col-md-4");
+    b.src = "/images/works/" + imgLink;
+    b.alt = "Saad Al Amin Projects";
+    b.title = title.toUpperCase();
+    b.style.width = "100%";
+    c.innerHTML = title;
+    d.href = goLink;
+    d.className = "float-end btn py-1 px-2 btn-success";
+    d.style.fontSize = "0.8rem";
+    d.innerHTML = "View";
+    d.target = "_blank";
+    a.appendChild(b);
+    a.appendChild(c);
+    c.appendChild(d);
+    projectRow.appendChild(a);
+    projectObject.push(a);
+   }
+
+   if (prj) {
+    getJSON("/data/works-music.json", function (res) {
+     var projectAObject = [];
+     var projectBObject = [];
+     var projectARow = prj.querySelectorAll(".project-container-a .row")[0];
+     var projectBRow = prj.querySelectorAll(".project-container-b .row")[0];
+
+     for (const i in res) {
+      if (Object.hasOwnProperty.call(res, i)) {
+       if (res[i].dir == "musicvideos") {
+        appendProject(
+         "musicvideos/" + res[i].src,
+         res[i].title,
+         res[i].link,
+         projectARow,
+         projectAObject
+        );
+       } else if (res[i].dir == "mycreations") {
+        appendProject(
+         "mycreations/" + res[i].src,
+         res[i].title,
+         res[i].link,
+         projectBRow,
+         projectBObject
+        );
+       }
+      }
+     }
+    });
+   }
+  }
+  configProjects();
+ }, []);
  return (
   <div>
    <h4 className="title">Music Videos</h4>
