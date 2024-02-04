@@ -1,28 +1,30 @@
 {
-  "name": "saad-al-amin",
-  "version": "1.0.0",
-  "description": "This is a official website.",
-  "main": "scripts/index.js",
+  "name": "saadalamin",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "sass": "sass ./styles/style.scss ./styles/style.css",
-    "sass:watch": "sass --watch ./styles/style.scss ./styles/style.css"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saadalamin/saadalamin.github.io.git"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.22.0"
   },
-  "keywords": [
-    "Saad Al Amin",
-    "Official",
-    "Website"
-  ],
-  "author": "Saad Al Amin",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/saadalamin/saadalamin.github.io/issues"
-  },
-  "homepage": "https://github.com/saadalamin/saadalamin.github.io#readme",
   "devDependencies": {
-    "sass": "^1.63.6"
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.1",
+    "vite": "^5.0.8"
   }
 }

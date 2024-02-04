@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -16,643 +16,70 @@
   <meta name="author" content="Saad Al Amin" />
 
   <!-- ICON -->
-  <link rel="shortcut icon" type="img/vnd.microsoft.icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="images/icons/favicon/site.webmanifest" />
+  <link rel="shortcut icon" type="img/vnd.microsoft.icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/images/icons/favicon/site.webmanifest" />
 
   <!--[if lt IE 9]>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <![endif]-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
 
   <meta name="google-site-verification" content="gA5orYWccF-_PmG9Zj4c62ThwuKU2wAuTSitDVV69YM" />
 
   <!-- FB PREVIEW -->
   <meta property="og:site_name" content="Saad Al Amin" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="SAAD AL AMIN - Official Website" />
+  <meta property="og:title" content="Saad Al Amin - Official Website" />
   <meta property="og:description"
     content="Saad Al Amin is a Bangladeshi artist, film maker and graphics designer born 3 August 2005 in Dhaka, Bangladesh." />
-  <meta property="og:image" content="images/interface/newcover.jpg" />
-  <meta property="og:url" content="https://saadalamin.github.io/" />
+  <meta property="og:image" content="/images/interface/mediaviewcover.jpg" />
+  <meta property="og:url" content="https://saadalamin.com/" />
 
   <!-- TWITTER PREVIEW -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SAAD AL AMIN - Official Website" />
+  <meta name="twitter:title" content="Saad Al Amin - Official Website" />
   <meta name="twitter:description"
     content="Saad Al Amin is a Bangladeshi artist, film maker and graphics designer born 3 August 2005 in Dhaka, Bangladesh." />
-  <meta name="twitter:image" content="images/interface/newcover.jpg" />
+  <meta name="twitter:image" content="/images/interface/newcover.jpg" />
   <meta name="twitter:site" content="@saadalamin" />
   <meta name="twitter:creator" content="@mosefatullah" />
 
   <!-- STYLESHEETS -->
-  <link rel="stylesheet" href="styles/bootstrap.min.css" />
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="/styles/bootstrap.min.css" />
 
-  <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
+
   <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "https://saadalamin.github.io/",
-        "name": "Saad Al Amin"
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://saadalamin.com/",
+          "name": "Saad Al Amin"
+        }
+    </script>
+
+  <script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
       }
+    }(window.location))
   </script>
 </head>
 
-<body class="bgImage">
-  <!-- __NAVBAR -->
-  <nav class="navbar">
-    <div class="container">
-      <a class="navbar-brand" href="/">
-        <img src="images/persons/saad2.jpg" alt="Saad Al Amin" width="35" height="35" />
-      </a>
-      <div class="d-lg-none dropdown">
-        <button class="nav-link mx-2" data-bs-toggle="dropdown">
-          <img src="images/icons/menu.png" alt="Menu" width="17" height="17" />
-        </button>
-        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
-          <li>
-            <a class="dropdown-item active" href="/">Home</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="works.html">Works</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="contents.html">Contents</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="blog.html">Blog</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="about.html">About</a>
-          </li>
-        </ul>
-      </div>
-      <ul class="desktop d-none d-lg-flex list-unstyled gap-5 m-0 text-uppercase">
-        <li>
-          <a class="active" href="/">Home</a>
-        </li>
-        <li>
-          <a href="works.html">Works</a>
-        </li>
-        <li>
-          <a href="contents.html">Contents</a>
-        </li>
-        <li>
-          <a href="blog.html">Blog</a>
-        </li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="https://www.google.com/search?q=saad+al+amin" target="_blank"><svg viewBox="0 0 24 24"
-              focusable="false" width="24" height="24" style="fill:white;margin-top:-5px">
-              <path
-                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-              </path>
-            </svg></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<body>
+  <div id="root"></div>
 
-  <!-- __FIRST -->
-  <div class="first w-100">
-    <div class="intro container">
-      <h2 class="fw-bolder mt-4">Saad Al Amin</h2>
-      <span class="badge bg-custom fw-normal p-2" style="width: fit-content;">Leader | Artist | Entrepreneur</span>
-      <p class="mt-4">Saad Al Amin is a Bangladeshi artist, film maker and graphics
-        designer born in Bangladesh. He is now working as a leading personality in tons of
-        activities. Saad is also a very well known personality in Bangladesh who has been working hard to make a
-        difference in Bangladesh.</p>
-      <a href="about.html" class="btn btn-dark p-2 px-4" style="width: fit-content;">Learn More <svg
-          xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-          class="bi bi-info-circle mb-1 ms-1" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-          <path
-            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-        </svg></a>
-    </div>
-  </div>
-
-  <!-- __MAIN_CONTAINER -->
-  <main class="home">
-    <div class="container py-md-5">
-      <!-- __PRESS_RELEASE -->
-      <h4 class="title">Press Release</h4>
-      <div class="posts-a row row-gap-4 mb-5"></div>
-    </div>
-    <div class="parallax bg-light">
-      <div class="container">
-        <div class="break"></div>
-        <!-- __FEATURES -->
-        <div class="features shadow row gap-5 justify-content-center text-center">
-          <section class="col-11 col-md-3">
-            <img src="images/icons/fa-solid-award.png" alt="Experience">
-            <h5>5+ Years Experience</h5>
-            <p>Founded Muktir Ghonta, Videophics. Worked as a Campus Ambassador at DMFF.</p>
-          </section>
-          <section class="col-11 col-md-3">
-            <img src="images/icons/award-star.png" alt="Acheivemnet">
-            <h5>Top Six Finalist</h5>
-            <p>Glocal Teen Hero Top Six Finalist 2022, Best Designer Award by Elan Records.</p>
-          </section>
-          <section class="col-11 col-md-3">
-            <img src="images/icons/verified.png" alt="Verification">
-            <h5>Goolge Verified</h5>
-            <p>He is verified by Google as a musical artist, film-maker and graphic designer.</p>
-          </section>
-        </div>
-        <br>
-        <!-- __COUNT -->
-        <div class="count shadow row row-gap-5 justify-content-center text-center">
-          <section class="col-12 col-md-3">
-            <h2 class="counting">27000+</h2>
-            <p>Audience</p>
-          </section>
-          <section class="col-12 col-md-3">
-            <h2 class="counting">300+</h2>
-            <p>Team Member</p>
-          </section>
-          <section class="col-12 col-md-3">
-            <h2>5M+</h2>
-            <p>Reached</p>
-          </section>
-        </div>
-        <div class="break"></div>
-      </div>
-    </div>
-
-    <div class="container pt-0 pt-md-5 pb-lg-5">
-      <!-- __ -->
-      <div class="container text-center p-0 mt-5" id="switch_btn" role="group" aria-label="Basic outlined example">
-        <button class="btn btn-sm btn-outline-light active m-1" aria-current="page">Experience</button>
-        <button class="btn btn-sm btn-outline-light m-1">Skills</button>
-        <button class="btn btn-sm btn-outline-light m-1">Education</button>
-        <button class="btn btn-sm btn-outline-light m-1">Certifications</button>
-        <button class="btn btn-sm btn-outline-light m-1">Publications</button>
-        <button class="btn btn-sm btn-outline-light m-1">Awards</button>
-        <button class="btn btn-sm btn-outline-light m-1">Languages</button>
-      </div>
-      <br>
-      <!-- __UNDER_SECTIONS -->
-      <div id="sections">
-        <section class="experience-container">
-          <!-- __EXPERIENCE -->
-          <h4 class="title">Experience</h4>
-          <div class="experience shadow">
-            <div class="box d-flex">
-              <img src="images/icons/muktir_ghonta.jpg" alt="Muktir Ghonta">
-              <div class="details">
-                <h3>Chief Executive Officer</h3>
-                <p>Muktir Ghonta</p>
-                <span>Nov 2018 - Present</span>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/videophics.jpg" alt="Videophics">
-              <div class="details">
-                <h3>Owner & Founder</h3>
-                <p>Videophics</p>
-                <span>Jan 2019 - Present</span>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/100mm.jpeg" alt="100 Million Mindset">
-              <div class="details">
-                <h3>Photographer & Graphics Designer</h3>
-                <p>100 Million Mindset</p>
-                <span>Aug 2022 - Present</span>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/chcl.jpeg" alt="Chalkboard">
-              <div class="details">
-                <h3>Graphics Design Artist</h3>
-                <p>Chalkboard Communications Ltd</p>
-                <span>Aug 2022 - Present</span>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/engoly.jpeg" alt="English Olympiad™">
-              <div class="details">
-                <h3>Campus Ambassador</h3>
-                <p>English Olympiad™</p>
-                <span>Aug 2022 - Present</span>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/millatpc.jpg" alt="Millat Photography">
-              <div class="details">
-                <h3>President & Founder</h3>
-                <p>Millat Photography Club</p>
-                <span>Nov 2022 - Present</span>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/cyc.jpg" alt="CYC">
-              <div class="details">
-                <h3>Founder</h3>
-                <p>Creative Youth Community</p>
-                <span>Dec 2022 - Present</span>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/youthci.jpg" alt="Youth Ambassador">
-              <div class="details">
-                <h3>Youth Ambassador</h3>
-                <p>Youth Career Institute</p>
-                <span>Jun 2023 - Present</span>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/sps.jpg" alt="Special Stars">
-              <div class="details">
-                <h3>Executive Director</h3>
-                <p>Special Stars</p>
-                <span>July 2023 - Present</span>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- __SKILLS -->
-        <section class="skills-container dn">
-          <h4 class="title">Skills</h4>
-          <div class="skills shadow">
-            <ul class="">
-              <li>Leadership</li>
-              <li>Film Making</li>
-              <li>Journalism</li>
-              <li>Volunteering</li>
-              <li>Graphic Design</li>
-              <li>Cinematography</li>
-              <li>Photography</li>
-              <li>Performing arts</li>
-              <li>Digital Marketing</li>
-            </ul>
-          </div>
-        </section>
-        <!-- __EDUCATION -->
-        <section class="education-container dn">
-          <h4 class="title">Education</h4>
-          <div class="education shadow">
-            <div class="box d-flex">
-              <img src="images/icons/tmkm.jpg" alt="Education">
-              <div class="details">
-                <h3>Tamirul Millat Kamil Madrasah</h3>
-                <p>HSC Level</p>
-                <span>2021 - 2023</span>
-                <span>A+</span>
-                <a href="https://www.linkedin.com/school/tmkm-edu/" target="_blank"
-                  class="btn btn-sm btn-primary">Visit</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/tmkm.jpg" alt="Education">
-              <div class="details">
-                <h3>Tamirul Millat Kamil Madrasah</h3>
-                <p>SSC Level</p>
-                <span>2019 - 2021</span>
-                <span>A+</span>
-                <a href="https://www.linkedin.com/school/tmkm-edu/" target="_blank"
-                  class="btn btn-sm btn-primary">Visit</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- __CERTIFICATIONS -->
-        <section class="certifications-container dn">
-          <h4 class="title">Certifications</h4>
-          <div class="certifications shadow">
-            <div class="box d-flex">
-              <img src="images/icons/google.jpg" alt="Certificate">
-              <div class="details">
-                <h3>Foundation of UX Course</h3>
-                <p>Google</p>
-                <span>Issued: Feb 2023</span>
-                <a href="https://coursera.org/verify/V4FPJQJYBDSC" target="_blank" class="btn btn-sm btn-primary">Show
-                  certificate</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/google.jpg" alt="Certificate">
-              <div class="details">
-                <h3>Fundamentals of Digital Marketing Course</h3>
-                <p>Google Digital Garage</p>
-                <span>Issued: May 2022</span>
-                <a href="https://learndigital.withgoogle.com/link/1qsdpcedm9s" target="_blank"
-                  class="btn btn-sm btn-primary">Show certificate</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/aspirelp.jpg" alt="Certificate">
-              <div class="details">
-                <h3>Online Leadership Course</h3>
-                <p>Aspire Institute</p>
-                <span>Issued: Mar 2023</span>
-                <a href="https://drive.google.com/file/d/1QzAbGU3-7bWX72cXot3slQStbll9TsgF/view?usp=share_link"
-                  target="_blank" class="btn btn-sm btn-primary">Show certificate</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/eduonix.jpg" alt="Certificate">
-              <div class="details">
-                <h3>Producing a Professional Short Film Course</h3>
-                <p>Eduonix</p>
-                <span>Issued: Jan 2022</span>
-                <a href="https://www.eduonix.com/certificate/9c27b8cdf8" target="_blank"
-                  class="btn btn-sm btn-primary">Show certificate</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/whocerti.jpg" alt="Certificate">
-              <div class="details">
-                <h3>Social Prescribing Course</h3>
-                <p>World Health Organization</p>
-                <span>Issued: May 2022</span>
-                <a href="https://openwho.org/verify/xopap-zoket-zezat-hasok-tevol" target="_blank"
-                  class="btn btn-sm btn-primary">Show certificate</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/hplife.jpg" alt="Certificate">
-              <div class="details">
-                <h3>Social Entrepreneurship Course</h3>
-                <p>Hp Life</p>
-                <span>Issued: May 2022</span>
-                <a href="https://drive.google.com/file/d/1tUF5ofz79vGN2C6-hzK427T-Uu9fvl6j/view?usp=sharing"
-                  target="_blank" class="btn btn-sm btn-primary">Show certificate</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/openlearn.jpg" alt="Certificate">
-              <div class="details">
-                <h3>Philosophy Course : the nature of persons</h3>
-                <p>The Open University</p>
-                <span>Issued: Jun 2022</span>
-                <a href="https://drive.google.com/file/d/10mPZCbPxY8HWMZyMRq4Z0V0ve6fXMLd9/view?usp=sharing"
-                  target="_blank" class="btn btn-sm btn-primary">Show certificate</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/openlearn.jpg" alt="Certificate">
-              <div class="details">
-                <h3>Emotion Course : an introductory picture</h3>
-                <p>The Open University</p>
-                <span>Issued: Jun 2022</span>
-                <a href="https://drive.google.com/file/d/1S8vRBeDL5r8a37Y5oRXEzg4ooM2ADrTO/view?usp=sharing"
-                  target="_blank" class="btn btn-sm btn-primary">Show certificate</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- __PUBLICATIONS -->
-        <section class="publications-container dn">
-          <h4 class="title">Publications</h4>
-          <div class="publications shadow">
-            <div class="box d-flex">
-              <img src="images/icons/publi1.png" alt="Publications">
-              <div class="details">
-                <h3>The mysteries of dark matter and dark energy</h3>
-                <p>Muktir Ghonta</p>
-                <span>Published on : Feb 20, 2023</span>
-                <a href="https://www.academia.edu/97167491/The_mysteries_of_dark_matter_and_dark_energy?source=swp_share"
-                  target="_blank" class="btn btn-sm btn-primary">Show the paper</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/publi2.png" alt="Publications">
-              <div class="details">
-                <h3>Ethics & Current Generation's relationship Culture</h3>
-                <p>Saad Al Amin</p>
-                <span>Published on : Mar, 2023</span>
-                <a href="https://www.researchgate.net/publication/369618403_Ethics_Current_Generation's_relationship_Culture"
-                  target="_blank" class="btn btn-sm btn-primary">Show the paper</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/publi3.png" alt="Publications">
-              <div class="details">
-                <h3>Bangladeshi Education System & International System's Gap</h3>
-                <p>Saad Al Amin</p>
-                <span>Published on : Mar, 2023</span>
-                <a href="https://www.researchgate.net/publication/369618543_Bangladeshi_Education_System_International_System's_Gap"
-                  target="_blank" class="btn btn-sm btn-primary">Show the paper</a>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/publi4.png" alt="Publications">
-              <div class="details">
-                <h3>The Spiritual and Cultural Significance of Ramadan</h3>
-                <p>Saad Al Amin</p>
-                <span>Published on : Mar, 2023</span>
-                <a href="https://www.researchgate.net/publication/369618517_The_Spiritual_and_Cultural_Significance_of_Ramadan"
-                  target="_blank" class="btn btn-sm btn-primary">Show the paper</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- __AWARDS -->
-        <section class="awards-container dn">
-          <h4 class="title">Awards</h4>
-          <div class="awards shadow">
-            <div class="box d-flex">
-              <img src="images/icons/gloclawa.jpg" alt="Award">
-              <div class="details">
-                <h3>Glocal Teen Hero Top Six Finalist 2022</h3>
-                <p>Glocal Pvt. Ltd</p>
-                <span>Issued: Dec 2022</span>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/elanreco.jpg" alt="Award">
-              <div class="details">
-                <h3>Best Designer Award</h3>
-                <p>Elan Records</p>
-                <span>Issued: Feb 2021</span>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- __LANGUAGES -->
-        <section class="languages-container dn">
-          <h4 class="title">Languages</h4>
-          <div class="languages shadow">
-            <div class="box d-flex">
-              <img src="images/icons/bnlang.png" alt="Language">
-              <div class="details">
-                <h3>Bangla</h3>
-                <p>Native or bilingual proficiency</p>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/enlang.png" alt="Language">
-              <div class="details">
-                <h3>English</h3>
-                <p>Professional working proficiency</p>
-              </div>
-            </div>
-            <hr>
-            <div class="box d-flex">
-              <img src="images/icons/hnlang.png" alt="Language">
-              <div class="details">
-                <h3>Hindi</h3>
-                <p>Elementary proficiency</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <br>
-      <br>
-      <!-- __WORKED_WITH -->
-      <h4 class="title mt-5">Worked with</h4>
-      <div class="workedwith justify-content-center text-center">
-        <div class="wrapper">
-          <div class="item"><img alt="Company" src="images/companies/1.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/2.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/3.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/4.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/5.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/6.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/7.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/8.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/9.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/10.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/11.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/12.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/13.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/14.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/15.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/16.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/17.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/18.jpg"></div>
-          <div class="item"><img alt="Company" src="images/companies/19.jpg"></div>
-        </div>
-
-      </div>
-      <br><br>
-      <!-- __SHOW_ME -->
-      <div class="showme mx-1 shadow row gap-5 justify-content-center text-center">
-        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div>
-                <img src="images/icons/google.png" alt="Icon">
-                <h5>Google</h5>
-                <p>Verified as Musical artist</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div>
-                <img src="images/icons/youtube.png" alt="Icon">
-                <h5>Youtube</h5>
-                <p>Recognized as Artist</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div>
-                <img src="images/icons/spotify.png" alt="Icon">
-                <h5>Spotify</h5>
-                <p>Verified as Artist</p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-
-
-    </div>
-  </main>
-
-  <!-- __FOOTER_CONTAINER -->
-  <footer class="py-5">
-    <div class="container">
-      <hr>
-      <div class="d-flex justify-content-between">
-        <p>Created by <a class="link-light" href="https://www.facebook.com/mosefatullah">Sefatullah</a>. All rights
-          reserved.</p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a href="https://www.linkedin.com/in/saadalamin"><svg xmlns="http://www.w3.org/2000/svg"
-                width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                <path
-                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-              </svg></a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
-  <!-- __MODAL -->
-  <div class="modal fade" id="modalForPress" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-scrollable">
-      <div class="modal-content bg-light text-black">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modalLabel">Press Release</h1>
-          <button type="button" class="btn-close bg-white p-1" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body list-group p-0 text-center"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- __BOTTOM_TO_TOP -->
-  <div class="__b2top position-fixed end-0 bottom-0 m-3 btn bg-transparent dn">
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" class="bi bi-arrow-up-square-fill"
-      viewBox="0 0 16 16">
-      <path
-        d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
-    </svg>
-  </div>
-
-
-  <!--<div class="__alert">
-    
-  </div>-->
-
-  <!-- __SCRIPTS -->
-  <script defer type="text/javascript" src="scripts/index.js"></script>
-
+  <!-- SCRIPTS -->
+  <script type="module" src="/src/main.jsx"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
