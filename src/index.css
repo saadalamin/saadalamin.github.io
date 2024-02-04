@@ -760,6 +760,11 @@ footer {
     background-position: 0 20%;
   }
 }
+@media screen and (min-width: 1400px) {
+  .works .banner {
+    background-position: 0 40%;
+  }
+}
 .__alert {
   position: fixed;
   bottom: 10px;

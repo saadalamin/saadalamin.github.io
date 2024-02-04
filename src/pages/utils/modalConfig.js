@@ -57,7 +57,6 @@ export default function modalConfig() {
  }
  if (elm4) {
   elm4.forEach((e) => {
-   console.log(e);
    modalConfig(
     e,
     e.parentElement.querySelectorAll("span")[0].innerHTML,

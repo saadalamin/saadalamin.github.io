@@ -23,7 +23,7 @@ function Hidden() {
        ></button>
       </div>
       <div className="modal-body p-4">
-       <img
+       <mg
         alt="about"
         className="image rounded-2 mb-3"
         style={{ width: "100px", height: "100px" }}

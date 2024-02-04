@@ -8,7 +8,7 @@ function PressRelease() {
    */
   function modalPressConfig() {
    var modalPress = document.getElementById("modalForPress");
-   getJSON("https://saadalamin.com/data/press.json", function (data) {
+   getJSON("/data/press.json", function (data) {
     var t = data;
     var o = "";
     for (let e = 0; e < t.length; e++) {

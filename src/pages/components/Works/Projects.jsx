@@ -11,12 +11,13 @@ function Projects() {
     var b = document.createElement("img");
     var c = document.createElement("p");
     var d = document.createElement("a");
-    a.classList.add("col-md-4");
+    a.className = "col-lg-2 col-xl-4";
     b.src = "/images/works/" + imgLink;
     b.alt = "Saad Al Amin Projects";
     b.title = title.toUpperCase();
     b.style.width = "100%";
     c.innerHTML = title;
+    c.className = "d-flex justify-content-between";
     d.href = goLink;
     d.className = "float-end btn py-1 px-2 btn-success";
     d.style.fontSize = "0.8rem";
@@ -207,6 +208,17 @@ function Projects() {
         height="315"
         src="https://www.youtube.com/embed/54mSnqleMp0"
         title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+       ></iframe>
+      </div>
+      <div className="col-md-4">
+       <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/t-eEGaxhhCk"
+        title="Abu Adam - Lost | Official Nasheed Video (Vocals Only)"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
