@@ -1,0 +1,52 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+ <url>
+<<<<<<< HEAD:public/sitemap.xml
+    <loc>https://saadalamin.com</loc>
+=======
+    <loc>https://saadalamin.com/</loc>
+>>>>>>> 96279bfb87e0959cee50dfe94418ec518d6bf5c4:sitemap.xml
+    <lastmod>2023-07-31T17:11:59+00:00</lastmod>
+    <priority>1.00</priority>
+ </url>
+ <url>
+<<<<<<< HEAD:public/sitemap.xml
+      <loc>https://saadalamin.comabout.html</loc>
+=======
+      <loc>https://saadalamin.com/about.html</loc>
+>>>>>>> 96279bfb87e0959cee50dfe94418ec518d6bf5c4:sitemap.xml
+      <lastmod>2023-07-31T17:11:59+00:00</lastmod>
+      <priority>0.80</priority>
+ </url>
+ <url>
+<<<<<<< HEAD:public/sitemap.xml
+      <loc>https://saadalamin.comblog.html</loc>
+=======
+      <loc>https://saadalamin.com/blog.html</loc>
+>>>>>>> 96279bfb87e0959cee50dfe94418ec518d6bf5c4:sitemap.xml
+      <lastmod>2023-07-31T17:11:59+00:00</lastmod>
+      <priority>0.80</priority>
+ </url>
+ <url>
+<<<<<<< HEAD:public/sitemap.xml
+      <loc>https://saadalamin.comworks.html</loc>
+=======
+      <loc>https://saadalamin.com/works.html</loc>
+>>>>>>> 96279bfb87e0959cee50dfe94418ec518d6bf5c4:sitemap.xml
+      <lastmod>2023-07-31T17:11:59+00:00</lastmod>
+      <priority>0.80</priority>
+ </url>
+ <url>
+      <loc>https://saadalamin.com/contents.html</loc>
+      <lastmod>2023-07-31T17:11:59+00:00</lastmod>
+      <priority>0.80</priority>
+ </url>
+ <!--
+  Blog Posts
+ -->
+ <url>
+     <loc>https://saadalamin.blogspot.com/2023/01/the-history-of-poster-design.html</loc>
+     <lastmod>2024-02-01T17:11:59+00:00</lastmod>
+     <priority>0.64</priority>
+ </url>
+</urlset>
