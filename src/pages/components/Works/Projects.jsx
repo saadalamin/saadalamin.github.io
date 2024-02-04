@@ -2,7 +2,7 @@ import React from "react";
 
 function Projects() {
  return (
-  <>
+  <div>
    <h4 className="title">Music Videos</h4>
    <div className="project-container-a">
     <div className="container">
@@ -587,7 +587,7 @@ function Projects() {
      </div>
     </div>
    </div>
-  </>
+  </div>
  );
 }
 
