@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Nibedon",
+    "dir": "musicvideos",
+    "src": "nibedon.jpeg",
+    "link": "https://www.youtube.com/watch?v=0yD8Lvs-JYE"
+  },
+  {
+    "title": "Ramadan Kareem",
+    "dir": "musicvideos",
+    "src": "ramjan.jpg",
+    "link": "https://www.youtube.com/watch?v=uj60JrZcvts"
+  },
+  {
+    "title": "Tar Kotha Vebe",
+    "dir": "musicvideos",
+    "src": "tarkothavebe.jpeg",
+    "link": "https://www.youtube.com/watch?v=0lLB3LjEQQA"
+  },
+  {
+    "title": "Rojar Barta",
+    "dir": "musicvideos",
+    "src": "rojarbarta.jpeg",
+    "link": "https://www.youtube.com/watch?v=fmSPNu0mhAw"
+  },
+  {
+    "title": "Shadhinota",
+    "dir": "musicvideos",
+    "src": "shadinota.jpg",
+    "link": "https://www.youtube.com/watch?v=PUcLGTI3JFg"
+  },
+  {
+    "title": "Dishehara Pothik",
+    "dir": "musicvideos",
+    "src": "dishehara.jpeg",
+    "link": "https://www.youtube.com/watch?v=Vx_Qo7Jy8Io"
+  },
+  {
+    "title": "Classroom",
+    "dir": "musicvideos",
+    "src": "classroom.webp",
+    "link": "https://www.youtube.com/watch?v=3C9TjWwTSsM"
+  },
+  {
+    "title": "Doyamoy",
+    "dir": "musicvideos",
+    "src": "doyamoy.webp",
+    "link": "https://www.youtube.com/watch?v=OdS5Ei39df8"
+  }
+]
