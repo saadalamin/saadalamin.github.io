@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import modalConfig from "./utils/modalConfig";
+import modalConfig from "./scripts/modalConfig";
 
 // Components
 import Navbar from "./components/Navbar";

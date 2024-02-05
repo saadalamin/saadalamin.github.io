@@ -1,65 +1,18 @@
 import React from "react";
-import getJSON from "../../utils/getJSON";
+import getMusicVideos from "../../scripts/getMusicvideos";
 
 function Projects() {
+ const [musicVideos, setMusicVideos] = React.useState([]);
  React.useEffect(() => {
   function configProjects() {
-   var prj = document.querySelectorAll(".works > .container")[0];
-
-   function appendProject(imgLink, title, goLink, projectRow, projectObject) {
-    var a = document.createElement("div");
-    var b = document.createElement("img");
-    var c = document.createElement("p");
-    var d = document.createElement("a");
-    a.className = "col-lg-2 col-xl-4";
-    b.src = "/images/works/" + imgLink;
-    b.alt = "Saad Al Amin Projects";
-    b.title = title.toUpperCase();
-    b.style.width = "100%";
-    c.innerHTML = title;
-    c.className = "d-flex justify-content-between";
-    d.href = goLink;
-    d.className = "float-end btn py-1 px-2 btn-success";
-    d.style.fontSize = "0.8rem";
-    d.innerHTML = "View";
-    d.target = "_blank";
-    a.appendChild(b);
-    a.appendChild(c);
-    c.appendChild(d);
-    projectRow.appendChild(a);
-    projectObject.push(a);
-   }
-
-   if (prj) {
-    getJSON("/data/works-music.json", function (res) {
-     var projectAObject = [];
-     var projectBObject = [];
-     var projectARow = prj.querySelectorAll(".project-container-a .row")[0];
-     var projectBRow = prj.querySelectorAll(".project-container-b .row")[0];
-
-     for (const i in res) {
-      if (Object.hasOwnProperty.call(res, i)) {
-       if (res[i].dir == "musicvideos") {
-        appendProject(
-         "musicvideos/" + res[i].src,
-         res[i].title,
-         res[i].link,
-         projectARow,
-         projectAObject
-        );
-       } else if (res[i].dir == "mycreations") {
-        appendProject(
-         "mycreations/" + res[i].src,
-         res[i].title,
-         res[i].link,
-         projectBRow,
-         projectBObject
-        );
-       }
-      }
-     }
-    });
-   }
+   getMusicVideos(
+    (res) => {
+     setMusicVideos(res);
+    },
+    (err) => {
+     console.info(err);
+    }
+   );
   }
   configProjects();
  }, []);
@@ -68,7 +21,37 @@ function Projects() {
    <h4 className="title">Music Videos</h4>
    <div className="project-container-a">
     <div className="container">
-     <div className="row row-gap-2"></div>
+     <div className="row row-gap-2">
+      {musicVideos.map((mv, i) => {
+       return (
+        <div className="col-lg-2 col-xl-4" key={i}>
+         <img
+          className="w-100"
+          style={{
+           minHeight: "200px",
+          }}
+          src={mv.src}
+          alt="Thumbnail - Music Video"
+          title={mv.title}
+         />
+         <p className="d-flex justify-content-between">
+          <span>{mv.title}</span>
+          <a
+           href={mv.link}
+           className="float-end btn py-1 px-2 btn-success"
+           target="_blank"
+           rel="noreferrer"
+           style={{
+            fontSize: "0.8rem",
+           }}
+          >
+           Watch
+          </a>
+         </p>
+        </div>
+       );
+      })}
+     </div>
     </div>
    </div>
    <div className="break"></div>
@@ -554,108 +537,73 @@ function Projects() {
       <div className="col-md-4">
        <img
         loading="lazy"
-        src="/images/works/social/1.jpg"
+        src="https://firebasestorage.googleapis.com/v0/b/saadalamindev.appspot.com/o/works%2Fsocial%2F1.jpg?alt=media&token=31f160f1-7148-473d-97cf-3e0a06fe0b3c"
         alt="Social"
         data-bs-toggle="modal"
         data-bs-target="#modalMain"
        />
        <span>After Working at Ramadan Iftar Donation Project 2022</span>
-       <span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-        voluptatem in beatae eligendi adipisci ut harum rem recusandae quam
-        dolorem, quis nulla neque aliquid. Earum voluptatum ipsa perspiciatis
-        odio voluptas?
-       </span>
+       <span></span>
       </div>
       <div className="col-md-4">
        <img
-        src="/images/works/social/2.jpg"
+        src="https://firebasestorage.googleapis.com/v0/b/saadalamindev.appspot.com/o/works%2Fsocial%2F2.jpg?alt=media&token=4fb86d1a-e5ce-4680-9a9d-2d8ded3774fc"
         alt="Social"
         data-bs-toggle="modal"
         data-bs-target="#modalMain"
        />
        <span>After Working at Ramadan Iftar Donation Project 2022</span>
-       <span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-        voluptatem in beatae eligendi adipisci ut harum rem recusandae quam
-        dolorem, quis nulla neque aliquid. Earum voluptatum ipsa perspiciatis
-        odio voluptas?
-       </span>
+       <span></span>
       </div>
       <div className="col-md-4">
        <img
-        src="/images/works/social/3.jpg"
+        src="https://firebasestorage.googleapis.com/v0/b/saadalamindev.appspot.com/o/works%2Fsocial%2F3.jpg?alt=media&token=0b95f4cb-da28-457b-b45b-a03dad7b25cb"
         alt="Social"
         data-bs-toggle="modal"
         data-bs-target="#modalMain"
        />
        <span>After Working at Ramadan Iftar Donation Project 2022</span>
-       <span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-        voluptatem in beatae eligendi adipisci ut harum rem recusandae quam
-        dolorem, quis nulla neque aliquid. Earum voluptatum ipsa perspiciatis
-        odio voluptas?
-       </span>
+       <span></span>
       </div>
       <div className="col-md-4">
        <img
-        src="/images/works/social/4.jpg"
+        src="https://firebasestorage.googleapis.com/v0/b/saadalamindev.appspot.com/o/works%2Fsocial%2F4.jpg?alt=media&token=f722c59b-9382-4dba-b59e-6cc5d20a1af9"
         alt="Social"
         data-bs-toggle="modal"
         data-bs-target="#modalMain"
        />
        <span>After Working at Ramadan Iftar Donation Project 2022</span>
-       <span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-        voluptatem in beatae eligendi adipisci ut harum rem recusandae quam
-        dolorem, quis nulla neque aliquid. Earum voluptatum ipsa perspiciatis
-        odio voluptas?
-       </span>
+       <span></span>
       </div>
       <div className="col-md-4">
        <img
-        src="/images/works/social/5.jpg"
+        src="https://firebasestorage.googleapis.com/v0/b/saadalamindev.appspot.com/o/works%2Fsocial%2F5.jpg?alt=media&token=3325d778-33c4-4713-a3af-547f094ed5eb"
         alt="Social"
         data-bs-toggle="modal"
         data-bs-target="#modalMain"
        />
        <span>After Working at Ramadan Iftar Donation Project 2022</span>
-       <span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-        voluptatem in beatae eligendi adipisci ut harum rem recusandae quam
-        dolorem, quis nulla neque aliquid. Earum voluptatum ipsa perspiciatis
-        odio voluptas?
-       </span>
+       <span></span>
       </div>
       <div className="col-md-4">
        <img
-        src="/images/works/social/6.jpg"
+        src="https://firebasestorage.googleapis.com/v0/b/saadalamindev.appspot.com/o/works%2Fsocial%2F6.jpg?alt=media&token=0794d2f0-c622-4311-a66e-0c60eb7a85cf"
         alt="Social"
         data-bs-toggle="modal"
         data-bs-target="#modalMain"
        />
        <span>After Working at Ramadan Iftar Donation Project 2022</span>
-       <span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-        voluptatem in beatae eligendi adipisci ut harum rem recusandae quam
-        dolorem, quis nulla neque aliquid. Earum voluptatum ipsa perspiciatis
-        odio voluptas?
-       </span>
+       <span></span>
       </div>
       <div className="col-md-4">
        <img
-        src="/images/works/social/7.jpg"
+        src="https://firebasestorage.googleapis.com/v0/b/saadalamindev.appspot.com/o/works%2Fsocial%2F7.jpg?alt=media&token=725131e8-e7dc-4e70-a572-f8b2e382206b"
         alt="Social"
         data-bs-toggle="modal"
         data-bs-target="#modalMain"
        />
        <span>After Working at Ramadan Iftar Donation Project 2022</span>
-       <span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
-        voluptatem in beatae eligendi adipisci ut harum rem recusandae quam
-        dolorem, quis nulla neque aliquid. Earum voluptatum ipsa perspiciatis
-        odio voluptas?
-       </span>
+       <span></span>
       </div>
      </div>
     </div>

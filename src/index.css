@@ -176,9 +176,13 @@ main {
   position: relative;
 }
 .home .posts-a .post img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-height: 300px;
   aspect-ratio: 16/9;
   object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.065);
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
 }
@@ -403,6 +407,11 @@ main {
 /*** WORKS PAGE ***/
 .works > * {
   font-family: sans-serif !important;
+}
+.works img {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
 }
 .works .break {
   height: 100px;
@@ -704,6 +713,10 @@ footer {
   z-index: 10000001;
   border-radius: 1rem 1rem 0 0;
   width: 100%;
+}
+#modalMain .modal-dialog,
+#modalForPress .modal-dialog {
+  min-width: 300px;
 }
 #modalMain .title-post,
 #modalForPress .title-post {

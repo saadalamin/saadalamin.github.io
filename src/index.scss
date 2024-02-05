@@ -172,9 +172,13 @@ main {
   .post {
    position: relative;
    img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-height: 300px;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.065);
     border-top-left-radius: 0.4rem;
     border-top-right-radius: 0.4rem;
     &:hover {
@@ -413,6 +417,11 @@ main {
 .works {
  & > * {
   font-family: sans-serif !important;
+ }
+ img {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
  }
  .break {
   height: 100px;
@@ -738,6 +747,9 @@ footer {
  z-index: 10000001;
  border-radius: 1rem 1rem 0 0;
  width: 100%;
+ .modal-dialog {
+  min-width: 300px;
+ }
  .title-post {
   margin: 0;
  }

@@ -9,10 +9,14 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist",
+    "deploy": "vite build && node deploy.js",
     "a": "gh-pages -d dist"
   },
   "dependencies": {
+    "@firebase/app": "^0.9.27",
+    "@firebase/database": "^1.0.3",
+    "@firebase/firestore": "^4.4.2",
+    "@firebase/storage": "^0.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

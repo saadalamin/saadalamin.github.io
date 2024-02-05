@@ -1,0 +1,80 @@
+{
+  "posts": {
+    "press": [
+      {
+        "title": "Saad Al Amin: The Young and Talented Artistic workaholic Waves in Bangladesh and Beyond",
+        "date": "16 Feb 2023",
+        "img": "press1.jpg",
+        "link": "https://www.issuewire.com/saad-al-amin-the-young-and-talented-artistic-workaholic-waves-in-bangladesh-and-beyond-1757978397256223"
+      },
+      {
+        "title": "News of Kishor Alo",
+        "date": "11 Jan 2023",
+        "img": "press2.jpeg",
+        "link": "https://www.kishoralo.com/bgkmjd27j4"
+      },
+      {
+        "title": "News of The Daily Star",
+        "date": "24 Dec 2022",
+        "img": "press3.jpeg",
+        "link": "https://www.thedailystar.net/business/organisation-news/press-releases/news/18-years-old-talha-zubair-awarded-glocal-teen-hero-bangladesh-2022-3203856?amp"
+      },
+      {
+        "title": "News of iculture BD",
+        "date": "19 Dec 2022",
+        "img": "press4.jpg",
+        "link": "https://www.iculturebd.com/2022/12/19/%E0%A6%A4%E0%A6%B0%E0%A7%81%E0%A6%A3-%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%A4%E0%A6%BE-%E0%A6%B8%E0%A6%BE%E0%A6%A6-%E0%A6%86%E0%A6%B2-%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%A8/"
+      },
+      {
+        "title": "Saad Al Amin: Glocal Teen Hero",
+        "date": "08 Dec 2023",
+        "img": "press4.jpg",
+        "link": "https://glocalteenhero.com/saad-al-amin/"
+      }
+    ]
+  },
+  "works": {
+    "musicvideos": [
+      {
+        "title": "Nibedon",
+        "src": "nibedon.jpeg",
+        "link": "https://www.youtube.com/watch?v=0yD8Lvs-JYE"
+      },
+      {
+        "title": "Ramadan Kareem",
+        "src": "ramjan.jpg",
+        "link": "https://www.youtube.com/watch?v=uj60JrZcvts"
+      },
+      {
+        "title": "Tar Kotha Vebe",
+        "src": "tarkothavebe.jpeg",
+        "link": "https://www.youtube.com/watch?v=0lLB3LjEQQA"
+      },
+      {
+        "title": "Rojar Barta",
+        "src": "rojarbarta.jpeg",
+        "link": "https://www.youtube.com/watch?v=fmSPNu0mhAw"
+      },
+      {
+        "title": "Shadhinota",
+        "src": "shadinota.jpg",
+        "link": "https://www.youtube.com/watch?v=PUcLGTI3JFg"
+      },
+      {
+        "title": "Dishehara Pothik",
+        "src": "dishehara.jpeg",
+        "link": "https://www.youtube.com/watch?v=Vx_Qo7Jy8Io"
+      },
+      {
+        "title": "Classroom",
+        "src": "classroom.webp",
+        "link": "https://www.youtube.com/watch?v=3C9TjWwTSsM"
+      },
+      {
+        "title": "Doyamoy",
+        "src": "doyamoy.webp",
+        "link": "https://www.youtube.com/watch?v=OdS5Ei39df8"
+      }
+    ]
+  }
+}

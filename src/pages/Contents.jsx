@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 // Components
 import Navbar from "./components/Navbar";
-import modalConfig from "./utils/modalConfig";
+import modalConfig from "./scripts/modalConfig";
 import Hidden from "./components/Contents/Hidden";
 
 function Contents() {
