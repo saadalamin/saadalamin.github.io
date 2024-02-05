@@ -15,7 +15,7 @@ export default function modalConfig() {
    if (e.querySelectorAll("p")[0] && customTitle === undefined)
     t = e.querySelectorAll("p")[0].innerHTML;
 
-   if (e.querySelectorAll("img")[0])
+   if (e.querySelectorAll("img")[0].src)
     document.querySelectorAll("#modalMain img")[0].src =
      e.querySelectorAll("img")[0].src;
    else if (src) document.querySelectorAll("#modalMain img")[0].src = src;
