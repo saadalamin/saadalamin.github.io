@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Works from "./pages/Works";
 import Contents from "./pages/Contents";
+import Admin from "./pages/Admin";
 
 import WithScrollback from "./pages/contexts/WithScrollback";
 
@@ -51,6 +52,14 @@ function App() {
       element={
        <WithScrollback>
         <Contents />
+       </WithScrollback>
+      }
+     />
+     <Route
+      path="/admin"
+      element={
+       <WithScrollback>
+        <Admin />
        </WithScrollback>
       }
      />

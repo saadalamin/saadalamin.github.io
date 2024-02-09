@@ -5,7 +5,7 @@
  */
 
 import { initializeApp } from "@firebase/app";
-/*import {
+import {
  getAuth,
  signInWithEmailAndPassword,
  signInWithPopup,
@@ -13,7 +13,7 @@ import { initializeApp } from "@firebase/app";
  onAuthStateChanged,
  signOut,
  deleteUser,
-} from "@firebase/auth";*/
+} from "@firebase/auth";
 import * as $fdb from "@firebase/database";
 import * as $fst from "@firebase/storage";
 import * as $fsr from "@firebase/firestore";
@@ -31,7 +31,7 @@ const firebaseConfig = {
 
 /** Root Supplying **/
 export const $firebase = initializeApp(firebaseConfig);
-//export const $firebase_auth = getAuth($firebase);
+export const $firebase_auth = getAuth($firebase);
 export const $firebase_database = $fdb.getDatabase($firebase);
 export const $firebase_storage = $fst.getStorage($firebase);
 export const $firebase_firestore = $fsr.getFirestore($firebase);
@@ -62,7 +62,7 @@ const $handling = (r, e) => {
 /****** Authentication ******/
 /***/
 /***/
-/*
+/***/
 
 export const $firebase_auth_check_admin = (result, error) => {
  $handling(
@@ -125,7 +125,7 @@ export const $firebase_auth_login_google = (result, e) => {
     result($firebase_auth.currentUser);
    } else {
     e(
-     "You are not an admin! Please contact with special stars administrators if you think it's a mistake."
+     "You are not permitted to log in as an admin! Please contact if you think it's a mistake."
     );
     deleteUser($firebase_auth.currentUser);
     $firebase_auth_logout(
@@ -171,7 +171,7 @@ export const $firebase_auth_onAuth = (result, error) => {
   error(e);
  }
 };
-*/
+
 /****** Database ******/
 /***/
 /***/
