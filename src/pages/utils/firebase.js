@@ -10,6 +10,7 @@ import {
  signInWithEmailAndPassword,
  signInWithPopup,
  GoogleAuthProvider,
+ GithubAuthProvider,
  onAuthStateChanged,
  signOut,
  deleteUser,
@@ -35,13 +36,7 @@ export const $firebase_auth = getAuth($firebase);
 export const $firebase_database = $fdb.getDatabase($firebase);
 export const $firebase_storage = $fst.getStorage($firebase);
 export const $firebase_firestore = $fsr.getFirestore($firebase);
-/*
-export const $firebase_auth_cuid = $firebase_auth.currentUser?.uid;
-export const $firebase_auth_cemail = $firebase_auth.currentUser?.email;
-export const $firebase_auth_cname = $firebase_auth.currentUser?.displayName;
-export const $firebase_auth_cphoto = $firebase_auth.currentUser?.photoURL;
-export const $firebase_auth_user = $firebase_auth.currentUser;
-*/
+
 /* export const $firebase_database_key = $fdb
   .push($fdb.ref($firebase_database))
   .key.substring(1);
@@ -140,6 +135,38 @@ export const $firebase_auth_login_google = (result, e) => {
  $handling(
   async () => {
    const provider = new GoogleAuthProvider();
+   provider.setCustomParameters({ prompt: "select_account" });
+   await signInWithPopup($firebase_auth, provider);
+   checkAdmin();
+  },
+  (error) => {
+   e(error);
+  }
+ );
+};
+
+export const $firebase_auth_github = (result, e) => {
+ function checkAdmin() {
+  $firebase_auth_check_admin((r) => {
+   if (r) {
+    result($firebase_auth.currentUser);
+   } else {
+    e(
+     "You are not permitted to log in as an admin! Please contact if you think it's a mistake."
+    );
+    deleteUser($firebase_auth.currentUser);
+    $firebase_auth_logout(
+     () => {},
+     (e) => {
+      e(e);
+     }
+    );
+   }
+  });
+ }
+ $handling(
+  async () => {
+   const provider = new GithubAuthProvider();
    provider.setCustomParameters({ prompt: "select_account" });
    await signInWithPopup($firebase_auth, provider);
    checkAdmin();

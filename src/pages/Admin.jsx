@@ -1,19 +1,27 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import Sitemap from "./components/Sitemap";
+import Nabvar from "./components/Navbar";
+
 import {
  $firebase_auth_check_admin,
  $firebase_auth_login_google,
+ $firebase_auth_github,
+ $firebase_auth_logout,
  $firebase_auth_onAuth,
 } from "./utils/firebase";
 
 function Admin() {
  const [isLoggedIn, setIsLoggedIn] = React.useState(null);
+ const [userName, setUserName] = React.useState(null);
  React.useEffect(() => {
   $firebase_auth_onAuth((user) => {
    if (user) {
     $firebase_auth_check_admin((r) => {
      if (r) {
       setIsLoggedIn(true);
+      setUserName(user.displayName);
      } else {
       setIsLoggedIn(false);
      }
@@ -29,33 +37,105 @@ function Admin() {
  }, []);
  return (
   <>
-   <h1>Admin</h1>
-   <p>Admin page</p>
-   {isLoggedIn === null && (
-    <>
-     <p>Loading...</p>
-    </>
-   )}
-   {isLoggedIn == false && (
-    <>
-     <button
-      onClick={() => {
-       $firebase_auth_login_google(
-        (user) => {
-         setIsLoggedIn(user ? true : false);
-        },
-        (e) => {
-         setIsLoggedIn(false);
-         alert(e);
-        }
-       );
-      }}
-     >
-      Login with Google
-     </button>
-    </>
-   )}
-   {isLoggedIn == true && <Sitemap />}
+   <Helmet>
+    <title>Admin</title>
+   </Helmet>
+   <Nabvar />
+   <div className="admin-container">
+    <div className="hero-section">
+     <h1>Admin</h1>
+     {isLoggedIn == true ? (
+      <>
+       <p className="text-muted">Logged in as {userName}</p>
+       <button
+        className="btn btn-danger btn-sm"
+        onClick={() => {
+         $firebase_auth_logout(
+          (user) => {
+           setIsLoggedIn(user ? true : false);
+          },
+          (e) => {
+           setIsLoggedIn(false);
+           alert(e);
+          }
+         );
+        }}
+       >
+        Logout
+       </button>
+      </>
+     ) : (
+      <p className="text-muted">Not logged in</p>
+     )}
+    </div>
+    <div className="container pt-5">
+     {isLoggedIn === null && (
+      <>
+       <p>Loading...</p>
+      </>
+     )}
+     {isLoggedIn == true && <Sitemap />}
+     {isLoggedIn == false && (
+      <div
+       style={{
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+       }}
+      >
+       <div
+        style={{
+         width: "100%",
+         maxWidth: "350px",
+         minHeight: "250px",
+         backgroundColor: "rgba(0, 0, 0, 0.1)",
+         padding: "10px",
+         borderRadius: "5px",
+         display: "flex",
+         flexDirection: "column",
+         alignItems: "center",
+         justifyContent: "center",
+        }}
+       >
+        <h3>Login</h3>
+        <button
+         className="btn btn-primary btn-sm mt-5"
+         onClick={() => {
+          $firebase_auth_login_google(
+           (user) => {
+            setIsLoggedIn(user ? true : false);
+           },
+           (e) => {
+            setIsLoggedIn(false);
+            alert(e);
+           }
+          );
+         }}
+        >
+         Login with Google
+        </button>
+        <button
+         className="btn btn-secondary btn-sm mt-3"
+         onClick={() => {
+          $firebase_auth_github(
+           (user) => {
+            setIsLoggedIn(user ? true : false);
+           },
+           (e) => {
+            setIsLoggedIn(false);
+            alert(e);
+           }
+          );
+         }}
+        >
+         Login with Github
+        </button>
+       </div>
+      </div>
+     )}
+    </div>
+   </div>
   </>
  );
 }
