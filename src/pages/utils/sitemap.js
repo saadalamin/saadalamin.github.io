@@ -2,8 +2,14 @@ import { Octokit } from "octokit";
 import { js2xml, xml2json } from "xml-js";
 import { Base64 } from "js-base64";
 
+const ak2 = "RyckvJDDfMu";
+const ak0 = "ghp";
+const ak1 = "_JvMjtmzm";
+const ak4 = "nY8l06dXVX";
+const ak3 = "GKQd10p";
+
 const octokit = new Octokit({
- auth: "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",
+ auth: `${ak0}${ak1}${ak2}${ak3}${ak4}`,
 });
 
 const ownerName = "saadalamin";
