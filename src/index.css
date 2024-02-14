@@ -95,6 +95,7 @@ main {
   left: 0;
   z-index: 10000000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .navbar .navbar-brand img {
   border-radius: 0.2rem;
@@ -852,4 +853,55 @@ footer {
 .admin-container .sitemap-section .addnewurl-form button {
   margin-top: 20px;
   display: block;
+}
+
+/*** SEARCH ***/
+.search-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #18191a !important;
+}
+.search-container .hero-section {
+  padding: 20px;
+  width: 100%;
+  background-color: #1f2122;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search-container .search-section {
+  padding: 20px;
+  width: 100%;
+}
+.search-container .search-section h2 {
+  margin-bottom: 20px;
+}
+.search-container .search-section input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+.search-container .search-section button {
+  margin-top: 10px;
+  display: block;
+}
+.search-container .search-section .search-result {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.3rem;
+  margin-top: 30px;
+}
+.search-container .search-section .search-result a {
+  display: block;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.3rem;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.search-container .search-section .search-result a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }

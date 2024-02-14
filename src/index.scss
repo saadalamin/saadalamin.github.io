@@ -93,6 +93,7 @@ main {
  left: 0;
  z-index: 10000000;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ border-bottom: 1px solid rgba(255, 255, 255, 0.05);
  .navbar-brand img {
   border-radius: 0.2rem;
   object-fit: cover;
@@ -885,6 +886,57 @@ footer {
    button {
     margin-top: 20px;
     display: block;
+   }
+  }
+ }
+}
+
+/*** SEARCH ***/
+.search-container {
+ width: 100%;
+ min-height: 100vh;
+ background-color: $primary-color !important;
+ .hero-section {
+  padding: 20px;
+  width: 100%;
+  background-color: lighten($primary-color, 3%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ .search-section {
+  padding: 20px;
+  width: 100%;
+  h2 {
+   margin-bottom: 20px;
+  }
+  input {
+   width: 100%;
+   padding: 10px;
+   margin: 10px 0;
+  }
+  button {
+   margin-top: 10px;
+   display: block;
+  }
+  .search-result {
+   padding: 20px;
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   border-radius: 0.3rem;
+   margin-top: 30px;
+   a {
+    display: block;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.3rem;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+     background-color: rgba(255, 255, 255, 0.1);
+    }
    }
   }
  }

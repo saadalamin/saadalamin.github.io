@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -9,11 +10,17 @@ import Contents from "./pages/Contents";
 import Admin from "./pages/Admin";
 
 import WithScrollback from "./pages/contexts/WithScrollback";
+import websiteSchema from "./schemas/websiteSchema";
+import Search from "./pages/Search";
 
 function App() {
  return (
   <>
    <BrowserRouter>
+    <Helmet>
+     <script type="application/ld+json">{websiteSchema}</script>
+    </Helmet>
+    <websiteSchema />
     <Routes>
      <Route
       path="/"
@@ -52,6 +59,14 @@ function App() {
       element={
        <WithScrollback>
         <Contents />
+       </WithScrollback>
+      }
+     />
+     <Route
+      path="/search"
+      element={
+       <WithScrollback>
+        <Search />
        </WithScrollback>
       }
      />
