@@ -25,13 +25,19 @@ function Search() {
         className="form-control"
         placeholder="Search"
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => {
+         setSearch(e.target.value);
+         if (e.target.value)
+          window.history.pushState({}, "", `/search?q=${e.target.value}`);
+         else window.history.pushState({}, "", "/search");
+        }}
         style={{ maxWidth: "400px" }}
        />
        <button
         className="btn btn-secondary"
         type="button"
         onClick={(e) => {
+         if (!search) return;
          setSearch(e.target.value);
          window.location.replace(`/search?q=${search}`);
         }}

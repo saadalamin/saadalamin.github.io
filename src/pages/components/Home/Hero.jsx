@@ -10,7 +10,7 @@ function Hero() {
       className="badge bg-custom fw-normal p-2"
       style={{ width: "fit-content" }}
      >
-      Leader | Artist | Entrepreneur
+      Film Maker | Musical Artist | Leader
      </span>
      <p className="mt-4">
       Saad Al Amin is a Bangladeshi artist, film maker and graphics designer

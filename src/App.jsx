@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import websiteSchema from "./pages/schemas/websiteSchema";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,7 +11,6 @@ import Contents from "./pages/Contents";
 import Admin from "./pages/Admin";
 
 import WithScrollback from "./pages/contexts/WithScrollback";
-import websiteSchema from "./schemas/websiteSchema";
 import Search from "./pages/Search";
 
 function App() {

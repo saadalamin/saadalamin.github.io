@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import faqSchema from "./schemas/faqSchema";
+import articleSchema from "./schemas/articleSchema";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -12,8 +14,6 @@ import WorkedWith from "./components/Home/WorkedWith";
 import ShowMe from "./components/Home/ShowMe";
 import Footer from "./components/Footer";
 import Hidden from "./components/Home/Hidden";
-
-import faqSchema from "../schemas/faqSchema";
 
 function Home() {
  React.useEffect(() => {
@@ -63,6 +63,7 @@ function Home() {
 
     {`<!-- SCHEMA.ORG -->`}
     <script type="application/ld+json">{faqSchema}</script>
+    <script type="application/ld+json">{articleSchema}</script>
    </Helmet>
 
    {/*-- __NAVBAR__ --*/}
