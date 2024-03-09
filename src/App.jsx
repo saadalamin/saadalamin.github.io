@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import websiteSchema from "./pages/schemas/websiteSchema";
 
 import Home from "./pages/Home";
@@ -20,7 +20,7 @@ function App() {
     <Helmet>
      <script type="application/ld+json">{websiteSchema}</script>
     </Helmet>
-    <websiteSchema />
+    
     <Routes>
      <Route
       path="/"

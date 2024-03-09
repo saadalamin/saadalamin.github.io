@@ -87,11 +87,12 @@ function Admin() {
        <div
         style={{
          width: "100%",
-         maxWidth: "350px",
+         maxWidth: "400px",
          minHeight: "250px",
-         backgroundColor: "rgba(0, 0, 0, 0.1)",
+         backgroundColor: "#333",
+         border: "1px solid rgba(255, 255, 255, 0.05)",
          padding: "10px",
-         borderRadius: "5px",
+         borderRadius: "8px",
          display: "flex",
          flexDirection: "column",
          alignItems: "center",

@@ -842,10 +842,17 @@ footer {
  min-height: 100vh;
  background-color: rgba($primary-color, 0.5);
  .hero-section {
-  padding: 20px;
+  padding: 45px 20px;
   width: 100%;
   background-color: rgba($primary-color, 0.6);
   text-align: center;
+  p {
+   width: fit-content;
+   margin: 28px auto 19px auto;
+   border: 1px dashed rgba(255, 255, 255, 0.2);
+   padding: 10px 20px;
+   line-height: 1.6;
+  }
  }
  .text-muted {
   color: gray !important;
@@ -897,7 +904,7 @@ footer {
  min-height: 100vh;
  background-color: $primary-color !important;
  .hero-section {
-  padding: 20px;
+  padding: 45px 20px;
   width: 100%;
   background-color: $secondary-color;
   text-align: center;
@@ -905,6 +912,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ }
+ & * {
+  font-family: "Roboto", sans-serif !important;
  }
  .search-section {
   padding: 20px;
@@ -921,23 +931,11 @@ footer {
    margin-top: 10px;
    display: block;
   }
-  .search-result {
-   padding: 20px;
-   border: 1px solid rgba(255, 255, 255, 0.1);
-   border-radius: 0.3rem;
-   margin-top: 30px;
-   a {
-    display: block;
-    padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0.3rem;
-    margin-top: 10px;
-    color: #fff;
-    text-decoration: none;
-    &:hover {
-     background-color: rgba(255, 255, 255, 0.1);
-    }
-   }
-  }
+ }
+ .ais-Highlight {
+  color: #444 !important;
+ }
+ .hits p .ais-Highlight-nonHighlighted {
+  color: gray !important;
  }
 }

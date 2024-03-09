@@ -48,7 +48,7 @@ function Navbar() {
      </div>
      <ul className="desktop d-none d-lg-flex list-unstyled gap-5 m-0 text-uppercase">
       <li>
-       <NavLink to="/" preventScrollReset={true}>
+       <NavLink to="/">
         Home
        </NavLink>
       </li>
