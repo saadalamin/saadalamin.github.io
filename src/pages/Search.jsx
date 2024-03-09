@@ -114,7 +114,7 @@ function Search() {
      }}
     >
      Powered by{" "}
-     <a href="https://www.algolia.com/" target="_blank">
+     <a href="https://www.algolia.com/" target="_blank" rel="noreferrer">
       <img
        src="/images/icons/Algolia-logo-blue.png"
        alt="Algolia"
