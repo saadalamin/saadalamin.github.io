@@ -23,7 +23,7 @@ function Features() {
      <img src="/images/icons/verified.png" alt="Verification" />
      <h5>Goolge Verified</h5>
      <p>
-      He is verified by Google as a musical artist, film-maker and graphic
+      He is verified by Google as a film-maker, musical artist and graphic
       designer.
      </p>
     </section>

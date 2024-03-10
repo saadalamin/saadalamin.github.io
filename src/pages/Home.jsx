@@ -90,6 +90,9 @@ function Home() {
      content="@mosefatullah"
      data-react-helmet="true"
     />
+
+    <link rel="preload" href="/images/interface/e3.jpg" as="image" />
+    <link rel="preload" href="/images/interface/e-2-blur.jpg" as="image" />
    </Helmet>
 
    {/*-- __NAVBAR__ --*/}

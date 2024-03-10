@@ -12,6 +12,7 @@ import Admin from "./pages/Admin";
 
 import WithScrollback from "./pages/contexts/WithScrollback";
 import Search from "./pages/Search";
+import Error from './pages/Error';
 
 function App() {
  return (
@@ -20,7 +21,7 @@ function App() {
     <Helmet>
      <script type="application/ld+json">{websiteSchema}</script>
     </Helmet>
-    
+
     <Routes>
      <Route
       path="/"
@@ -75,6 +76,14 @@ function App() {
       element={
        <WithScrollback>
         <Admin />
+       </WithScrollback>
+      }
+     />
+     <Route
+      path="*"
+      element={
+       <WithScrollback>
+        <Error />
        </WithScrollback>
       }
      />

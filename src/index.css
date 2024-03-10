@@ -160,6 +160,7 @@ main {
 }
 .first .intro a {
   margin-top: 40px;
+  font-family: "Roboto", sans-serif;
 }
 
 .home {
@@ -635,7 +636,7 @@ main {
     font-size: 0.8rem;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 769px) {
   .first .intro {
     padding: 100px 20px 120px 20px;
     text-align: center;
@@ -648,6 +649,9 @@ main {
     font-size: 0.9rem;
     line-height: 30px;
     width: 100%;
+  }
+  .first .intro .links * {
+    font-size: 0.9rem !important;
   }
   .break {
     height: 50px;
@@ -866,17 +870,17 @@ footer {
 .search-container {
   width: 100%;
   min-height: 100vh;
-  background-color: #18191a !important;
+  background-color: #242526 !important;
 }
 .search-container .hero-section {
   padding: 45px 20px;
   width: 100%;
-  background-color: #242526;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #18191a;
 }
 .search-container * {
   font-family: "Roboto", sans-serif !important;

@@ -57,6 +57,10 @@ function Search() {
   }
  }, [q]);
 
+ React.useEffect(() => {
+  document.body.classList.remove("body-home");
+ }, []);
+
  return (
   <>
    <Helmet>
