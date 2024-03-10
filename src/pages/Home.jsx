@@ -26,70 +26,34 @@ function Home() {
     <meta
      name="description"
      content="Saad Al Amin is a Bangladeshi artist, film maker and graphics designer born 3 August 2005 in Dhaka, Bangladesh. He founded Muktir Ghonta and Videophics in 2018. He has also founded Creative Youth Community - CYC."
-     data-react-helmet="true"
     />
     <meta
      name="keywords"
      content="saad al amin, official website, graphic designer, artist, film maker, finalist, leader, designer, journalist, bangladesh"
-     data-react-helmet="true"
     />
-    <meta name="author" content="Saad Al Amin" data-react-helmet="true" />
+    <meta name="author" content="Saad Al Amin" />
     {`<!-- OPEN GRAPH -->`}
-    <meta
-     property="og:site_name"
-     content="Saad Al Amin"
-     data-react-helmet="true"
-    />
-    <meta property="og:type" content="website" data-react-helmet="true" />
-    <meta
-     property="og:title"
-     content="Saad Al Amin - Official Website"
-     data-react-helmet="true"
-    />
+    <meta property="og:site_name" content="Saad Al Amin" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Saad Al Amin - Official Website" />
     <meta
      property="og:description"
      content="Saad Al Amin is a Bangladeshi artist, film maker and graphics designer born 3 August 2005 in Dhaka, Bangladesh. He
     founded Muktir Ghonta and Videophics in 2018. He has also founded Creative Youth Community - CYC."
-     data-react-helmet="true"
     />
-    <meta
-     property="og:image"
-     content="/images/interface/mediaviewcover.jpg"
-     data-react-helmet="true"
-    />
-    <meta
-     property="og:url"
-     content="https://saadalamin.com/"
-     data-react-helmet="true"
-    />
+    <meta property="og:image" content="/images/interface/mediaviewcover.jpg" />
+    <meta property="og:url" content="https://saadalamin.com/" />
     {`<!-- TWITTER GRAPH -->`}
-    <meta
-     name="twitter:card"
-     content="summary_large_image"
-     data-react-helmet="true"
-    />
-    <meta
-     name="twitter:title"
-     content="Saad Al Amin - Official Website"
-     data-react-helmet="true"
-    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Saad Al Amin - Official Website" />
     <meta
      name="twitter:description"
      content="Saad Al Amin is a Bangladeshi artist, film maker and graphics designer born 3 August 2005 in Dhaka, Bangladesh. He
     founded Muktir Ghonta and Videophics in 2018. He has also founded Creative Youth Community - CYC."
-     data-react-helmet="true"
     />
-    <meta
-     name="twitter:image"
-     content="/images/interface/newcover.jpg"
-     data-react-helmet="true"
-    />
-    <meta name="twitter:site" content="@saadalamin" data-react-helmet="true" />
-    <meta
-     name="twitter:creator"
-     content="@mosefatullah"
-     data-react-helmet="true"
-    />
+    <meta name="twitter:image" content="/images/interface/newcover.jpg" />
+    <meta name="twitter:site" content="@saadalamin" />
+    <meta name="twitter:creator" content="@mosefatullah" />
 
     <link rel="preload" href="/images/interface/e3.jpg" as="image" />
     <link rel="preload" href="/images/interface/e-2-blur.jpg" as="image" />
