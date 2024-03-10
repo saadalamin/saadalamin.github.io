@@ -6,7 +6,7 @@ function Navbar() {
   <>
    <nav className="navbar">
     <div className="container">
-     <NavLink className="navbar-brand" href="/">
+     <NavLink className="navbar-brand" to="/">
       <img
        src="/images/persons/saad2.jpg"
        alt="Saad Al Amin"
