@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import modalConfig from "./scripts/modalConfig";
-import articleSchema from "./schemas/articleSchema";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -21,7 +20,6 @@ function About() {
    {/*-- __HEAD__ --*/}
    <Helmet>
     <title>About - Saad Al Amin</title>
-    <script type="application/ld+json">{articleSchema}</script>
    </Helmet>
 
    {/*-- __NAVBAR__ --*/}

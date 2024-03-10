@@ -1,7 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import faqSchema from "./schemas/faqSchema";
-import articleSchema from "./schemas/articleSchema";
 
 // Components
 import Navbar from "./components/Navbar";
@@ -92,14 +90,6 @@ function Home() {
      content="@mosefatullah"
      data-react-helmet="true"
     />
-
-    {`<!-- SCHEMA.ORG -->`}
-    <script type="application/ld+json" data-react-helmet="true">
-     {faqSchema}
-    </script>
-    <script type="application/ld+json" data-react-helmet="true">
-     {articleSchema}
-    </script>
    </Helmet>
 
    {/*-- __NAVBAR__ --*/}
