@@ -944,6 +944,52 @@ footer {
     }
   }
 }
+.banner-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($primary-color, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .banner {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    position: relative;
+    animation: openup 0.5s ease;
+
+    & * {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #333;
+        font-size: 1.5rem;
+    }
+
+    @keyframes openup {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
 
 /*** ADMIN ***/
 .admin-container {

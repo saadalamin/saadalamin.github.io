@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Post from "./components/Discuss/Post";
+import Banner from "./components/Discuss/Banner";
 
 function Discuss() {
   const [navHeight, setNavHeight] = React.useState(0);
@@ -199,6 +200,9 @@ function Discuss() {
 
       {/*-- __FOOTER__ --*/}
       <Footer />
+
+      {/*-- __BANNER__ --*/}
+      <Banner />
     </>
   );
 }
