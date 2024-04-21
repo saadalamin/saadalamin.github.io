@@ -876,7 +876,7 @@ footer {
   cursor: pointer;
   font-size: 1.3rem;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   color: #a6c7e9;
 }
 .discuss .post .post-title:hover {
@@ -911,10 +911,6 @@ footer {
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
-}
-.discuss .post footer .post-author span {
-  color: #fff;
-  padding-left: 4px;
 }
 
 .banner-container {
@@ -958,6 +954,47 @@ footer {
   100% {
     opacity: 1;
   }
+}
+
+.post-self .section {
+  width: 100%;
+  background-color: #242526;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 0.3rem;
+}
+.post-self .section header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+}
+.post-self .section header b {
+  font-family: "Sedan", serif !important;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.post-self .section .posts {
+  padding: 16px 20px;
+  background-color: transparent;
+}
+.post-self .section .posts ul {
+  padding: 0;
+  margin: 0;
+}
+.post-self .section .posts ul li {
+  padding: 5px 0;
+}
+.post-self .section .posts ul li a {
+  color: #333;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  text-decoration: none;
+}
+.post-self .section .posts ul li a:hover {
+  color: #666;
+}
+.post-self .section .posts ul li a svg {
+  stroke: #6daeee;
 }
 
 /*** ADMIN ***/

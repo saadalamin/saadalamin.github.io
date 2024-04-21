@@ -7,19 +7,11 @@ import Footer from "./components/Footer";
 import Post from "./components/Discuss/Post";
 import Banner from "./components/Discuss/Banner";
 
+// Utils
+import posts from "./utils/_data.json";
+
 function Discuss() {
   const [navHeight, setNavHeight] = React.useState(0);
-  const posts = [
-    {
-      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    },
-    {
-      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    },
-    {
-      title: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    },
-  ];
   React.useEffect(() => {
     document.body.classList.remove("body-home");
     setNavHeight(document.querySelector(".navbar").offsetHeight);

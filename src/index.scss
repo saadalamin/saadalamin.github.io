@@ -894,6 +894,7 @@ footer {
       }
     }
   }
+
   .post {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -901,7 +902,7 @@ footer {
       cursor: pointer;
       font-size: 1.3rem;
       font-weight: 400;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       color: #a6c7e9;
 
       &:hover {
@@ -936,10 +937,6 @@ footer {
           border-radius: 50%;
           margin-right: 10px;
         }
-        span {
-          color: #fff;
-          padding-left: 4px;
-        }
       }
     }
   }
@@ -972,12 +969,12 @@ footer {
     }
 
     .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        color: #333;
-        font-size: 1.5rem;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      color: #333;
+      font-size: 1.5rem;
     }
 
     @keyframes openup {
@@ -986,6 +983,50 @@ footer {
       }
       100% {
         opacity: 1;
+      }
+    }
+  }
+}
+.post-self {
+  .section {
+    width: 100%;
+    background-color: $secondary-color;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 0.3rem;
+    header {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 10px 20px;
+      b {
+        font-family: "Sedan", serif !important;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+    }
+    .posts {
+      padding: 16px 20px;
+      background-color: transparent;
+      ul {
+        padding: 0;
+        margin: 0;
+        li {
+          padding: 5px 0;
+          a {
+            color: #333;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            text-decoration: none;
+
+            &:hover {
+              color: #666;
+            }
+
+            svg {
+              stroke: #6daeee;
+            }
+          }
+        }
       }
     }
   }
