@@ -12,7 +12,7 @@ import data from "./utils/_data.json";
 
 function DiscussPost() {
   const [navHeight, setNavHeight] = React.useState(0);
-  
+
   let post = useLocation()?.state?.post;
   if (!post) post = data.find((v) => v.id === useParams().id);
 
@@ -43,7 +43,10 @@ function DiscussPost() {
                 className="p-3 pb-4 p-md-4"
                 style={{
                   borderLeft: "1px solid rgba(255, 255, 255, 0.1)",
-                  borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+                  borderBottom:
+                    post && post.body
+                      ? "1px solid rgba(255, 255, 255, 0.1)"
+                      : "none",
                 }}
               >
                 <div className="w-100">
@@ -79,14 +82,58 @@ function DiscussPost() {
               <div
                 className="p-0"
                 style={{
-                  minHeight: "50vh",
+                  minHeight: "30vh",
                   borderLeft: "1px solid rgba(255, 255, 255, 0.1)",
+                  display: post && post.body ? "block" : "none",
                 }}
               >
                 <div className="p-4">
                   <p>{post ? post.body : "No body found!"}</p>
                 </div>
               </div>
+              <section
+                className="answer"
+                style={{
+                  display:
+                    post && typeof post.answer === "object" ? "block" : "none",
+                }}
+              >
+                <div className="d-sm-flex gap-4">
+                  <img
+                    src="/images/persons/saad2.jpg"
+                    alt="Saad Al Amin"
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "50%",
+                      border: "2px solid #fff",
+                      marginBottom: "25px",
+                    }}
+                  />
+                  <div>
+                    <span
+                      style={{
+                        color: "#aaa",
+                      }}
+                    >
+                      Saad Al Amin, 2 minutes ago
+                    </span>
+                    <p
+                      className="mt-2"
+                      style={{
+                        fontSize: "0.98rem",
+                      }}
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Architecto, esse obcaecati suscipit quam neque sapiente
+                      soluta molestiae laborum commodi saepe quaerat! Nam nemo
+                      laudantium eligendi delectus optio. Sint, expedita
+                      delectus?
+                    </p>
+                  </div>
+                  <div className="d-flex"></div>
+                </div>
+              </section>
             </div>
             <div className="col-12 col-md-4 py-4">
               <section className="section">
@@ -96,11 +143,24 @@ function DiscussPost() {
                 <div className="info posts">
                   <ul className="list-unstyled">
                     <li>
-                      <b>Asked:</b> {post ? post.author : "Unknown"}
+                      Asked:{" "}
+                      <span
+                        style={{
+                          color: "#ccc",
+                        }}
+                      >
+                        {post ? post.author : "Unknown"}
+                      </span>
                     </li>
                     <li>
-                      <b>Asked on:</b>{" "}
-                      {post ? convertDateToText(post.askedOn) : "Unknown"}
+                      Asked on:{" "}
+                      <span
+                        style={{
+                          color: "#ccc",
+                        }}
+                      >
+                        {post ? convertDateToText(post.date) : "Unknown"}
+                      </span>
                     </li>
                   </ul>
                 </div>

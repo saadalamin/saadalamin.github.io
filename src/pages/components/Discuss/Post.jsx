@@ -48,8 +48,8 @@ function Post({ key, post }) {
         <div>
           Asked{" "}
           <span className="post-time">
-            {post.askedOn
-              ? convertDateToText(post.askedOn)
+            {post.date
+              ? convertDateToText(post.date)
               : "on an unknown date"}
           </span>
         </div>

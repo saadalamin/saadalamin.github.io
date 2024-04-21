@@ -895,6 +895,11 @@ footer {
     }
   }
 
+  .answer {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+  }
+
   .post {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
@@ -930,7 +935,7 @@ footer {
       .post-author {
         display: flex;
         align-items: center;
-        color: #a6c7e9;
+        color: #aaa;
         img {
           width: 30px;
           height: 30px;
@@ -989,34 +994,18 @@ footer {
 }
 .post-self {
   .section {
-    width: 100%;
     background-color: $secondary-color;
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
-    border-radius: 0.3rem;
     header {
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 10px 20px;
-      b {
-        font-family: "Sedan", serif !important;
-        font-weight: 500;
-        font-size: 1.1rem;
-      }
     }
     .posts {
-      padding: 16px 20px;
       background-color: transparent;
       ul {
-        padding: 0;
-        margin: 0;
         li {
-          padding: 5px 0;
           a {
             color: #333;
-            display: flex;
-            gap: 6px;
-            align-items: center;
-            text-decoration: none;
 
             &:hover {
               color: #666;

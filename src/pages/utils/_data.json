@@ -4,20 +4,23 @@
     "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veliusto temporibus non, pariatur a officiis quas, repellendus alias quosnulla neque voluptates natus dicta expedita eligendi odio, ex nesciunt.",
     "author": "Abdullah",
-    "askedOn": "10 April, 2024"
+    "date": "10 April, 2024",
+    "answer": {
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veliusto temporibus non, pariatur a officiis quas, repellendus alias quosnulla neque voluptates natus dicta expedita eligendi odio, ex nesciunt.",
+      "date": "21 April, 2024"
+    }
   },
   {
     "id": "GbbTFJkjUFTuhhg",
     "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veliusto temporibus non, pariatur a officiis quas, repellendus alias quosnulla neque voluptates natus dicta expedita eligendi odio, ex nesciunt.",
     "author": "Nishat",
-    "askedOn": "12 April, 2024"
+    "date": "12 April, 2024"
   },
   {
     "id": "uUYb878uTYghRTj7",
     "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veliusto temporibus non, pariatur a officiis quas, repellendus alias quosnulla neque voluptates natus dicta expedita eligendi odio, ex nesciunt.",
     "author": "Hijbullah",
-    "askedOn": "14 Feb, 2024"
+    "date": "14 Feb, 2024"
   }
 ]
