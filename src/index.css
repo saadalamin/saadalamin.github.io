@@ -20,7 +20,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  background-color: #242526 !important;
+  background-color: #18191a !important;
   color: #fff;
 }
 body.body-home {
@@ -86,7 +86,7 @@ main {
 
 /*** Navbar ***/
 .navbar {
-  height: 65px;
+  height: 70px;
   background-color: rgba(36, 37, 38, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -99,7 +99,8 @@ main {
 }
 .navbar .navbar-brand img {
   border-radius: 0.2rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .navbar .dropdown-menu {
   background-color: #242526;
@@ -125,6 +126,7 @@ main {
 /*** HOME PAGE ***/
 .first {
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   min-height: 95vh;
   background-color: rgba(24, 25, 26, 0.45);
@@ -154,7 +156,7 @@ main {
 .first .intro p {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  line-height: 38px;
+  line-height: 36px;
   width: 60%;
   margin-top: 50px !important;
 }
@@ -183,7 +185,8 @@ main {
   align-items: center;
   max-height: 300px;
   aspect-ratio: 16/9;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.065);
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
@@ -193,7 +196,8 @@ main {
   opacity: 0.4;
 }
 .home .posts-a .post img:first-child {
-  object-position: 0 30%;
+  -o-object-position: 0 30%;
+     object-position: 0 30%;
 }
 .home .posts-a .post .body p {
   width: 100%;
@@ -252,7 +256,8 @@ main {
   height: 78px;
   padding: 18px;
   border-radius: 1rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: #fff;
   margin-top: -100px;
 }
@@ -293,6 +298,7 @@ main {
   color: #333;
   background-color: #fff;
   padding: 4px 10px;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 0.4rem;
   margin: 0 auto;
@@ -486,7 +492,8 @@ main {
   width: 100%;
   height: 100%;
   min-height: 115px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .works .project-container-d .row div img:hover,
 .works .project-container-e .row div img:hover {
@@ -495,7 +502,8 @@ main {
 }
 .works .project-container-g img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .works .project-container-g span {
   display: block;
@@ -521,6 +529,7 @@ main {
   padding: 0 10px;
 }
 .about .opinion .opinion-list .item {
+  height: -moz-min-content;
   height: min-content;
   border-radius: 2rem;
   background-color: #fff;
@@ -558,7 +567,8 @@ main {
   height: 100px;
   border-radius: 100rem;
   border: 8px solid #eee;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about .media-links {
   padding-top: 10px;
@@ -709,7 +719,7 @@ main {
 }
 /*** FOOTER & Others ***/
 footer {
-  background-color: rgba(24, 25, 26, 0.5);
+  background-color: rgba(36, 37, 38, 0.5);
   color: #fff;
 }
 
@@ -732,7 +742,8 @@ footer {
   width: 100%;
   max-width: 400px;
   border: 1px dashed #fff;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #modalForPress li {
@@ -752,7 +763,8 @@ footer {
   width: 200px !important;
   border-radius: 0.3rem;
   aspect-ratio: 16/9;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 500px) {
@@ -787,12 +799,14 @@ footer {
   position: fixed;
   bottom: 10px;
   left: 15px;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(24, 25, 26, 0.5);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 10px 0 rgba(150, 144, 162, 0.1);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   padding: 10px 20px;
   z-index: 10000000;
   border-radius: 0.7rem;
@@ -804,27 +818,74 @@ footer {
   font-family: Roboto, sans-serif;
 }
 
+/*** DISCUSS ***/
+.discuss * {
+  font-family: "Roboto", sans-serif !important;
+}
+.discuss h2 {
+  font-family: "Sedan", serif !important;
+}
+.discuss .section {
+  width: 100%;
+  background-color: #6b5724;
+  border: 1px solid #957932;
+  border-radius: 0.3rem;
+}
+.discuss .section header {
+  border-bottom: 1px solid #957932;
+  padding: 10px 20px;
+}
+.discuss .section header b {
+  font-family: "Sedan", serif !important;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.discuss .section .posts {
+  padding: 16px 20px;
+  background-color: #413516;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+.discuss .section .posts ul {
+  padding: 0;
+  margin: 0;
+}
+.discuss .section .posts ul li {
+  padding: 5px 0;
+}
+.discuss .section .posts ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.discuss .post {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /*** ADMIN ***/
 .admin-container {
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(24, 25, 26, 0.5);
+  background-color: #18191a;
 }
 .admin-container .hero-section {
   padding: 45px 20px;
   width: 100%;
-  background-color: rgba(24, 25, 26, 0.6);
+  background-color: rgba(255, 255, 255, 0.05);
   text-align: center;
 }
 .admin-container .hero-section p {
+  width: -moz-fit-content;
   width: fit-content;
   margin: 28px auto 19px auto;
-  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border: 1px dashed rgba(255, 255, 255, 0.4);
   padding: 10px 20px;
   line-height: 1.6;
 }
 .admin-container .text-muted {
   color: gray !important;
+}
+.admin-container .btn {
+  padding: 10px 17px !important;
 }
 .admin-container .sitemap-section {
   padding: 20px;

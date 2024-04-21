@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Works from "./pages/Works";
 import Contents from "./pages/Contents";
+import Discuss from "./pages/Discuss";
 import Admin from "./pages/Admin";
 
 import WithScrollback from "./pages/contexts/WithScrollback";
@@ -68,6 +69,14 @@ function App() {
       element={
        <WithScrollback>
         <Search />
+       </WithScrollback>
+      }
+     />
+     <Route
+      path="/discuss"
+      element={
+       <WithScrollback>
+        <Discuss />
        </WithScrollback>
       }
      />
