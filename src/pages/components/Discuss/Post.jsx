@@ -3,15 +3,8 @@ import { Link } from "react-router-dom";
 
 // Utils
 import { convertDateToText } from "../../utils/date";
-import data from "../../utils/_data.json";
 
-function Post({ key, post: postData }) {
-  const post = postData;
-  React.useEffect(() => {
-    if (!post) {
-      post = data;
-    }
-  });
+function Post({ key, post }) {
   return (
     <article className="post p-4" key={key}>
       <header>

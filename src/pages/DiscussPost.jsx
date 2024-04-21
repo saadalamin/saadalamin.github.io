@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 // Components
@@ -8,10 +8,14 @@ import Footer from "./components/Footer";
 
 // Utils
 import { convertDateToText } from "./utils/date";
+import data from "./utils/_data.json";
 
 function DiscussPost() {
   const [navHeight, setNavHeight] = React.useState(0);
-  const post = useLocation().state.post;
+  
+  let post = useLocation()?.state?.post;
+  if (!post) post = data.find((v) => v.id === useParams().id);
+
   React.useEffect(() => {
     document.body.classList.remove("body-home");
     setNavHeight(document.querySelector(".navbar").offsetHeight);
