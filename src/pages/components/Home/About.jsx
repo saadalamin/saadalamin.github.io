@@ -362,8 +362,9 @@ function About() {
        <img src="/images/icons/publi1.png" alt="Publications" />
        <div className="details">
         <h3>The mysteries of dark matter and dark energy</h3>
-        <p>Muktir Ghonta</p>
+        <p>Saad Al Amin</p>
         <span>Published on : Feb 20, 2023</span>
+        <span>Academia</span>
         <a
          href="https://www.academia.edu/97167491/The_mysteries_of_dark_matter_and_dark_energy?source=swp_share"
          target="_blank"
@@ -380,6 +381,7 @@ function About() {
         <h3>Ethics & Current Generation's relationship Culture</h3>
         <p>Saad Al Amin</p>
         <span>Published on : Mar, 2023</span>
+        <span>Researchgate</span>
         <a
          href="https://www.researchgate.net/publication/369618403_Ethics_Current_Generation's_relationship_Culture"
          target="_blank"
@@ -396,6 +398,7 @@ function About() {
         <h3>Bangladeshi Education System & International System's Gap</h3>
         <p>Saad Al Amin</p>
         <span>Published on : Mar, 2023</span>
+        <span>Researchgate</span>
         <a
          href="https://www.researchgate.net/publication/369618543_Bangladeshi_Education_System_International_System's_Gap"
          target="_blank"
@@ -412,6 +415,7 @@ function About() {
         <h3>The Spiritual and Cultural Significance of Ramadan</h3>
         <p>Saad Al Amin</p>
         <span>Published on : Mar, 2023</span>
+        <span>Researchgate</span>
         <a
          href="https://www.researchgate.net/publication/369618517_The_Spiritual_and_Cultural_Significance_of_Ramadan"
          target="_blank"

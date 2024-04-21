@@ -39,17 +39,23 @@ function Discuss() {
 
       {/*-- __MAIN__ --*/}
       <main className="discuss p-0">
-        <div className="container py-4 px-3 p-md-4 p-lg-5">
+        <div className="container pb-5">
           <div className="row">
             <div className="col-12 col-md-8">
               <div
-                className="pb-4 p-3 p-md-4"
+                className="p-3 pb-4 p-md-4"
                 style={{
                   borderLeft: "1px solid rgba(255, 255, 255, 0.1)",
                   borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
                 }}
               >
-                <h2 className="fw-medium">Q&A Discussions</h2>
+                <div className="w-100 d-flex gap-3 flex-column flex-sm-row align-items-sm-center">
+                  <h2 className="fw-medium m-0">Q&A Discussions</h2>
+                  <div className="ms-sm-auto">
+                    <button className="btn btn-primary">Ask Question</button>
+                  </div>
+                </div>
+
                 <div className="row mt-4 row-gap-2">
                   <div className="col-md-9 d-flex">
                     <input
@@ -81,7 +87,7 @@ function Discuss() {
                 ))}
               </div>
             </div>
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-md-4 py-4">
               <section className="section">
                 <header>
                   <b>Suggested Posts!</b>
@@ -89,19 +95,99 @@ function Discuss() {
                 <div className="posts">
                   <ul className="list-unstyled">
                     <li>
-                      <a href="#!">&rarr; Lorem ipsum dolor sit amet.</a>
+                      <a href="#!">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          style={{ width: "20px", height: "20px" }}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+                          />
+                        </svg>
+                        Lorem ipsum dolor sit amet.
+                      </a>
                     </li>
                     <li>
-                      <a href="#!">&rarr; Lorem ipsum dolor sit amet.</a>
+                      <a href="#!">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          style={{ width: "20px", height: "20px" }}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+                          />
+                        </svg>
+                        Lorem ipsum dolor sit amet.
+                      </a>
                     </li>
                     <li>
-                      <a href="#!">&rarr; Lorem ipsum dolor sit amet.</a>
+                      <a href="#!">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          style={{ width: "20px", height: "20px" }}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+                          />
+                        </svg>
+                        Lorem ipsum dolor sit amet.
+                      </a>
                     </li>
                     <li>
-                      <a href="#!">&rarr; Lorem ipsum dolor sit amet.</a>
+                      <a href="#!">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          style={{ width: "20px", height: "20px" }}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+                          />
+                        </svg>
+                        Lorem ipsum dolor sit amet.
+                      </a>
                     </li>
                     <li>
-                      <a href="#!">&rarr; Lorem ipsum dolor sit amet.</a>
+                      <a href="#!">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          style={{ width: "20px", height: "20px" }}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+                          />
+                        </svg>
+                        Lorem ipsum dolor sit amet.
+                      </a>
                     </li>
                   </ul>
                 </div>

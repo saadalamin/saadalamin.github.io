@@ -44,6 +44,11 @@ function Navbar() {
          About
         </NavLink>
        </li>
+       <li>
+        <NavLink className="dropdown-item" to="/discuss">
+         Discuss
+        </NavLink>
+       </li>
       </ul>
      </div>
      <ul className="desktop d-none d-lg-flex list-unstyled gap-5 m-0 text-uppercase">
@@ -59,6 +64,9 @@ function Navbar() {
        <NavLink to="/contents">Contents</NavLink>
       </li>
       <li>
+       <NavLink to="/discuss">Discuss</NavLink>
+      </li>
+      <li>
        <NavLink to="/blog">Blog</NavLink>
       </li>
       <li>
@@ -71,7 +79,7 @@ function Navbar() {
          focusable="false"
          width="24"
          height="24"
-         style={{ fill: "white", marginTop: "-5px" }}
+         style={{ fill: "grey", marginTop: "-1px" }}
         >
          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
         </svg>

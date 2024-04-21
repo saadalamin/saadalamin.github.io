@@ -86,7 +86,7 @@ main {
 
 /*** Navbar ***/
 .navbar {
-  height: 70px;
+  height: 75px;
   background-color: rgba(36, 37, 38, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -115,12 +115,15 @@ main {
   padding: 0 !important;
 }
 .navbar a {
-  font-family: Roboto;
+  text-transform: capitalize;
   text-decoration: none;
-  color: inherit;
+  color: #aaa;
 }
 .navbar .desktop a.active {
-  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+.navbar .desktop a.active svg {
+  fill: white !important;
 }
 
 /*** HOME PAGE ***/
@@ -855,10 +858,63 @@ footer {
 }
 .discuss .section .posts ul li a {
   color: #fff;
+  display: flex;
+  gap: 6px;
+  align-items: center;
   text-decoration: none;
+}
+.discuss .section .posts ul li a:hover {
+  color: #bfdcfa;
+}
+.discuss .section .posts ul li a svg {
+  stroke: #6daeee;
 }
 .discuss .post {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.discuss .post .post-title {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #a6c7e9;
+}
+.discuss .post .post-title:hover {
+  color: #6daeee;
+}
+.discuss .post .post-body {
+  font-size: 0.98rem;
+  font-weight: 300;
+  color: #e0e0e0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.discuss .post footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  background-color: transparent;
+}
+.discuss .post footer .post-time {
+  color: #aaa;
+}
+.discuss .post footer .post-author {
+  display: flex;
+  align-items: center;
+  color: #a6c7e9;
+}
+.discuss .post footer .post-author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.discuss .post footer .post-author span {
+  color: #fff;
+  padding-left: 4px;
 }
 
 /*** ADMIN ***/
