@@ -12,7 +12,7 @@ import Discuss from "./pages/Discuss";
 import DiscussPost from "./pages/DiscussPost";
 import Admin from "./pages/Admin";
 
-import WithScrollback from "./pages/contexts/WithScrollback";
+import WithLayout from "./pages/contexts/WithLayout";
 import Search from "./pages/Search";
 import Error from "./pages/Error";
 
@@ -28,81 +28,81 @@ function App() {
           <Route
             path="/"
             element={
-              <WithScrollback>
+              <WithLayout>
                 <Home />
-              </WithScrollback>
+              </WithLayout>
             }
           />
           <Route
             path="/about"
             element={
-              <WithScrollback>
+              <WithLayout>
                 <About />
-              </WithScrollback>
+              </WithLayout>
             }
           />
           <Route
             path="/blog"
             element={
-              <WithScrollback>
+              <WithLayout>
                 <Blog />
-              </WithScrollback>
+              </WithLayout>
             }
           />
           <Route
             path="/works"
             element={
-              <WithScrollback>
+              <WithLayout>
                 <Works />
-              </WithScrollback>
+              </WithLayout>
             }
           />
           <Route
             path="/contents"
             element={
-              <WithScrollback>
+              <WithLayout>
                 <Contents />
-              </WithScrollback>
+              </WithLayout>
             }
           />
           <Route
             path="/search"
             element={
-              <WithScrollback>
+              <WithLayout>
                 <Search />
-              </WithScrollback>
+              </WithLayout>
             }
           />
           <Route
             path="/discuss"
             element={
-              <WithScrollback>
+              <WithLayout>
                 <Discuss />
-              </WithScrollback>
+              </WithLayout>
             }
           />
           <Route
             path="/discuss/question/:id"
             element={
-              <WithScrollback>
+              <WithLayout>
                 <DiscussPost />
-              </WithScrollback>
+              </WithLayout>
             }
           />
           <Route
             path="/admin"
             element={
-              <WithScrollback>
+              <WithLayout>
                 <Admin />
-              </WithScrollback>
+              </WithLayout>
             }
           />
           <Route
             path="*"
             element={
-              <WithScrollback>
+              <WithLayout>
                 <Error />
-              </WithScrollback>
+              </WithLayout>
             }
           />
         </Routes>

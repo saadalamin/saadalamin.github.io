@@ -880,8 +880,9 @@ footer {
   cursor: pointer;
   font-size: 1.3rem;
   font-weight: 400;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   color: #a6c7e9;
+  font-family: "Sedan", serif !important;
 }
 .discuss .post .post-title:hover {
   color: #6daeee;
@@ -894,6 +895,7 @@ footer {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  margin-bottom: 0.3rem;
 }
 .discuss .post footer {
   display: flex;

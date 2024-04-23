@@ -20,7 +20,7 @@ function Post({ key, post }) {
           <h1 className="post-title">{post.title || "Untitled Question!"}</h1>
         </Link>
       </header>
-      <p className="post-body">{post.body || "No body found!"}</p>
+      <p className="post-body">{post.body || "No description found..."}</p>
       <footer>
         <div className="d-flex gap-1">
           <span className="post-author">
@@ -45,13 +45,21 @@ function Post({ key, post }) {
             {post.author}
           </span>
         </div>
-        <div>
-          Asked{" "}
-          <span className="post-time">
-            {post.date
-              ? convertDateToText(post.date)
-              : "on an unknown date"}
+        <div className="d-flex gap-1">
+          <span
+            style={{
+              display: post.answer ? "block" : "none",
+              color: "#00AB29",
+            }}
+          >
+            (Answered)
           </span>
+          <div>
+            Asked{" "}
+            <span className="post-time">
+              {post.date ? convertDateToText(post.date) : "on an unknown date"}
+            </span>
+          </div>
         </div>
       </footer>
     </article>

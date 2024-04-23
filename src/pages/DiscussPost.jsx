@@ -11,15 +11,8 @@ import { convertDateToText } from "./utils/date";
 import data from "./utils/_data.json";
 
 function DiscussPost() {
-  const [navHeight, setNavHeight] = React.useState(0);
-
   let post = useLocation()?.state?.post;
   if (!post) post = data.find((v) => v.id === useParams().id);
-
-  React.useEffect(() => {
-    document.body.classList.remove("body-home");
-    setNavHeight(document.querySelector(".navbar").offsetHeight);
-  }, []);
   return (
     <>
       {/*-- __HEAD__ --*/}
@@ -38,10 +31,16 @@ function DiscussPost() {
       <main className="post-self discuss p-0">
         <div className="container pb-5">
           <div className="row">
-            <div className="col-12 col-md-8">
+            <div
+              className="col-12 col-md-8"
+              style={{
+                minHeight: "55vh",
+              }}
+            >
               <div
                 className="p-3 pb-4 p-md-4"
                 style={{
+                  minHeight: "35vh",
                   borderLeft: "1px solid rgba(255, 255, 255, 0.1)",
                   borderBottom:
                     post && post.body

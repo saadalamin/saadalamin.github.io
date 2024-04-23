@@ -11,11 +11,6 @@ import Banner from "./components/Discuss/Banner";
 import posts from "./utils/_data.json";
 
 function Discuss() {
-  const [navHeight, setNavHeight] = React.useState(0);
-  React.useEffect(() => {
-    document.body.classList.remove("body-home");
-    setNavHeight(document.querySelector(".navbar").offsetHeight);
-  }, []);
   return (
     <>
       {/*-- __HEAD__ --*/}

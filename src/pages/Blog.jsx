@@ -7,7 +7,6 @@ import Navbar from "./components/Navbar";
 function Blog() {
  const [navHeight, setNavHeight] = React.useState(0);
  React.useEffect(() => {
-  document.body.classList.remove("body-home");
   setNavHeight(document.querySelector(".navbar").offsetHeight);
  }, []);
  return (

@@ -5,7 +5,7 @@ function Navbar() {
  return (
   <>
    <nav className="navbar">
-    <div className="container">
+    <div className="container p-md-0">
      <NavLink className="navbar-brand" to="/">
       <img
        src="/images/persons/saad2.jpg"
@@ -25,6 +25,11 @@ function Navbar() {
         </NavLink>
        </li>
        <li>
+        <NavLink className="dropdown-item" to="/about">
+         About
+        </NavLink>
+       </li>
+       <li>
         <NavLink className="dropdown-item" to="/works">
          Works
         </NavLink>
@@ -35,18 +40,13 @@ function Navbar() {
         </NavLink>
        </li>
        <li>
-        <NavLink className="dropdown-item" to="/blog">
-         Blog
-        </NavLink>
-       </li>
-       <li>
-        <NavLink className="dropdown-item" to="/about">
-         About
-        </NavLink>
-       </li>
-       <li>
         <NavLink className="dropdown-item" to="/discuss">
          Discuss
+        </NavLink>
+       </li>
+       <li>
+        <NavLink className="dropdown-item" to="/blog">
+         Blog
         </NavLink>
        </li>
       </ul>
@@ -56,6 +56,9 @@ function Navbar() {
        <NavLink to="/">
         Home
        </NavLink>
+      </li>
+      <li>
+       <NavLink to="/about">About</NavLink>
       </li>
       <li>
        <NavLink to="/works">Works</NavLink>
@@ -68,9 +71,6 @@ function Navbar() {
       </li>
       <li>
        <NavLink to="/blog">Blog</NavLink>
-      </li>
-      <li>
-       <NavLink to="/about">About</NavLink>
       </li>
       <li>
        <NavLink to="/search">
