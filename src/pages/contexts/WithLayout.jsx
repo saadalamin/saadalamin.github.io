@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 
 function WithLayout({ children }) {
   const location = useLocation();
-  const [navHeight, setNavHeight] = React.useState(0);
 
   React.useEffect(() => {
     window.scrollTo({
@@ -12,15 +11,6 @@ function WithLayout({ children }) {
       behavior: "instant",
     });
   }, [location]);
-
-  React.useEffect(() => {
-    if (!document.querySelector("main.home")) {
-      document.body.classList.remove("body-home");
-    } else {
-      document.body.classList.add("body-home");
-    }
-    setNavHeight(document.querySelector(".navbar").offsetHeight);
-  }, []);
 
   React.useEffect(() => {
     /**

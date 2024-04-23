@@ -30,10 +30,10 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: $primary-color !important;
   color: $primary-text-color;
-  &.body-home {
-    @include image-center("../images/interface/e3.jpg");
-    background-attachment: fixed;
-  }
+}
+.Home {
+  @include image-center("../images/interface/e3.jpg");
+  background-attachment: fixed;
 }
 
 /*** Common Things ***/

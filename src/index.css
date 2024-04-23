@@ -23,7 +23,8 @@ body {
   background-color: #18191a !important;
   color: #fff;
 }
-body.body-home {
+
+.Home {
   background-image: url(../images/interface/e3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
