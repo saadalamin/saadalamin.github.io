@@ -82,7 +82,7 @@ function App() {
             }
           />
           <Route
-            path="/discuss/question/:id"
+            path="/discuss/q/:id"
             element={
               <WithLayout>
                 <DiscussPost />

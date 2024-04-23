@@ -8,17 +8,17 @@ import Post from "./components/Discuss/Post";
 import Banner from "./components/Discuss/Banner";
 
 // Utils
-import postsOffline from "./utils/_data.json";
 import { allPosts } from "./utils/discuss";
 
 function Discuss() {
-  const [posts, setPosts] = React.useState([]);
+  const [posts, setPosts] = React.useState(null);
   React.useEffect(() => {
     allPosts(
       (data) => {
         setPosts(data);
       },
       (e) => {
+        setPosts(false);
         console.error(e);
       }
     );
@@ -82,9 +82,23 @@ function Discuss() {
                   borderLeft: "1px solid rgba(255, 255, 255, 0.1)",
                 }}
               >
-                {posts.map((post, index) => (
+                {Array.isArray(posts) ? posts.map((post, index) => (
                   <Post key={index} post={post} />
-                ))}
+                )) : (
+                  posts == null ? (
+                    <div className="d-flex justify-content-center align-items-center" style={{ height: "50vh" }}>
+                      <div className="spinner-border text-primary" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="d-flex justify-content-center align-items-center" style={{ height: "50vh" }}>
+                      <div className="alert alert-danger" role="alert">
+                        <b>Failed to load posts!</b>
+                      </div>
+                    </div>
+                  )
+                )}
               </div>
             </div>
             <div className="col-12 col-md-4 py-4">

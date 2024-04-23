@@ -100,8 +100,7 @@ main {
 }
 .navbar .navbar-brand img {
   border-radius: 0.2rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .navbar .dropdown-menu {
   background-color: #242526;
@@ -130,7 +129,6 @@ main {
 /*** HOME PAGE ***/
 .first {
   width: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   min-height: 95vh;
   background-color: rgba(24, 25, 26, 0.45);
@@ -189,8 +187,7 @@ main {
   align-items: center;
   max-height: 300px;
   aspect-ratio: 16/9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.065);
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
@@ -200,8 +197,7 @@ main {
   opacity: 0.4;
 }
 .home .posts-a .post img:first-child {
-  -o-object-position: 0 30%;
-     object-position: 0 30%;
+  object-position: 0 30%;
 }
 .home .posts-a .post .body p {
   width: 100%;
@@ -260,8 +256,7 @@ main {
   height: 78px;
   padding: 18px;
   border-radius: 1rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   background-color: #fff;
   margin-top: -100px;
 }
@@ -302,7 +297,6 @@ main {
   color: #333;
   background-color: #fff;
   padding: 4px 10px;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 0.4rem;
   margin: 0 auto;
@@ -496,8 +490,7 @@ main {
   width: 100%;
   height: 100%;
   min-height: 115px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .works .project-container-d .row div img:hover,
 .works .project-container-e .row div img:hover {
@@ -506,8 +499,7 @@ main {
 }
 .works .project-container-g img {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .works .project-container-g span {
   display: block;
@@ -533,7 +525,6 @@ main {
   padding: 0 10px;
 }
 .about .opinion .opinion-list .item {
-  height: -moz-min-content;
   height: min-content;
   border-radius: 2rem;
   background-color: #fff;
@@ -571,8 +562,7 @@ main {
   height: 100px;
   border-radius: 100rem;
   border: 8px solid #eee;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .about .media-links {
   padding-top: 10px;
@@ -746,8 +736,7 @@ footer {
   width: 100%;
   max-width: 400px;
   border: 1px dashed #fff;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #modalForPress li {
@@ -767,8 +756,7 @@ footer {
   width: 200px !important;
   border-radius: 0.3rem;
   aspect-ratio: 16/9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 500px) {
@@ -803,14 +791,12 @@ footer {
   position: fixed;
   bottom: 10px;
   left: 15px;
-  width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(24, 25, 26, 0.5);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 10px 0 rgba(150, 144, 162, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   padding: 10px 20px;
   z-index: 10000000;
   border-radius: 0.7rem;
@@ -875,6 +861,7 @@ footer {
   padding: 2rem;
 }
 .discuss .post {
+  max-width: 700px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .discuss .post .post-title {
@@ -882,17 +869,23 @@ footer {
   font-size: 1.3rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
+}
+.discuss .post .post-title a {
+  color: #fff;
   font-family: "Sedan", serif !important;
+}
+.discuss .post .post-title a:hover {
+  color: #ddd;
 }
 .discuss .post .post-body {
   font-size: 0.98rem;
   font-weight: 300;
-  color: #e0e0e0;
+  color: #aaa;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 .discuss .post footer {
   display: flex;
@@ -901,13 +894,16 @@ footer {
   font-size: 0.8rem;
   background-color: transparent;
 }
+.discuss .post footer * {
+  font-family: "Montserrat", sans-serif !important;
+}
 .discuss .post footer .post-time {
   color: #aaa;
 }
 .discuss .post footer .post-author {
   display: flex;
   align-items: center;
-  color: #aaa;
+  color: #6daeee;
 }
 .discuss .post footer .post-author img {
   width: 30px;
@@ -993,7 +989,6 @@ footer {
   text-align: center;
 }
 .admin-container .hero-section p {
-  width: -moz-fit-content;
   width: fit-content;
   margin: 28px auto 19px auto;
   border: 1px dashed rgba(255, 255, 255, 0.4);

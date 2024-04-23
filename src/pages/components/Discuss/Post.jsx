@@ -10,7 +10,7 @@ function Post({ key, post }) {
       <header>
         <h1 className="post-title">
           <Link
-            to={`/discuss/question/${post.id}`}
+            to={`/discuss/q/${post.id}`}
             state={{
               post: post,
             }}
@@ -54,10 +54,10 @@ function Post({ key, post }) {
               color: "#00AB29",
             }}
           >
-            (Answered)
+            (answered)
           </span>
           <div>
-            Asked{" "}
+            asked{" "}
             <span className="post-time">
               {post.date ? convertDateToText(post.date) : "on an unknown date"}
             </span>
