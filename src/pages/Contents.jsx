@@ -89,7 +89,7 @@ function Contents() {
               <span className="visually-hidden">Loading...</span>
             </div>
           </div>
-          <div className="row" id="contents"></div>
+          <div className="row row-gap-2" id="contents"></div>
         </div>
       </main>
 

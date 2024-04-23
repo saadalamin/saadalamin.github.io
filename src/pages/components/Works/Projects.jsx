@@ -347,7 +347,7 @@ function Projects() {
       <div className="col-6 col-md-3">
        <img
         loading="lazy"
-        src="https://firebasestorage.googleapis.com/v0/b/saadalamindev.appspot.com/o/works%2Fdesign%2F2.jpg?alt=media&token=9d65b3a6-5290-438a-9e53-ea431c4f5ec9g"
+        src="https://firebasestorage.googleapis.com/v0/b/saadalamindev.appspot.com/o/works%2Fdesign%2F2.jpg?alt=media&token=9d65b3a6-5290-438a-9e53-ea431c4f5ec9"
         alt="Design"
         data-bs-toggle="modal"
         data-bs-target="#modalMain"
@@ -533,7 +533,7 @@ function Projects() {
    <h4 className="title">Social</h4>
    <div className="project-container-g">
     <div className="container">
-     <div className="row row-gap-2">
+     <div className="row row-gap-4">
       <div className="col-md-4">
        <img
         loading="lazy"
