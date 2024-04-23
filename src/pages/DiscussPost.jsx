@@ -40,7 +40,6 @@ function DiscussPost() {
               <div
                 className="p-3 pb-4 p-md-4"
                 style={{
-                  minHeight: "35vh",
                   borderLeft: "1px solid rgba(255, 255, 255, 0.1)",
                   borderBottom:
                     post && post.body
@@ -82,12 +81,11 @@ function DiscussPost() {
                 className="p-0"
                 style={{
                   minHeight: "30vh",
-                  borderLeft: "1px solid rgba(255, 255, 255, 0.1)",
-                  display: post && post.body ? "block" : "none",
+                  borderLeft: "1px solid rgba(255, 255, 255, 0.1)"
                 }}
               >
                 <div className="p-4">
-                  <p>{post ? post.body : "No body found!"}</p>
+                  <p>{post && post.body ? post.body : "No description found!"}</p>
                 </div>
               </div>
               <section

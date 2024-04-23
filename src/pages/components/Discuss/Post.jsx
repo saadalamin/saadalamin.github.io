@@ -8,17 +8,19 @@ function Post({ key, post }) {
   return (
     <article className="post p-4" key={key}>
       <header>
-        <Link
-          to={`/discuss/question/${post.id}`}
-          state={{
-            post: post,
-          }}
-          style={{
-            textDecoration: "none",
-          }}
-        >
-          <h1 className="post-title">{post.title || "Untitled Question!"}</h1>
-        </Link>
+        <h1 className="post-title">
+          <Link
+            to={`/discuss/question/${post.id}`}
+            state={{
+              post: post,
+            }}
+            style={{
+              textDecoration: "none"
+            }}
+          >
+            {post.title || "Untitled Question!"}
+          </Link>
+        </h1>
       </header>
       <p className="post-body">{post.body || "No description found..."}</p>
       <footer>

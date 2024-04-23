@@ -8,9 +8,21 @@ import Post from "./components/Discuss/Post";
 import Banner from "./components/Discuss/Banner";
 
 // Utils
-import posts from "./utils/_data.json";
+import postsOffline from "./utils/_data.json";
+import { allPosts } from "./utils/discuss";
 
 function Discuss() {
+  const [posts, setPosts] = React.useState([]);
+  React.useEffect(() => {
+    allPosts(
+      (data) => {
+        setPosts(data);
+      },
+      (e) => {
+        console.error(e);
+      }
+    );
+  }, []);
   return (
     <>
       {/*-- __HEAD__ --*/}

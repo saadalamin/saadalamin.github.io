@@ -369,14 +369,16 @@ export const $firebase_storage_delete = (path /* Single */, result, error) => {
 
 export const $firebase_firestore_read = (path, result, error) => {
   $handling(
-    () => {
-      $fsr
-        .get($fsr.doc($firebase_firestore, path))
+    async () => {
+      await $fsr
+        // reading all data
+        .get($fsr.collection($firebase_firestore, path))
         .then((s) => {
-          result(s.data());
-        })
-        .catch((e) => {
-          if (error) error(e);
+          let data = [];
+          s.forEach((doc) => {
+            data.push(doc.data());
+          });
+          result(data);
         });
     },
     (e) => {
