@@ -1,7 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import Sitemap from "./components/Sitemap";
+import Sitemap from "./components/Admin/Sitemap";
+import Discuss from "./components/Admin/Discuss";
 import Nabvar from "./components/Navbar";
 
 import {
@@ -83,6 +84,7 @@ function Admin() {
             </div>
           )}
           {isLoggedIn == true && <Sitemap />}
+          {isLoggedIn == true && <Discuss />}
           {isLoggedIn == false && (
             <div
               style={{

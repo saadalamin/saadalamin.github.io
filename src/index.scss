@@ -751,7 +751,8 @@ footer {
  color: $primary-text-color;
 }
 #modalMain,
-#modalForPress {
+#modalForPress,
+#modalForDiscuss {
  z-index: 10000001;
  border-radius: 1rem 1rem 0 0;
  width: 100%;
@@ -1032,11 +1033,11 @@ footer {
 .admin-container {
  width: 100%;
  min-height: 100vh;
- background-color: $primary-color;
+ background-color: $secondary-color;
  .hero-section {
   padding: 45px 20px;
   width: 100%;
-  background-color: rgba(#fff, 0.05);
+  background-color: $primary-color;
   text-align: center;
   p {
    width: fit-content;

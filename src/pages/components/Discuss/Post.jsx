@@ -50,7 +50,7 @@ function Post({ key, post }) {
         <div className="d-flex gap-1">
           <span
             style={{
-              display: post.answer ? "block" : "none",
+              display: post.answer && post.answer.date ? "block" : "none",
               color: "#00AB29",
             }}
           >

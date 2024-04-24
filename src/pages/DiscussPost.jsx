@@ -107,7 +107,7 @@ function DiscussPost() {
                     className="answer"
                     style={{
                       display:
-                        post && typeof post.answer === "object" ? "block" : "none",
+                        post && typeof post.answer === "object" && post.answer.date ? "block" : "none",
                     }}
                   >
                     <div className="d-sm-flex gap-4">

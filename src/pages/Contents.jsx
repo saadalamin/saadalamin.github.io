@@ -24,13 +24,11 @@ function Contents() {
             <div class="col-md-6 col-lg-4 mb-3">
               <div class="card bg-dark text-white mb-3 h-100">
                     <div class="position-relative border-sm"> 
-                        <img src="${
-                          e.picture
-                        }" class="img-fluid" alt="..." width="100%" style="aspect-ratio: 16/9; object-fit: contain; background-color: black; border-radius: 0.375rem 0.375rem 0 0; filter: brightness(0.5);">
+                        <img src="${e.picture
+            }" class="img-fluid" alt="..." width="100%" style="aspect-ratio: 16/9; object-fit: contain; background-color: black; border-radius: 0.375rem 0.375rem 0 0; filter: brightness(0.5);">
                         <div class="position-absolute top-50 start-50 translate-middle"
-                            onclick="document.getElementById('modalMain').querySelector('video').src='${
-                              e.source
-                            }'; document.getElementById('modalMain').querySelector('.title-post').innerHTML='${title}';"> 
+                            onclick="document.getElementById('modalMain').querySelector('video').src='${e.source
+            }'; document.getElementById('modalMain').querySelector('.title-post').innerHTML='${title}';"> 
                             <button type="button" class="btn btn-primary rounded-pill p-0 ps-1" style="width: 38px; height: 38px;"  data-bs-toggle="modal" data-bs-target="#modalMain"
                             > 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 18 18">
@@ -41,27 +39,24 @@ function Contents() {
                     </div> 
                     <div> 
                         <div class="card-body"> 
-                            ${
-                              e.title
-                                ? `<p class="card-text m-0">${e.title}</p>`
-                                : ""
-                            } 
-                            <p class="card-text m-0"><small>${
-                              e.description?.replace(
-                                /#(\w+)/g,
-                                '<a href="https://www.facebook.com/hashtag/$1" target="_blank" class="text-decoration-none">#$1</a>'
-                              ) || "No description"
-                            }</small></p> <p class="card-text m-0" style="color: #aaa"><small>${
-            e.views
-          } views</small></p> 
+                            ${e.title
+              ? `<p class="card-text m-0">${e.title}</p>`
+              : ""
+            } 
+                            <p class="card-text m-0"><small>${e.description?.replace(
+              /#(\w+)/g,
+              '<a href="https://www.facebook.com/hashtag/$1" target="_blank" class="text-decoration-none">#$1</a>'
+            ) || "No description"
+            }</small></p> <p class="card-text m-0" style="color: #aaa"><small>${e.views
+            } views</small></p> 
                         </div> 
                     </div>
                </div>
             </div>
             `;
         });
-        document.getElementById("contents").innerHTML = contents;
-        document.getElementById("loading").style.display = "none";
+        if (document.getElementById("contents")) document.getElementById("contents").innerHTML = contents;
+        if (document.getElementById("loading")) document.getElementById("loading").style.display = "none";
       })
       .catch((err) => {
         console.log(err);

@@ -23,7 +23,5 @@ export const convertDateToText = (date) => {
  if (minutes) {
   return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
  }
- if (diff) {
-  return "Just now";
- }
+ return "just now";
 };

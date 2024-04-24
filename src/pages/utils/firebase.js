@@ -367,16 +367,45 @@ export const $firebase_storage_delete = (path /* Single */, result, error) => {
 /***/
 /***/
 
+export const $timestamp = (x) => $fsr.Timestamp.fromDate(x);
+
+/* reading all data */
 export const $firebase_firestore_read = (path, result, error) => {
  $handling(
   async () => {
+   await $fsr.getDocs($fsr.collection($firebase_firestore, path)).then((s) => {
+    let data = [];
+    s.forEach((doc) => {
+     let x = doc.data();
+     x.id = doc.id;
+     data.push(x);
+    });
+    result(data);
+   });
+  },
+  (e) => {
+   error(e);
+  }
+ );
+};
+
+export const $firebase_firestore_read_query = (path, query, result, error) => {
+ $handling(
+  async () => {
+   // firestore timestamp
    await $fsr
-    // reading all data
-    .getDocs($fsr.collection($firebase_firestore, path))
+    .getDocs(
+     $fsr.query(
+      $fsr.collection($firebase_firestore, path),
+      $fsr.where(query[0], query[1], query[2])
+     )
+    )
     .then((s) => {
      let data = [];
      s.forEach((doc) => {
-      data.push(doc.data());
+      let x = doc.data();
+      x.id = doc.id;
+      data.push(x);
      });
      result(data);
     });
@@ -394,8 +423,11 @@ export const $firebase_firestore_read_single = (path, result, error) => {
    await $fsr
     .getDoc($fsr.doc($firebase_firestore, p[0], p[1]))
     .then((s) => {
-     if (s.exists()) result(s.data());
-     else error(false);
+     if (s.exists()) {
+      let x = s.data();
+      x.id = s.id;
+      result(x);
+     } else error(false);
     })
     .catch((e) => {
      if (error) error(e);
@@ -409,18 +441,18 @@ export const $firebase_firestore_read_single = (path, result, error) => {
 
 export const $firebase_firestore_write = (path, data, result, error) => {
  $handling(
-  () => {
-   $fsr
-    .set($fsr.doc($firebase_firestore, path), data)
+  async () => {
+   await $fsr
+    .addDoc($fsr.collection($firebase_firestore, path), data)
     .then((s) => {
-     result(true, s);
+     if (result) result(s);
     })
     .catch((e) => {
      if (error) error(e);
     });
   },
   (e) => {
-   error(e);
+   if (error) error(e);
   }
  );
 };
