@@ -25,8 +25,8 @@ function About() {
       <Navbar />
 
       {/*-- __MAIN__ --*/}
-      <main className="about pt-lg-5">
-        <div className="container p-0">
+      <main className="about py-5">
+        <div className="container p-md-0">
           {/*-- __HERO__ --*/}
           <Hero />
 

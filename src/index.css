@@ -866,7 +866,9 @@ footer {
 }
 .discuss .post {
   max-width: 700px;
+  background-color: rgba(36, 37, 38, 0.4);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 .discuss .post .post-title {
   cursor: pointer;
@@ -959,6 +961,9 @@ footer {
   }
 }
 
+.post-self {
+  min-height: 70vh;
+}
 .post-self .section {
   background-color: #242526;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -978,6 +983,10 @@ footer {
 }
 .post-self .section .posts ul li a svg {
   stroke: #6daeee;
+}
+.post-self .btn:active {
+  opacity: 0.5;
+  transform: scale(0.9);
 }
 
 /*** ADMIN ***/

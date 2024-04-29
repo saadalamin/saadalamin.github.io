@@ -97,7 +97,7 @@ function Discuss() {
                 className="p-0"
                 style={{
                   minHeight: "50vh",
-                  borderLeft: "1px solid rgba(255, 255, 255, 0.1)",
+                  borderLeft: "1px solid rgba(255, 255, 255, 0.1)"
                 }}
               >
                 {Array.isArray(posts) ? posts.map((post, index) => (

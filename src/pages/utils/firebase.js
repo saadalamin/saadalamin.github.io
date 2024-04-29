@@ -380,11 +380,11 @@ export const $firebase_firestore_read = (path, result, error) => {
      x.id = doc.id;
      data.push(x);
     });
-    result(data);
+    if (result) result(data);
    });
   },
   (e) => {
-   error(e);
+   if (error) error(e);
   }
  );
 };
@@ -441,18 +441,18 @@ export const $firebase_firestore_read_single = (path, result, error) => {
 
 export const $firebase_firestore_write = (path, data, result, error) => {
  $handling(
-  async () => {
-   await $fsr
-    .addDoc($fsr.collection($firebase_firestore, path), data)
+  () => {
+   $fsr
+    .setDoc($fsr.doc($firebase_firestore, path), data)
     .then((s) => {
-     if (result) result(s);
+     result(true, s);
     })
     .catch((e) => {
      if (error) error(e);
     });
   },
   (e) => {
-   if (error) error(e);
+   error(e);
   }
  );
 };
@@ -461,7 +461,7 @@ export const $firebase_firestore_update = (path, data, result, error) => {
  $handling(
   () => {
    $fsr
-    .update($fsr.doc($firebase_firestore, path), data)
+    .updateDoc($fsr.doc($firebase_firestore, path), data)
     .then((s) => {
      result(true, s);
     })
