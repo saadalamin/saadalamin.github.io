@@ -173,7 +173,7 @@ function DiscussPost() {
                     className="answer-form answer"
                     style={{
                       display:
-                        isLoggedIn === true &&
+                        isLoggedIn &&
                           (post && typeof post.answer !== "object") || (post && typeof post.answer === "object" && Object.keys(post.answer).length === 0)
                           ? "block" : "none",
                     }}

@@ -24,6 +24,9 @@ function Modal() {
         $firebase_firestore_write('discuss-posts', data, () => {
             alert('Question submitted successfully');
             document.querySelector('#modalForDiscuss').querySelector('button.btn-close').click();
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
         }, (e) => {
             alert("Failed to submit question");
             console.error(e);

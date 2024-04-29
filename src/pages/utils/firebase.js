@@ -443,7 +443,7 @@ export const $firebase_firestore_write = (path, data, result, error) => {
  $handling(
   () => {
    $fsr
-    .setDoc($fsr.doc($firebase_firestore, path), data)
+    .addDoc($fsr.collection($firebase_firestore, path), data)
     .then((s) => {
      result(true, s);
     })
