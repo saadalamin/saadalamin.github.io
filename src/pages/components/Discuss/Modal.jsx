@@ -41,7 +41,10 @@ function Modal() {
             aria-labelledby="Ask Question"
             aria-hidden="true"
         >
-            <div className="modal-dialog modal-lg modal-dialog-scrollable">
+            <div className="modal-dialog modal-lg modal-dialog-scrollable"
+                style={{
+                    maxWidth: '500px',
+                }}>
                 <div className="modal-content bg-light text-black">
                     <div className="modal-header">
                         <h1 className="modal-title fs-5" id="modalLabel">
