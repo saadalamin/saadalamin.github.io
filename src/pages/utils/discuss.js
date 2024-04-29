@@ -36,7 +36,7 @@ const suggestedPosts = (success, error) => {
 const postAnswer = (postId, data, success, error) => {
  $firebase_firestore_update(
   `discuss-posts/${postId}`,
-  { answers: data },
+  { answer: data },
   (s) => {
    if (success) success(s);
   },
