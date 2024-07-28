@@ -127,7 +127,7 @@ function DiscussPost() {
                     className="answer"
                     style={{
                       display:
-                        post && typeof post.answer === "object" && post.answer.date ? "block" : "none",
+                        typeof post.answer === "object" && post.body && post.answer.date ? "block" : "none",
                     }}
                   >
                     <div className="d-sm-flex gap-4">
@@ -246,7 +246,7 @@ function DiscussPost() {
                     style={{
                       display:
                         isLoggedIn ?
-                          ((post && typeof post.answer !== "object") || (post && typeof post.answer === "object" && Object.keys(post.answer).length === 0)
+                          ((typeof post.answer !== "object") || (typeof post.answer === "object" && Object.keys(post.answer).length === 0)
                             ? "block" : "none") : "none"
                     }}
                   >
