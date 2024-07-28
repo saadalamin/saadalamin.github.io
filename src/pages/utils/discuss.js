@@ -1,5 +1,4 @@
 import {
- $firebase_firestore_read,
  $firebase_firestore_read_limit,
  $firebase_firestore_update,
 } from "./firebase";
@@ -48,4 +47,18 @@ const postAnswer = (postId, data, success, error) => {
  );
 };
 
-export { allPosts, suggestedPosts, postAnswer };
+/* */
+const editAnswer = (postId, data, success, error) => {
+ $firebase_firestore_update(
+  `discuss-posts/${postId}`,
+  { answer: data },
+  (s) => {
+   if (success) success(s);
+  },
+  (e) => {
+   if (error) error(e);
+  }
+ );
+};
+
+export { allPosts, suggestedPosts, postAnswer, editAnswer };
