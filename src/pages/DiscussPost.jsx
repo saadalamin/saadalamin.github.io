@@ -212,19 +212,21 @@ function DiscussPost() {
                             }}
                             onClick={() => {
                               const _b = prompt("Edit answer:", post.answer.body || "");
-                              editAnswer(postId, { body: _b, date: $timestamp(new Date()) }, () => {
-                                setPost({
-                                  ...post,
-                                  answer: {
-                                    body: _b,
-                                    date: new Date(),
-                                  },
+                              if (_b) {
+                                editAnswer(postId, { body: _b, date: $timestamp(new Date()) }, () => {
+                                  setPost({
+                                    ...post,
+                                    answer: {
+                                      body: _b,
+                                      date: new Date(),
+                                    },
+                                  });
+                                  alert("Answer edited successfully!");
+                                }, (e) => {
+                                  alert("Failed to edit answer!");
+                                  console.log(e);
                                 });
-                                alert("Answer edited successfully!");
-                              }, (e) => {
-                                alert("Failed to edit answer!");
-                                console.log(e);
-                              });
+                              }
                             }}
                           >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="lightgreen" style={{
