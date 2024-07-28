@@ -81,7 +81,7 @@ function Discuss() {
                       className="form-control"
                       placeholder="Search"
                     />
-                    <button className="btn btn-dark ms-2">Search</button>
+                    <button className="btn btn-dark ms-2">Search by your email or title</button>
                   </div>
                   <div className="col-md-3">
                     <select className="form-select">
