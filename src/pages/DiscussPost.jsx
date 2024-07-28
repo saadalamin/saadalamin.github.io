@@ -12,7 +12,8 @@ import { editAnswer, postAnswer } from "./utils/discuss";
 import {
   $firebase_auth_check_admin,
   $firebase_auth_onAuth,
-  $firebase_firestore_read_single
+  $firebase_firestore_read_single,
+  $timestamp
 } from "./utils/firebase";
 
 function DiscussPost() {
@@ -180,7 +181,7 @@ function DiscussPost() {
                             }}
                             onClick={() => {
                               if (confirm("Are you sure you want to delete this answer?")) {
-                                postAnswer(postId, { answer: {} }, () => {
+                                postAnswer(postId, {}, () => {
                                   setPost({
                                     ...post,
                                     answer: {},
@@ -211,7 +212,7 @@ function DiscussPost() {
                             }}
                             onClick={() => {
                               const _b = prompt("Edit answer:", post.answer.body || "");
-                              editAnswer(postId, { body: _b }, () => {
+                              editAnswer(postId, { body: _b, date: $timestamp(new Date()) }, () => {
                                 setPost({
                                   ...post,
                                   answer: {
