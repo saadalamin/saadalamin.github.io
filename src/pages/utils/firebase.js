@@ -416,6 +416,33 @@ export const $firebase_firestore_read_query = (path, query, result, error) => {
  );
 };
 
+export const $firebase_firestore_read_limit = (path, [orderBy = "date", dOrA = "asc"], limit = 10, result, error) => {
+  $handling(
+    async () => {
+    await $fsr
+      .getDocs(
+      $fsr.query(
+        $fsr.collection($firebase_firestore, path),
+        $fsr.orderBy(orderBy, dOrA),
+        $fsr.limit(limit)
+      )
+      )
+      .then((s) => {
+      let data = [];
+      s.forEach((doc) => {
+        let x = doc.data();
+        x.id = doc.id;
+        data.push(x);
+      });
+      result(data);
+      });
+    },
+    (e) => {
+    error(e);
+    }
+  );
+  };
+
 export const $firebase_firestore_read_single = (path, result, error) => {
  $handling(
   async () => {
