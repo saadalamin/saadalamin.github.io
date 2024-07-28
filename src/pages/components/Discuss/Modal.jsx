@@ -18,7 +18,7 @@ function Modal() {
             author: document.querySelector('#modalForDiscuss #name').value,
             date: $timestamp(new Date()),
             email: email,
-            answer: []
+            answer: {}
         };
 
         $firebase_firestore_write('discuss-posts', data, () => {
