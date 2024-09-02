@@ -41,7 +41,7 @@ function Counter() {
   <>
    <div className="count shadow row row-gap-5 justify-content-center text-center">
     <section className="col-12 col-md-3">
-     <h2 className="counting">30000+</h2>
+     <h2 className="counting">30000</h2>
      <p>Audience</p>
     </section>
     <section className="col-12 col-md-3">
