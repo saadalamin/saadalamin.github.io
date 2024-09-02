@@ -5,7 +5,7 @@ function Hero() {
   return (
     <>
       <div className="first w-100">
-        <div className="intro container">
+        <div className="intro container text-center">
           <h2 className="fw-bolder">Saad Al Amin</h2>
           <span
             className="badge bg-custom fw-normal p-2"
@@ -13,14 +13,14 @@ function Hero() {
           >
             Film Maker | Musical Artist | Leader
           </span>
-          <p className="mt-4">
+          <p className="p-0" style={{margin: "0 auto"}}>
             Saad Al Amin is a Bangladeshi artist, film maker and graphics
             designer born in Bangladesh. He is now working as a leading
             personality in tons of activities. Saad is also a very well known
             personality in Bangladesh who has been working hard to make a
             difference in Bangladesh.
           </p>
-          <div className="mt-5 d-flex flex-column flex-md-row gap-3 align-items-center">
+          <div className="mt-5 d-flex flex-column flex-md-row gap-3 align-items-center justify-content-center">
             <Link
               to="/about"
               className="btn btn-dark p-2 px-4 m-0"
