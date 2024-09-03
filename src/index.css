@@ -131,7 +131,6 @@ main {
 /*** HOME PAGE ***/
 .first {
  width: 100%;
- background-color: rgba(24, 25, 26, 0.45);
 }
 .first .intro {
  padding: 85px 0;
