@@ -2,6 +2,7 @@ const websiteSchema = JSON.stringify({
  "@context": "https://schema.org",
  "@type": "WebSite",
  name: "Saad Al Amin",
+ url: "https://saadalamin.com",
  potentialAction: {
   "@type": "SearchAction",
   target: {
