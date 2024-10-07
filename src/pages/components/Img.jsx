@@ -1,27 +1,27 @@
-import React from "react";
+import { Component } from "react";
 
-export default class Img extends React.Component {
- state = { src: null };
+export default class Img extends Component {
+    state = { src: null };
 
- componentDidMount() {
-  const { src } = this.props;
+    componentDidMount() {
+        const { src } = this.props;
 
-  const imageLoader = new Image();
-  imageLoader.src = src;
+        const imageLoader = new Image();
+        imageLoader.src = src;
 
-  imageLoader.onload = () => {
-   this.setState({ src });
-  };
- }
+        imageLoader.onload = () => {
+            this.setState({ src });
+        };
+    }
 
- render() {
-  return (
-   <div
-    {...this.props}
-    style={{
-     backgroundImage: `url(${this.state.src || this.props.placeholder})`,
-    }}
-   />
-  );
- }
+    render() {
+        return (
+            <div
+                {...this.props}
+                style={{
+                    backgroundImage: `url(${this.state.src || this.props.placeholder})`,
+                }}
+            />
+        );
+    }
 }

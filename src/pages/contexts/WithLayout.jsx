@@ -1,10 +1,10 @@
-import React from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 function WithLayout({ children }) {
   const location = useLocation();
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
@@ -12,7 +12,7 @@ function WithLayout({ children }) {
     });
   }, [location]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     /**
      * @description Bottom to top button
      */

@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 
 // Components
@@ -11,17 +10,18 @@ import Modal from "./components/Discuss/Modal";
 // Utils
 import { allPosts, suggestedPosts } from "./utils/discuss";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function Discuss() {
-  const [posts, setPosts] = React.useState(null);
-  const [suggested, setSuggested] = React.useState(null);
+  const [posts, setPosts] = useState(null);
+  const [suggested, setSuggested] = useState(null);
   const openModal = () => {
     const modal = new bootstrap.Modal(document.getElementById("modalForDiscuss"), {
       keyboard: false,
     });
     modal.show();
   };
-  React.useEffect(() => {
+  useEffect(() => {
     allPosts(
       (data) => {
         setPosts(data);

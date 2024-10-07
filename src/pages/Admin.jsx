@@ -1,5 +1,5 @@
-import React from "react";
 import { Helmet } from "react-helmet";
+import { useEffect, useState } from "react";
 
 import Sitemap from "./components/Admin/Sitemap";
 import Discuss from "./components/Admin/Discuss";
@@ -15,9 +15,9 @@ import {
 } from "./utils/firebase";
 
 function Admin() {
-  const [isLoggedIn, setIsLoggedIn] = React.useState(null);
-  const [userName, setUserName] = React.useState(null);
-  React.useEffect(() => {
+  const [isLoggedIn, setIsLoggedIn] = useState(null);
+  const [userName, setUserName] = useState(null);
+  useEffect(() => {
     $firebase_auth_onAuth((user) => {
       if (user) {
         $firebase_auth_check_admin((r) => {

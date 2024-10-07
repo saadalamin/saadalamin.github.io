@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation, useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
@@ -15,14 +14,15 @@ import {
   $firebase_firestore_read_single,
   $timestamp
 } from "./utils/firebase";
+import { useEffect, useState } from "react";
 
 function DiscussPost() {
-  const [post, setPost] = React.useState(useLocation()?.state?.post || null);
-  const [isLoggedIn, setIsLoggedIn] = React.useState(null);
-  const [isDisabledSA, setIsDisabledSA] = React.useState(true);
+  const [post, setPost] = useState(useLocation()?.state?.post || null);
+  const [isLoggedIn, setIsLoggedIn] = useState(null);
+  const [isDisabledSA, setIsDisabledSA] = useState(true);
   const postId = useParams().id;
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!post) {
       $firebase_firestore_read_single(
         `discuss-posts/${postId}`,

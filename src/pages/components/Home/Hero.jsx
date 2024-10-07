@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 function Hero() {
@@ -8,22 +7,22 @@ function Hero() {
         <div className="intro container text-center">
           <h2 className="fw-bolder">Saad Al Amin</h2>
           <span
-            className="badge bg-custom fw-normal p-2"
-            style={{ width: "fit-content" }}
+            className="badge fw-normal p-2"
+            style={{ width: "fit-content", backgroundColor: "#444" }}
           >
             Film Maker | Musical Artist | Leader
           </span>
-          <p className="p-0" style={{margin: "0 auto"}}>
+          <p className="p-0" style={{ margin: "0 auto" }}>
             Saad Al Amin is a Bangladeshi artist, film maker and graphics
             designer born in Bangladesh. He is now working as a leading
             personality in tons of activities. Saad is also a very well known
             personality in Bangladesh who has been working hard to make a
             difference in Bangladesh.
           </p>
-          <div className="mt-5 d-flex flex-column flex-md-row gap-3 align-items-center justify-content-center">
+          <div className="mt-4 d-flex flex-column flex-md-row gap-3 align-items-center justify-content-center">
             <Link
               to="/about"
-              className="btn btn-dark p-2 px-4 m-0"
+              className="btn btn-secondary p-2 px-4 m-0"
               style={{ width: "fit-content" }}
             >
               Learn More{" "}

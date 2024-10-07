@@ -1,4 +1,3 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import modalConfig from "./scripts/modalConfig";
 
@@ -9,9 +8,10 @@ import Opinions from "./components/About/Opinions";
 import Media from "./components/About/Media";
 import Footer from "./components/Footer";
 import Hidden from "./components/About/Hidden";
+import { useEffect } from "react";
 
 function About() {
-  React.useEffect(() => {
+  useEffect(() => {
     modalConfig();
   }, []);
   return (

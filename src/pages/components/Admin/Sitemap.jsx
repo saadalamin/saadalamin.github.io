@@ -1,16 +1,16 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { getSitemap, postSitemap } from "../../utils/sitemap";
 
 function Sitemap() {
-    const [data, setData] = React.useState(null);
-    const [addnewsitemapInput1, setAddnewsitemapInput1] = React.useState(
+    const [data, setData] = useState(null);
+    const [addnewsitemapInput1, setAddnewsitemapInput1] = useState(
         "https://saadalamin.com/"
     );
-    const [addnewsitemapInput2, setAddnewsitemapInput2] = React.useState(
+    const [addnewsitemapInput2, setAddnewsitemapInput2] = useState(
         new Date().toISOString().split("T")[0]
     );
-    const [addnewsitemapInput3, setAddnewsitemapInput3] = React.useState("Select");
-    React.useEffect(() => {
+    const [addnewsitemapInput3, setAddnewsitemapInput3] = useState("Select");
+    useEffect(() => {
         getSitemap((result) => {
             setData(result);
         });

@@ -25,7 +25,7 @@ body {
 }
 
 .Home {
- background-image: url(../images/interface/e3.jpg);
+ /*background-image: url(../images/interface/e3.jpg);*/
  background-repeat: no-repeat;
  background-size: cover;
  background-position: center;
@@ -133,14 +133,15 @@ main {
  width: 100%;
 }
 .first .intro {
+ min-height: 80vh;
  padding: 85px 0;
  margin: 40px auto;
- background: linear-gradient(to right, rgb(24, 25, 26) 50%, transparent),
+ background: linear-gradient(to right, rgb(38, 39, 39) 50%, transparent),
   url(../images/interface/e3.jpg) no-repeat center !important;
  background-size: cover;
  animation: animate1 0.56s ease;
  border-radius: 1rem;
- border: 1px solid rgba(255, 255, 255, 0.1);
+ 
 }
 
 @keyframes animate1 {
@@ -164,9 +165,9 @@ main {
 .first .intro p {
  font-size: 1rem;
  font-family: "Roboto", sans-serif;
- line-height: 36px;
+ line-height: 34px;
  width: 60%;
- margin-top: 50px !important;
+ margin-top: 30px !important;
 }
 .first .intro a {
  margin-top: 40px;

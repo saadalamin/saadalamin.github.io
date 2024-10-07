@@ -1,7 +1,7 @@
-import React from "react";
+import { useEffect } from "react";
 
 function Discuss() {
-    React.useEffect(() => {
+    useEffect(() => {
     }, []);
     return (
         <div className="sitemap-section mt-5">

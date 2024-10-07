@@ -1,10 +1,10 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 
 // Components
 import Navbar from "./components/Navbar";
 import modalConfig from "./scripts/modalConfig";
 import Hidden from "./components/Contents/Hidden";
+import { useEffect } from "react";
 
 function Contents() {
   function getContentsFromFB() {
@@ -62,7 +62,7 @@ function Contents() {
         console.log(err);
       });
   }
-  React.useEffect(() => {
+  useEffect(() => {
     modalConfig();
     getContentsFromFB();
   }, []);
