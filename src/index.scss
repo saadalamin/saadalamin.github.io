@@ -31,10 +31,6 @@ body {
  background-color: $primary-color !important;
  color: $primary-text-color;
 }
-.Home {
- @include image-center("../images/interface/e3.jpg");
- background-attachment: fixed;
-}
 
 /*** Common Things ***/
 .bg-custom {
@@ -59,14 +55,16 @@ h6 {
 }
 .title {
  position: relative;
- margin: 30px 0 19px 30px;
+ font-weight: 800;
+ text-transform: uppercase;
+ margin: 30px 0 30px 30px;
  &:before {
   content: "";
   display: block;
   position: absolute;
   left: -20px;
   width: 6px;
-  height: 30px;
+  height: 28px;
   background-color: #e92f2f;
  }
 }
@@ -116,6 +114,7 @@ main {
   text-transform: capitalize;
   text-decoration: none;
   color: #aaa;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
  }
  .desktop a.active {
   color: #fff;
@@ -128,12 +127,15 @@ main {
 /*** HOME PAGE ***/
 .first {
  width: 100%;
- height: fit-content;
- min-height: 95vh;
- background-color: rgba($primary-color, 0.45);
  .intro {
+  min-height: 80vh;
   padding: 85px 0;
+  margin: 40px auto;
+  background: linear-gradient(to right, rgb(38, 39, 39) 50%, transparent),
+   url(../images/interface/e3.jpg) no-repeat center !important;
+  background-size: cover;
   animation: animate1 0.56s ease;
+  border-radius: 1rem;
   @keyframes animate1 {
    0% {
     transform: translateY(-100px);
@@ -155,9 +157,9 @@ main {
   p {
    font-size: 1rem;
    font-family: "Roboto", sans-serif;
-   line-height: 36px;
+   line-height: 34px;
    width: 60%;
-   margin-top: 50px !important;
+   margin-top: 30px !important;
   }
   a {
    margin-top: 40px;
@@ -312,10 +314,12 @@ main {
   margin: 20px 0;
  }
  .box {
-  img {
+  img,
+  .cover {
    width: 40px;
    height: 40px;
    border-radius: 0.3rem;
+   background-color: $secondary-color;
   }
   .details {
    width: 100%;
@@ -343,9 +347,13 @@ main {
   }
  }
  .publications {
-  img {
-   width: 45px;
-   height: 67.5px;
+  .box {
+   img,
+   .cover {
+    min-width: 90px !important;
+    min-height: 120px;
+    object-fit: cover;
+   }
   }
  }
  .skills {
@@ -604,6 +612,48 @@ main {
   background-attachment: initial;
  }
 }
+@media screen and (max-width: 993px) {
+ .Home {
+  @include image-center("../images/interface/e3.jpg");
+  background-attachment: fixed;
+ }
+ .first .intro {
+  min-height: 80vh;
+  background: transparent !important;
+  p {
+   width: 100%;
+  }
+ }
+ #modalForPress {
+  li {
+   flex-direction: column;
+   div {
+    padding-left: 5px;
+   }
+   img {
+    width: 100% !important;
+   }
+   h4 {
+    font-size: 0.7rem;
+   }
+  }
+ }
+}
+@media screen and (min-width: 993px) {
+ .works {
+  .banner {
+   @include image-center("../images/interface/coverphoto-work-1.jpg");
+   background-position: 0 20%;
+  }
+ }
+}
+@media screen and (min-width: 1400px) {
+ .works {
+  .banner {
+   background-position: 0 40%;
+  }
+ }
+}
 @media screen and (min-width: 1500px) {
  .first {
   .intro {
@@ -739,7 +789,8 @@ main {
     font-size: 2rem;
    }
    p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
    }
   }
  }
@@ -790,39 +841,7 @@ footer {
   object-fit: cover;
  }
 }
-@media screen and (max-width: 500px) {
- #modalForPress {
-  li {
-   flex-direction: column;
-   div {
-    padding-left: 5px;
-   }
-   img {
-    width: 100% !important;
-   }
-   h4 {
-    font-size: 0.7rem;
-   }
-  }
- }
-}
 
-@media screen and (min-width: 993px) {
- .works {
-  .banner {
-   @include image-center("../images/interface/coverphoto-work-1.jpg");
-   background-position: 0 20%;
-  }
- }
-}
-
-@media screen and (min-width: 1400px) {
- .works {
-  .banner {
-   background-position: 0 40%;
-  }
- }
-}
 .__alert {
  position: fixed;
  bottom: 10px;

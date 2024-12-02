@@ -14,100 +14,109 @@ import Admin from "./pages/Admin";
 import WithLayout from "./pages/contexts/WithLayout";
 import Search from "./pages/Search";
 import Error from "./pages/Error";
+import Publications from "./pages/Publications";
 
 function App() {
-  return (
-    <>
-      <BrowserRouter>
-        <Helmet>
-          <script type="application/ld+json">{websiteSchema}</script>
-        </Helmet>
+ return (
+  <>
+   <BrowserRouter>
+    <Helmet>
+     <script type="application/ld+json">{websiteSchema}</script>
+    </Helmet>
 
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <WithLayout>
-                <Home />
-              </WithLayout>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <WithLayout>
-                <About />
-              </WithLayout>
-            }
-          />
-          <Route
-            path="/blog"
-            element={
-              <WithLayout>
-                <Blog />
-              </WithLayout>
-            }
-          />
-          <Route
-            path="/works"
-            element={
-              <WithLayout>
-                <Works />
-              </WithLayout>
-            }
-          />
-          <Route
-            path="/contents"
-            element={
-              <WithLayout>
-                <Contents />
-              </WithLayout>
-            }
-          />
-          <Route
-            path="/search"
-            element={
-              <WithLayout>
-                <Search />
-              </WithLayout>
-            }
-          />
-          <Route
-            path="/discuss"
-            element={
-              <WithLayout>
-                <Discuss />
-              </WithLayout>
-            }
-          />
-          <Route
-            path="/discuss/q/:id"
-            element={
-              <WithLayout>
-                <DiscussPost />
-              </WithLayout>
-            }
-          />
-          <Route
-            path="/admin"
-            element={
-              <WithLayout>
-                <Admin />
-              </WithLayout>
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <WithLayout>
-                <Error />
-              </WithLayout>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+    <Routes>
+     <Route
+      path="/"
+      element={
+       <WithLayout>
+        <Home />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="/about"
+      element={
+       <WithLayout>
+        <About />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="/blog"
+      element={
+       <WithLayout>
+        <Blog />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="/works"
+      element={
+       <WithLayout>
+        <Works />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="/contents"
+      element={
+       <WithLayout>
+        <Contents />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="/search"
+      element={
+       <WithLayout>
+        <Search />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="/discuss"
+      element={
+       <WithLayout>
+        <Discuss />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="/discuss/q/:id"
+      element={
+       <WithLayout>
+        <DiscussPost />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="/publication/:id"
+      element={
+       <WithLayout>
+        <Publications />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="/admin"
+      element={
+       <WithLayout>
+        <Admin />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="*"
+      element={
+       <WithLayout>
+        <Error />
+       </WithLayout>
+      }
+     />
+    </Routes>
+   </BrowserRouter>
+  </>
+ );
 }
 
 export default App;
