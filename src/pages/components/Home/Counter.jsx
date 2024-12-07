@@ -1,61 +1,53 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function Counter() {
-    useEffect(() => {
-        /**
-         * @description Counting effect
-         */
-        var counting = function () {
-            var counters = document.querySelectorAll(".count .counting");
-            var countersQuantity = counters.length;
-            var counter = [];
+  const [counters, setCounters] = useState([0, 0]);
 
-            for (let i = 0; i < countersQuantity; i++) {
-                counter[i] = parseInt(counters[i].innerHTML);
-            }
+  useEffect(() => {
+    const targetValues = [35000, 300];
+    const duration = 2000;
+    const interval = 50;
 
-            var count = function (start, value, id) {
-                var localStart = start;
-                var interval = 50;
-                var increment = Math.ceil((value - start) / (2000 / interval));
+    const animateCounters = () => {
+      const increments = targetValues.map(
+        (value) => Math.ceil(value / (duration / interval))
+      );
 
-                var updateCounter = function () {
-                    if (localStart < value) {
-                        localStart += increment;
-                        if (localStart > value) localStart = value;
-                        counters[id].innerHTML = localStart.toLocaleString("en-US") + "+";
-                        setTimeout(updateCounter, interval);
-                    }
-                };
+      let currentValues = [...counters];
+      const timer = setInterval(() => {
+        let allCompleted = true;
+        currentValues = currentValues.map((val, idx) => {
+          if (val < targetValues[idx]) {
+            allCompleted = false;
+            return Math.min(val + increments[idx], targetValues[idx]);
+          }
+          return val;
+        });
 
-                updateCounter();
-            };
+        setCounters(currentValues);
+        if (allCompleted) clearInterval(timer);
+      }, interval);
+    };
 
-            for (let j = 0; j < countersQuantity; j++) {
-                count(0, counter[j], j);
-            }
-        };
-        counting();
-    }, []);
-    return (
-        <>
-            <div className="count shadow row row-gap-5 justify-content-center text-center">
-                <section className="col-12 col-md-3">
-                    <h2 className="counting">30000</h2>
-                    <p>Audience</p>
-                </section>
-                <section className="col-12 col-md-3">
-                    <h2 className="counting">300+</h2>
-                    <p>Team Member</p>
-                </section>
-                <section className="col-12 col-md-3">
-                    <h2>6M+</h2>
-                    <p>Reached</p>
-                </section>
-            </div>
-            <div className="break"></div>
-        </>
-    );
+    animateCounters();
+  }, []);
+
+  return (
+    <div className="count shadow row row-gap-5 justify-content-center text-center">
+      <section className="col-12 col-md-3">
+        <h2>{counters[0].toLocaleString("en-US")}+</h2>
+        <p>Audience</p>
+      </section>
+      <section className="col-12 col-md-3">
+        <h2>{counters[1].toLocaleString("en-US")}+</h2>
+        <p>Team Member</p>
+      </section>
+      <section className="col-12 col-md-3">
+        <h2>10M+</h2>
+        <p>Reached</p>
+      </section>
+    </div>
+  );
 }
 
 export default Counter;
