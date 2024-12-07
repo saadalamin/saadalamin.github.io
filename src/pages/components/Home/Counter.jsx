@@ -9,8 +9,8 @@ function Counter() {
     const interval = 50;
 
     const animateCounters = () => {
-      const increments = targetValues.map(
-        (value) => Math.ceil(value / (duration / interval))
+      const increments = targetValues.map((value) =>
+        Math.ceil(value / (duration / interval))
       );
 
       let currentValues = [...counters];
@@ -33,20 +33,23 @@ function Counter() {
   }, []);
 
   return (
-    <div className="count shadow row row-gap-5 justify-content-center text-center">
-      <section className="col-12 col-md-3">
-        <h2>{counters[0].toLocaleString("en-US")}+</h2>
-        <p>Audience</p>
-      </section>
-      <section className="col-12 col-md-3">
-        <h2>{counters[1].toLocaleString("en-US")}+</h2>
-        <p>Team Member</p>
-      </section>
-      <section className="col-12 col-md-3">
-        <h2>10M+</h2>
-        <p>Reached</p>
-      </section>
-    </div>
+    <>
+      <div className="count shadow row row-gap-5 justify-content-center text-center ">
+        <section className="col-12 col-md-3">
+          <h2>{counters[0].toLocaleString("en-US")}+</h2>
+          <p>Audience</p>
+        </section>
+        <section className="col-12 col-md-3">
+          <h2>{counters[1].toLocaleString("en-US")}+</h2>
+          <p>Team Member</p>
+        </section>
+        <section className="col-12 col-md-3">
+          <h2>10M+</h2>
+          <p>Reached</p>
+        </section>
+      </div>
+      <div className="break" />
+    </>
   );
 }
 
