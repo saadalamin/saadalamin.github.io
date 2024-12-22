@@ -118,7 +118,7 @@ function About() {
                 <span>Jan 2024 - Present</span>
                 <span>Dhaka, Bangladesh</span>
 
-                <p className="mt-2"></p>
+                <p className="mt-2">Founded brand concepts and design tasks for Qweek AI, with recognition from funders for creativity and impact.</p>
               </div>
             </div>
             <hr />
@@ -130,19 +130,7 @@ function About() {
                 <span>Aug 2022 - Sep 2023</span>
                 <span>Dhaka, Bangladesh</span>
 
-                <p className="mt-2"></p>
-              </div>
-            </div>
-            <hr />
-            <div className="box d-flex">
-              <img src="/images/icons/chcl.jpeg" alt="Chalkboard" />
-              <div className="details">
-                <h3>Graphics Design Artist</h3>
-                <p>Chalkboard Communications Ltd</p>
-                <span>Aug 2022 - Dec 2023</span>
-                <span>Dhaka, Bangladesh</span>
-
-                <p className="mt-2"></p>
+                <p className="mt-2">Documented and photographed five major events, managed social media content, and supported the organization’s goals of promoting cultural engagement through visual storytelling.</p>
               </div>
             </div>
             <hr />

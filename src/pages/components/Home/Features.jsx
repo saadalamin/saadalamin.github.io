@@ -5,7 +5,7 @@ function Features() {
             <div className="features shadow row gap-5 justify-content-center text-center">
                 <section className="col-11 col-md-3">
                     <img src="/images/icons/fa-solid-award.png" alt="Experience" />
-                    <h5>5+ Years Experience</h5>
+                    <h5>{new Date().getFullYear() - new Date("2018").getFullYear()}+ Years Experience</h5>
                     <p>
                         Founded Muktir Ghonta, Videophics. Worked as a Campus Ambassador at DMFF.
                     </p>

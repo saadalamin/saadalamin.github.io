@@ -4,7 +4,7 @@ function Navbar() {
     return (
         <>
             <nav className="navbar">
-                <div className="container p-md-0">
+                <div className="container-fluid px-3 px-md-5">
                     <NavLink className="navbar-brand" to="/">
                         <img
                             src="/images/persons/saad2.jpg"

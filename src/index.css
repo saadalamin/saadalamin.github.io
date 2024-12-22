@@ -94,7 +94,8 @@ main {
 }
 .navbar .navbar-brand img {
   border-radius: 0.2rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .navbar .dropdown-menu {
   background-color: #242526;
@@ -127,12 +128,22 @@ main {
 }
 .first .intro {
   min-height: 80vh;
-  padding: 85px 0;
-  margin: 40px auto;
-  background: linear-gradient(to right, rgb(38, 39, 39) 50%, transparent), url(../images/interface/e3.jpg) no-repeat center !important;
-  background-size: cover;
+  margin: 20px;
+  display: flex;
+  align-items: center;
   animation: animate1 0.56s ease;
-  border-radius: 1rem;
+}
+.first .intro:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+  background: linear-gradient(to right, rgba(38, 39, 39, 0.9) 50%, transparent), url(../images/interface/e3.jpg) no-repeat center !important;
+  background-size: cover;
 }
 @keyframes animate1 {
   0% {
@@ -155,8 +166,7 @@ main {
 .first .intro p {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  line-height: 34px;
-  width: 60%;
+  line-height: 30px;
   margin-top: 30px !important;
 }
 .first .intro a {
@@ -184,7 +194,8 @@ main {
   align-items: center;
   max-height: 300px;
   aspect-ratio: 16/9;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.065);
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
@@ -194,7 +205,8 @@ main {
   opacity: 0.4;
 }
 .home .posts-a .post img:first-child {
-  object-position: 0 30%;
+  -o-object-position: 0 30%;
+     object-position: 0 30%;
 }
 .home .posts-a .post .body p {
   width: 100%;
@@ -253,7 +265,8 @@ main {
   height: 78px;
   padding: 18px;
   border-radius: 1rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: #fff;
   margin-top: -100px;
 }
@@ -294,6 +307,7 @@ main {
   color: #333;
   background-color: #fff;
   padding: 4px 10px;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 0.4rem;
   margin: 0 auto;
@@ -344,7 +358,8 @@ main {
 .home .publications .box .cover {
   min-width: 90px !important;
   min-height: 120px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .home .skills li {
   padding: 8px 0;
@@ -491,7 +506,8 @@ main {
   width: 100%;
   height: 100%;
   min-height: 115px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .works .project-container-d .row div img:hover,
 .works .project-container-e .row div img:hover {
@@ -500,7 +516,8 @@ main {
 }
 .works .project-container-g img {
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .works .project-container-g span {
   display: block;
@@ -526,6 +543,7 @@ main {
   padding: 0 10px;
 }
 .about .opinion .opinion-list .item {
+  height: -moz-min-content;
   height: min-content;
   border-radius: 2rem;
   background-color: #fff;
@@ -563,7 +581,8 @@ main {
   height: 100px;
   border-radius: 100rem;
   border: 8px solid #eee;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about .media-links {
   padding-top: 10px;
@@ -594,8 +613,7 @@ main {
     background-position: center;
     background-attachment: fixed;
   }
-  .first .intro {
-    min-height: 80vh;
+  .first .intro:before {
     background: transparent !important;
   }
   .first .intro p {
@@ -629,9 +647,6 @@ main {
   }
 }
 @media screen and (min-width: 1500px) {
-  .first .intro {
-    padding-top: 150px !important;
-  }
   .first .intro p {
     padding-top: 20px;
   }
@@ -685,7 +700,6 @@ main {
 }
 @media screen and (max-width: 769px) {
   .first .intro {
-    padding: 100px 20px 120px 20px;
     text-align: center;
   }
   .first .intro h2 {
@@ -784,7 +798,8 @@ footer {
   width: 100%;
   max-width: 400px;
   border: 1px dashed #fff;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #modalForPress li {
@@ -804,19 +819,22 @@ footer {
   width: 200px !important;
   border-radius: 0.3rem;
   aspect-ratio: 16/9;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .__alert {
   position: fixed;
   bottom: 10px;
   left: 15px;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(24, 25, 26, 0.5);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 10px 0 rgba(150, 144, 162, 0.1);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   padding: 10px 20px;
   z-index: 10000000;
   border-radius: 0.7rem;
@@ -1018,6 +1036,7 @@ footer {
   text-align: center;
 }
 .admin-container .hero-section p {
+  width: -moz-fit-content;
   width: fit-content;
   margin: 28px auto 19px auto;
   border: 1px dashed rgba(255, 255, 255, 0.4);
