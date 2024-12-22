@@ -31,7 +31,7 @@ function Home() {
 
       {/*-- __MAIN__ --*/}
       <main className="home">
-        <div className="container p-md-0 py-md-5">
+        <div className="w-100 px-3 py-4 p-sm-5">
           {/*-- __PRESS_RELEASE__ --*/}
           <PressRelease />
         </div>

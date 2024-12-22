@@ -6,23 +6,20 @@ function Hero() {
   return (
     <>
       <div className="first w-100">
-        <div className="intro">
-          <div className="p-sm-5">
-            <div className="row align-items-center justify-content-between gap-5 gap-lg-0">
-              <div className="col-12 col-lg-6">
+        <div className="intro p-sm-5">
+            <div className="row align-items-center justify-content-between gap-2 gap-lg-0">
+              <div className="col-12 col-lg-5 one order-1 order-md-0">
                 <h2 className="fw-bolder">Saad Al Amin</h2>
                 <span
                   className="badge fw-normal p-2"
                   style={{ width: "fit-content", backgroundColor: "#444" }}
                 >
-                  Film Maker | Musical Artist | Leader
+                  Filmmaker | Artist | Researcher
                 </span>
-                <p className="p-0" style={{ margin: "0 0" }}>
+                <p className="p-0">
                   Saad Al Amin is a Bangladeshi artist, film maker and graphics
                   designer born in Bangladesh. He is now working as a leading
-                  personality in tons of activities. Saad is also a very well
-                  known personality in Bangladesh who has been working hard to
-                  make a difference in Bangladesh.
+                  personality in tons of activities.
                 </p>
                 <div className="mt-4 d-flex flex-column flex-md-row gap-3 align-items-center">
                   <Link
@@ -47,7 +44,7 @@ function Hero() {
                     <Link
                       to="/discuss"
                       className="btn p-0 py-2 m-0 ms-1"
-                      style={{ width: "fit-content", color: "#aaa" }}
+                      style={{ width: "fit-content", color: "#fff", paddingLeft: "0px !important" }}
                     >
                       &rarr;
                       <span className="text-decoration-underline ms-2">
@@ -57,7 +54,7 @@ function Hero() {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-lg-6">
+              <div className="col-12 col-lg-7 video">
                 <video
                   src="/videos/intro.mp4"
                   className="w-100 rounded-3"
@@ -74,7 +71,6 @@ function Hero() {
                 ></video>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </>

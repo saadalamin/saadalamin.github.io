@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 body::-webkit-scrollbar {
   width: 0.25em;
   background-color: rgba(255, 255, 255, 0.2);
@@ -16,7 +16,7 @@ body::-webkit-scrollbar-thumb {
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -125,15 +125,13 @@ main {
 /*** HOME PAGE ***/
 .first {
   width: 100%;
-}
-.first .intro {
-  min-height: 80vh;
-  margin: 20px;
+  position: relative;
+  min-height: 90vh;
+  padding: 20px 0 100px 0;
   display: flex;
   align-items: center;
-  animation: animate1 0.56s ease;
 }
-.first .intro:before {
+.first:before {
   content: "";
   position: absolute;
   top: 0;
@@ -141,9 +139,22 @@ main {
   z-index: -1;
   width: 100%;
   height: 100%;
-  transform: scaleX(-1);
-  background: linear-gradient(to right, rgba(38, 39, 39, 0.9) 50%, transparent), url(../images/interface/e3.jpg) no-repeat center !important;
+  background: linear-gradient(to right, rgba(110, 110, 110, 0.4) 40%, transparent), url(../images/interface/e3.jpg) no-repeat center !important;
   background-size: cover;
+  background-attachment: fixed !important;
+}
+.first::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(180deg, rgba(24, 25, 26, 0) 0%, rgb(24, 25, 26) 100%);
+}
+.first .intro {
+  margin: 0 20px;
+  animation: animate1 0.56s ease;
 }
 @keyframes animate1 {
   0% {
@@ -151,7 +162,6 @@ main {
     opacity: 0;
   }
   50% {
-    transform: translateY(50px);
     opacity: 0.5;
   }
   100% {
@@ -159,23 +169,35 @@ main {
     opacity: 1;
   }
 }
-.first .intro h2 {
+.first .intro .one {
+  padding: 0 2rem 0 4.5rem;
+}
+.first .intro .one h2 {
   font-size: 3.5rem;
   margin-bottom: 0;
+  text-transform: uppercase;
 }
-.first .intro p {
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  line-height: 30px;
-  margin-top: 30px !important;
+.first .intro .one .badge {
+  font-size: 1rem !important;
+  margin-top: -10px;
 }
-.first .intro a {
-  margin-top: 40px;
+.first .intro .one p {
+  font-size: 1.1rem;
+  font-family: "Rubik", sans-serif;
+  line-height: 32px;
+  margin: 30px 0 30px 0 !important;
+}
+.first .intro .one a {
+  font-size: 1rem !important;
+  padding: 0.5rem 1.3rem !important;
   font-family: "Roboto", sans-serif;
+}
+.first .intro a:last-child {
+  padding: 0.7rem 0.5rem !important;
 }
 
 .home {
-  padding: 40px 0 !important;
+  padding: 0 0 40px 0 !important;
   position: relative;
 }
 .home .posts-a {
@@ -187,6 +209,11 @@ main {
 }
 .home .posts-a .post {
   position: relative;
+}
+.home .posts-a .post iframe {
+  aspect-ratio: 16/9;
+  width: 100% !important;
+  height: auto !important;
 }
 .home .posts-a .post img {
   display: flex;
@@ -613,10 +640,25 @@ main {
     background-position: center;
     background-attachment: fixed;
   }
-  .first .intro:before {
+  .first {
+    padding: 0 !important;
+  }
+  .first:before {
     background: transparent !important;
   }
-  .first .intro p {
+  .first:after {
+    display: none;
+  }
+  .first .intro {
+    margin: 0 !important;
+  }
+  .first .intro video {
+    border-radius: 0 !important;
+  }
+  .first .intro .one {
+    padding: 20px;
+  }
+  .first .intro .one p {
     width: 100%;
   }
   #modalForPress li {
@@ -624,6 +666,9 @@ main {
   }
   #modalForPress li div {
     padding-left: 5px;
+  }
+  #modalForPress li iframe {
+    width: 100% !important;
   }
   #modalForPress li img {
     width: 100% !important;
@@ -815,6 +860,12 @@ footer {
   font-size: 1rem;
   margin-bottom: 5px;
 }
+#modalForPress iframe {
+  width: 200px !important;
+  aspect-ratio: 16/9;
+  height: auto !important;
+  max-width: 400px !important;
+}
 #modalForPress img {
   width: 200px !important;
   border-radius: 0.3rem;
@@ -935,7 +986,7 @@ footer {
   background-color: transparent;
 }
 .discuss .post footer * {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
 }
 .discuss .post footer .post-time {
   color: #aaa;

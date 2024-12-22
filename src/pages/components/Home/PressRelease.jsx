@@ -13,14 +13,23 @@ function PressRelease() {
           var t = data;
           var o = "";
           for (let e = 0; e < t.length; e++) {
-            o +=
-              '<li class="list-group-item"><img src="' +
-              t[e].img +
-              '" alt="press" /><div><h4>' +
-              t[e].title +
-              "</h4><a href='" +
-              t[e].link +
-              "' target='_blank'>See More</a></div></li>";
+            if (t[e].iframe) {
+              o +=
+                '<li class="list-group-item">' +
+                t[e].iframe +
+                "<div><h4>" +
+                t[e].title +
+                "</h4></div></li>";
+            } else {
+              o +=
+                '<li class="list-group-item"><img src="' +
+                t[e].img +
+                '" alt="press" /><div><h4>' +
+                t[e].title +
+                "</h4><a href='" +
+                t[e].link +
+                "' target='_blank'>See More</a></div></li>";
+            }
           }
           modalPress.querySelectorAll(".modal-body")[0].innerHTML = o;
         },
@@ -51,33 +60,50 @@ function PressRelease() {
           );
           var o = "";
           for (let e = 0; e < 4; e++) {
-            o +=
-              `<a class="post col-12 col-sm-6 col-lg-3"
-      href="` +
-              t[e].link +
-              `"
-      target="_blank">
-      <img src="` +
-              t[e].img +
-              `" class="card-img-top" alt="Saad Al Amin">
+            if (t[e].iframe) {
+              o +=
+                `<div class="post col-12 col-sm-6 col-lg-3">
+      ${t[e].iframe}
       <div class="body">
         <p>
           <span>` +
-              t[e].title +
-              `</span>
+                t[e].title +
+                `</span>
           <span>` +
-              t[e].date +
-              `</span>
+                t[e].date +
+                `</span>
+        </p>
+      </div>
+    </div>`;
+            } else {
+              o +=
+                `<a class="post col-12 col-sm-6 col-lg-3"
+      href="` +
+                t[e].link +
+                `"
+      target="_blank">
+      <img src="` +
+                t[e].img +
+                `" class="card-img-top" alt="Saad Al Amin">
+      <div class="body">
+        <p>
+          <span>` +
+                t[e].title +
+                `</span>
+          <span>` +
+                t[e].date +
+                `</span>
         </p>
       </div>
     </a>`;
+            }
             if (e == 6) break;
           }
           document.querySelectorAll(".posts-a")[0].innerHTML =
             o +
             '<hr><div class="seeMore col-12 col-sm-6 col-lg-3"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForPress" id="modalPressMore"><button class="btn">Browse More +</button></a></div>';
         },
-        () => { }
+        () => {}
       );
     }
     pressPostsLoad();
@@ -85,7 +111,7 @@ function PressRelease() {
   return (
     <>
       <h4 className="title">Press Release</h4>
-      <div className="posts-a row row-gap-4 mb-5"></div>
+      <div className="posts-a row px-1 row-gap-4 mb-5"></div>
     </>
   );
 }
