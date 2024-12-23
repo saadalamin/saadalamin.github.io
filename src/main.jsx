@@ -6,7 +6,9 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ReactLenis root>
+    <ReactLenis root options={{
+      smoothWheel: true
+    }}>
       <App />
     </ReactLenis>
   </React.StrictMode>

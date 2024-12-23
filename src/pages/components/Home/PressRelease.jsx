@@ -113,7 +113,7 @@ function PressRelease() {
                     <li key={index} className="list-group-item">
                       {post.iframe ? (
                         <>
-                          <div
+                          <section
                             dangerouslySetInnerHTML={{ __html: post.iframe }}
                           />
                           <div>
