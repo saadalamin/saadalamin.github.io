@@ -7,4 +7,5 @@ var callback = function (err) {
   console.log("Published!");
  }
 };
+console.log("Working...");
 ghpages.publish("dist", { cname: "saadalamin.com" }, callback);

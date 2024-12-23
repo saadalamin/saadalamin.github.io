@@ -235,13 +235,11 @@ main {
         border: 1px solid rgba(255, 255, 255, 0.065);
         border-top-left-radius: 0.4rem;
         border-top-right-radius: 0.4rem;
+        object-position: 0 30%;
         &:hover {
           border: 1.5px solid white;
           opacity: 0.4;
         }
-      }
-      img:first-child {
-        object-position: 0 30%;
       }
       .body {
         p {
@@ -792,12 +790,12 @@ main {
     .intro {
       text-align: center;
       h2 {
-        font-size: 2.3rem;
-        margin-bottom: 5px;
+        font-size: 2.5rem !important;
+        margin-bottom: 5px !important;
       }
       p {
-        font-size: 0.9rem;
-        line-height: 30px;
+        font-size: 1rem !important;
+        line-height: 30px !important;
         width: 100%;
       }
       .links * {

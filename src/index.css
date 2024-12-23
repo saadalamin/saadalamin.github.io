@@ -226,14 +226,12 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.065);
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
+  -o-object-position: 0 30%;
+     object-position: 0 30%;
 }
 .home .posts-a .post img:hover {
   border: 1.5px solid white;
   opacity: 0.4;
-}
-.home .posts-a .post img:first-child {
-  -o-object-position: 0 30%;
-     object-position: 0 30%;
 }
 .home .posts-a .post .body p {
   width: 100%;
@@ -748,12 +746,12 @@ main {
     text-align: center;
   }
   .first .intro h2 {
-    font-size: 2.3rem;
-    margin-bottom: 5px;
+    font-size: 2.5rem !important;
+    margin-bottom: 5px !important;
   }
   .first .intro p {
-    font-size: 0.9rem;
-    line-height: 30px;
+    font-size: 1rem !important;
+    line-height: 30px !important;
     width: 100%;
   }
   .first .intro .links * {

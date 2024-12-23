@@ -1,117 +1,148 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import getPress from "../../scripts/getPress";
+import { useLenis } from "lenis/react";
 
 function PressRelease() {
+  const [pressPosts, setPressPosts] = useState([]);
+  const [modalPressPosts, setModalPressPosts] = useState([]);
+  const [hasError, setHasError] = useState(false);
+  const lenis = useLenis();
+
   useEffect(() => {
-    /**
-     * @description Configures the press modal
-     */
-    function modalPressConfig() {
-      var modalPress = document.getElementById("modalForPress");
+    document
+      .getElementById("modalForPress")
+      .addEventListener("hide.bs.modal", function () {
+        lenis.start();
+      });
+    async function dataFetch() {
       getPress(
         (data) => {
-          var t = data;
-          var o = "";
-          for (let e = 0; e < t.length; e++) {
-            if (t[e].iframe) {
-              o +=
-                '<li class="list-group-item">' +
-                t[e].iframe +
-                "<div><h4>" +
-                t[e].title +
-                "</h4></div></li>";
-            } else {
-              o +=
-                '<li class="list-group-item"><img src="' +
-                t[e].img +
-                '" alt="press" /><div><h4>' +
-                t[e].title +
-                "</h4><a href='" +
-                t[e].link +
-                "' target='_blank'>See More</a></div></li>";
-            }
-          }
-          modalPress.querySelectorAll(".modal-body")[0].innerHTML = o;
-        },
-        () => {
-          modalPress.querySelectorAll(".modal-body")[0].innerHTML =
-            "<p>An unknown error occurred!</p>";
-        }
-      );
-      getPress();
-    }
-    if (document.getElementById("modalForPress")) {
-      document
-        .getElementById("modalForPress")
-        .addEventListener("shown.bs.modal", modalPressConfig);
-    }
-    /**
-     * @description Loads the press posts
-     */
-    function pressPostsLoad() {
-      getPress(
-        (data) => {
-          var t = data;
-          t = t.sort(
-            // format accepted : '24 Dec 2023'
+          setModalPressPosts(data);
+          setHasError(false);
+          const sortedData = data.sort(
             (a, b) =>
               new Date(b.date.split(" ").reverse().join(" ")) -
               new Date(a.date.split(" ").reverse().join(" "))
           );
-          var o = "";
-          for (let e = 0; e < 4; e++) {
-            if (t[e].iframe) {
-              o +=
-                `<div class="post col-12 col-sm-6 col-lg-3">
-      ${t[e].iframe}
-      <div class="body">
-        <p>
-          <span>` +
-                t[e].title +
-                `</span>
-          <span>` +
-                t[e].date +
-                `</span>
-        </p>
-      </div>
-    </div>`;
-            } else {
-              o +=
-                `<a class="post col-12 col-sm-6 col-lg-3"
-      href="` +
-                t[e].link +
-                `"
-      target="_blank">
-      <img src="` +
-                t[e].img +
-                `" class="card-img-top" alt="Saad Al Amin">
-      <div class="body">
-        <p>
-          <span>` +
-                t[e].title +
-                `</span>
-          <span>` +
-                t[e].date +
-                `</span>
-        </p>
-      </div>
-    </a>`;
-            }
-            if (e == 6) break;
-          }
-          document.querySelectorAll(".posts-a")[0].innerHTML =
-            o +
-            '<hr><div class="seeMore col-12 col-sm-6 col-lg-3"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForPress" id="modalPressMore"><button class="btn">Browse More +</button></a></div>';
+          setPressPosts(sortedData.slice(0, 4));
         },
-        () => {}
+        (error) => {
+          console.error("Error fetching:", error);
+          setHasError(true);
+        }
       );
     }
-    pressPostsLoad();
+
+    dataFetch();
   }, []);
+
   return (
     <>
       <h4 className="title">Press Release</h4>
-      <div className="posts-a row px-1 row-gap-4 mb-5"></div>
+      <div className="posts-a row px-1 row-gap-4 mb-5">
+        {pressPosts.map((post, index) => (
+          <div
+            key={index}
+            className={`post col-12 col-sm-6 col-lg-3 ${
+              post.iframe ? "" : "link-container"
+            }`}
+          >
+            {post.iframe ? (
+              <>
+                <div dangerouslySetInnerHTML={{ __html: post.iframe }} />
+                <div className="body">
+                  <p>
+                    <span>{post.title}</span>
+                    <span>{post.date}</span>
+                  </p>
+                </div>
+              </>
+            ) : (
+              <a href={post.link} target="_blank" rel="noopener noreferrer">
+                <img src={post.img} className="card-img-top" alt="Press" />
+                <div className="body">
+                  <p>
+                    <span>{post.title}</span>
+                    <span>{post.date}</span>
+                  </p>
+                </div>
+              </a>
+            )}
+          </div>
+        ))}
+        <hr />
+        <div className="seeMore col-12 col-sm-6 col-lg-3">
+          <button
+            className="btn"
+            data-bs-toggle="modal"
+            data-bs-target="#modalForPress"
+            onClick={() => lenis.stop()}
+          >
+            Browse More +
+          </button>
+        </div>
+      </div>
+
+      {/* Modal */}
+      <div
+        className="modal fade"
+        id="modalForPress"
+        tabIndex="-1"
+        aria-labelledby="modalForPressLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="modalForPressLabel">
+                Press Posts
+              </h5>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              {hasError ? (
+                <p>An unknown error occurred!</p>
+              ) : (
+                <ul className="list-group">
+                  {modalPressPosts.map((post, index) => (
+                    <li key={index} className="list-group-item">
+                      {post.iframe ? (
+                        <>
+                          <div
+                            dangerouslySetInnerHTML={{ __html: post.iframe }}
+                          />
+                          <div>
+                            <h4>{post.title}</h4>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <img src={post.img} alt="press" />
+                          <div>
+                            <h4>{post.title}</h4>
+                            <a
+                              href={post.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              See More
+                            </a>
+                          </div>
+                        </>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
