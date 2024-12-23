@@ -9,11 +9,19 @@ function PressRelease() {
   const lenis = useLenis();
 
   useEffect(() => {
-    document
-      .getElementById("modalForPress")
-      .addEventListener("hide.bs.modal", function () {
-        lenis.start();
-      });
+    if (lenis) {
+      const modalElement = document.getElementById("modalForPress");
+  
+      const handleModalHide = () => lenis.start();
+      modalElement.addEventListener("hide.bs.modal", handleModalHide);
+  
+      return () => {
+        modalElement.removeEventListener("hide.bs.modal", handleModalHide);
+      };
+    }
+  }, [lenis]);
+  
+  useEffect(() => {
     async function dataFetch() {
       getPress(
         (data) => {
@@ -94,8 +102,8 @@ function PressRelease() {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="modalForPressLabel">
-                Press Posts
+              <h5 className="modal-title text-black" id="modalForPressLabel">
+                Press release
               </h5>
               <button
                 type="button"
