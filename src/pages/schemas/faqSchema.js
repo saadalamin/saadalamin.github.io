@@ -1,7 +1,7 @@
 const faqs = [
  [
   "Who is Saad Al Amin?",
-  "Saad Al Amin is a Bangladeshi artist, film maker and graphics designer born 3 August 2005 in Dhaka, Bangladesh. He founded Muktir Ghonta and Videophics in 2018. He has also founded Creative Youth Community - CYC.",
+  "Saad Al Amin is a Bangladeshi artist, filmmaker and graphics designer born 3 August 2005 in Dhaka, Bangladesh. He founded Muktir Ghonta and Videophics in 2018. He has also founded Creative Youth Community - CYC.",
  ],
  [
   "How do I ask Saad Al Amin a question?",

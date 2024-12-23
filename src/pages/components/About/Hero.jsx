@@ -21,7 +21,7 @@ function Hero() {
                             <hr />
                             <br />
                             <p className="card-text">
-                                Saad Al Amin is a Bangladeshi artist, film maker and graphics designer
+                                Saad Al Amin is a Bangladeshi artist, filmmaker and graphics designer
                                 born 3 August 2005 in Dhaka, Bangladesh. He is now working as a leading
                                 personality in tons of activities. Saad is also a very well known
                                 personality in Bangladesh who has been working hard to make a difference

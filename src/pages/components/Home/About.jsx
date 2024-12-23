@@ -221,7 +221,7 @@ function About() {
           <div className="skills shadow">
             <ul className="">
               <li>Leadership</li>
-              <li>Film Making</li>
+              <li>Filmmaking</li>
               <li>Journalism</li>
               <li>Volunteering</li>
               <li>Graphic Design</li>

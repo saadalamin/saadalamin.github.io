@@ -353,18 +353,19 @@ main {
   .awards,
   .languages {
     width: 100%;
-    padding: 20px 40px;
+    padding: 30px 40px;
     background-color: rgba($secondary-color, 0.4);
     border-radius: 0.3rem;
     margin: 20px 0;
   }
   .box {
+    padding: 10px 0;
     img,
     .cover {
       width: 40px;
       height: 40px;
       border-radius: 0.3rem;
-      background-color: $secondary-color;
+      background-color: #fff;
     }
     .details {
       width: 100%;

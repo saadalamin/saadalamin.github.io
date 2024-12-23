@@ -4,7 +4,7 @@ const articleSchema = JSON.stringify({
  url: "https://saadalamin.com",
  name: "Saad Al Amin",
  description:
-  "Saad Al Amin is a Bangladeshi artist, Film Maker and Graphics Designer born 3rd august in Dhaka, Bangladesh. He was raised and educated in Dhaka, Bangladesh. He started his primary education at the age of 6. His father&apos;s name is Ruhul Amin. He is a businessman and religious leader before 2010. Furthermore, he is now working with his own Company. He is...",
+  "Saad Al Amin is a Bangladeshi artist, Filmmaker and Graphics Designer born 3rd august in Dhaka, Bangladesh. He was raised and educated in Dhaka, Bangladesh. He started his primary education at the age of 6. His father&apos;s name is Ruhul Amin. He is a businessman and religious leader before 2010. Furthermore, he is now working with his own Company. He is...",
  publisher: {
   "@type": "WebSite",
   name: "Saad Al Amin",
@@ -19,16 +19,16 @@ const articleSchema = JSON.stringify({
   url: "https://saadalamin.com",
  },
  headline:
-  "Saad Al Amin - A Bangladeshi Artist, Film Maker and Graphics Designer",
+  "Saad Al Amin - A Bangladeshi Artist, Filmmaker and Graphics Designer",
  mainEntity: {
   "@context": "https://schema.org",
   "@type": "Person",
   url: "https://saadalamin.com",
   name: "Saad Al Amin",
   description:
-   "Saad Al Amin is a Bangladeshi artist, Film Maker and Graphics Designer born 3rd august in Dhaka, Bangladesh. He was raised and educated in Dhaka, Bangladesh. He started his primary education at the age of 6. His father&apos;s name is Ruhul Amin. He is a businessman and religious leader before 2010. Furthermore, he is now working with his own Company. He is...",
+   "Saad Al Amin is a Bangladeshi artist, Filmmaker and Graphics Designer born 3rd august in Dhaka, Bangladesh. He was raised and educated in Dhaka, Bangladesh. He started his primary education at the age of 6. His father&apos;s name is Ruhul Amin. He is a businessman and religious leader before 2010. Furthermore, he is now working with his own Company. He is...",
   jobTitle: [
-   "Film Maker",
+   "Filmmaker",
    "Musical Artist",
    "Director",
    "Editor",

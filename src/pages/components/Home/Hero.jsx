@@ -15,7 +15,7 @@ function Hero() {
                 Filmmaker | Artist | Researcher
               </span>
               <p className="p-0">
-                Saad Al Amin is a Bangladeshi artist, film maker and graphics
+                Saad Al Amin is a Bangladeshi artist, filmmaker and graphics
                 designer born in Bangladesh. He is now working as a leading
                 personality in tons of activities.
               </p>

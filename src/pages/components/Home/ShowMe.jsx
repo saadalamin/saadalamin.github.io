@@ -9,7 +9,7 @@ function ShowMe() {
                             <div>
                                 <img src="/images/icons/google.png" alt="Icon" />
                                 <h5>Google</h5>
-                                <p>Verified as Film Maker</p>
+                                <p>Verified as Filmmaker</p>
                             </div>
                         </div>
                         <div className="carousel-item">
