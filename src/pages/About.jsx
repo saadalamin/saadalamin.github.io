@@ -20,7 +20,7 @@ function About() {
       {/*-- __HEAD__ --*/}
       <Helmet>
         <title>About - Saad Al Amin</title>
-        <script type="application/ld+json">{JSON.stringify(faqSchema.faqSchema)}</script>
+        <script type="application/ld+json">{faqSchema.faqSchema}</script>
       </Helmet>
 
       {/*-- __NAVBAR__ --*/}

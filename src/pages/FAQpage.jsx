@@ -10,7 +10,7 @@ export default function Faqpage() {
     <div>
       <Helmet>
         <title>Who is Saad Al Amin? – Frequently Asked Questions</title>
-        <script type="application/ld+json">{JSON.stringify(faqSchema.faqSchema)}</script>
+        <script type="application/ld+json">{faqSchema.faqSchema}</script>
       </Helmet>
       <Navbar />
       <Faq />

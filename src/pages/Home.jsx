@@ -24,7 +24,7 @@ function Home() {
 
         <link rel="preload" href="/images/interface/e3.jpg" as="image" />
         <link rel="preload" href="/images/interface/e-2-blur.jpg" as="image" />
-        <script type="application/ld+json">{JSON.stringify(faqSchema.faqSchema)}</script>
+        <script type="application/ld+json">{faqSchema.faqSchema}</script>
       </Helmet>
 
       {/*-- __NAVBAR__ --*/}
