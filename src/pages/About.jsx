@@ -9,6 +9,7 @@ import Media from "./components/About/Media";
 import Footer from "./components/Footer";
 import Hidden from "./components/About/Hidden";
 import { useEffect } from "react";
+import faqSchema from "./schemas/faqSchema";
 
 function About() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function About() {
       {/*-- __HEAD__ --*/}
       <Helmet>
         <title>About - Saad Al Amin</title>
+        <script type="application/ld+json">{JSON.stringify(faqSchema.faqSchema)}</script>
       </Helmet>
 
       {/*-- __NAVBAR__ --*/}

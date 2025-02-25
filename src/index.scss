@@ -863,6 +863,13 @@ footer {
   background-color: rgba($secondary-color, 0.5);
   color: $primary-text-color;
 }
+.Footer-desc {
+  margin-top: 15px;
+  max-width: 400px;
+}
+.accordion-item {
+  border-color: gray !important;
+}
 #modalMain,
 #modalForPress,
 #modalForDiscuss {

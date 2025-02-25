@@ -15,6 +15,7 @@ import WithLayout from "./pages/contexts/WithLayout";
 import Search from "./pages/Search";
 import Error from "./pages/Error";
 import Publications from "./pages/Publications";
+import Faqpage from "./pages/Faqpage";
 
 function App() {
  return (
@@ -62,6 +63,14 @@ function App() {
       element={
        <WithLayout>
         <Contents />
+       </WithLayout>
+      }
+     />
+     <Route
+      path="/faq"
+      element={
+       <WithLayout>
+        <Faqpage />
        </WithLayout>
       }
      />

@@ -11,6 +11,8 @@ import WorkedWith from "./components/Home/WorkedWith";
 import ShowMe from "./components/Home/ShowMe";
 import Footer from "./components/Footer";
 import Hidden from "./components/Home/Hidden";
+import Faq from "./components/Home/Faq";
+import faqSchema from "./schemas/faqSchema";
 
 function Home() {
   return (
@@ -18,9 +20,11 @@ function Home() {
       {/*-- __HEAD__ --*/}
       <Helmet>
         <title>Saad Al Amin - Official Website</title>
+        <link rel="canonical" href="https://www.saadalamin.com"/>
 
         <link rel="preload" href="/images/interface/e3.jpg" as="image" />
         <link rel="preload" href="/images/interface/e-2-blur.jpg" as="image" />
+        <script type="application/ld+json">{JSON.stringify(faqSchema.faqSchema)}</script>
       </Helmet>
 
       {/*-- __NAVBAR__ --*/}
@@ -53,6 +57,9 @@ function Home() {
           <ShowMe />
         </div>
       </main>
+
+      {/*-- __FAQ__ --*/}
+      <Faq limited />
 
       {/*-- __FOOTER__ --*/}
       <Footer />

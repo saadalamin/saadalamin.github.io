@@ -5,7 +5,7 @@ function Hero() {
     <>
       <div className="first w-100">
         <div className="intro p-sm-5">
-          <div className="row align-items-center justify-content-between gap-2 gap-lg-0">
+          <div className="row align-items-center justify-content-between gap-2 gap-lg-0 w-100 m-0">
             <div className="col-12 col-lg-5 one order-1 order-md-0">
               <h2 className="fw-bolder">Saad Al Amin</h2>
               <span
