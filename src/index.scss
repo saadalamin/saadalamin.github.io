@@ -360,7 +360,7 @@ main {
   }
   .box {
     padding: 10px 0;
-    img,
+    img:not(.icon),
     .cover {
       width: 40px;
       height: 40px;
@@ -394,7 +394,7 @@ main {
   }
   .publications {
     .box {
-      img,
+      img:not(.icon),
       .cover {
         min-width: 90px !important;
         min-height: 120px;
@@ -734,7 +734,7 @@ main {
   .home {
     padding-top: 10px;
     .box {
-      img {
+      img:not(.icon) {
         width: 60px;
         height: 60px;
       }

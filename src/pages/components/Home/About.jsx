@@ -118,7 +118,10 @@ function About() {
                 <span>Jan 2024 - Present</span>
                 <span>Dhaka, Bangladesh</span>
 
-                <p className="mt-2">Founded brand concepts and design tasks for Qweek AI, with recognition from funders for creativity and impact.</p>
+                <p className="mt-2">
+                  Founded brand concepts and design tasks for Qweek AI, with
+                  recognition from funders for creativity and impact.
+                </p>
               </div>
             </div>
             <hr />
@@ -130,7 +133,11 @@ function About() {
                 <span>Aug 2022 - Sep 2023</span>
                 <span>Dhaka, Bangladesh</span>
 
-                <p className="mt-2">Documented and photographed five major events, managed social media content, and supported the organization’s goals of promoting cultural engagement through visual storytelling.</p>
+                <p className="mt-2">
+                  Documented and photographed five major events, managed social
+                  media content, and supported the organization’s goals of
+                  promoting cultural engagement through visual storytelling.
+                </p>
               </div>
             </div>
             <hr />
@@ -409,7 +416,7 @@ function About() {
           <h4 className="title">Publications</h4>
           <div className="publications shadow">
             <div className="box d-flex">
-              <div className="cover" />
+            <img src="/images/icons/tshgsrhtrh.jpg" alt="Publication" />
               <div className="details">
                 <h3>
                   Bangladeshi July Revolution & Visual Representation Impacts: A
@@ -417,25 +424,56 @@ function About() {
                 </h3>
                 <p>Saad Al Amin</p>
                 <span>Published on : Nov 30, 2024</span>
-                <span>Zonedo</span>
-                <a
-                  href="https://www.researchgate.net/publication/386275443_Bangladeshi_July_Revolution_Visual_Representation_Impacts_A_Film_Impact_Aspect"
-                  target="_blank"
-                  className="btn btn-sm btn-primary"
-                >
-                  Show the paper
-                </a>
-                <Link
-                  to="/publication/Bangladeshi_July_Revolution_Visual_Representation_Impacts_A_Film_Impact_Aspect"
-                  className="btn btn-sm btn-secondary ms-2"
-                >
-                  Open PDF
-                </Link>
+
+                <span className="mt-1">Published by:</span>
+                <div className="d-flex gap-2">
+                  {[
+                    [
+                      "Researchgate",
+                      "https://www.researchgate.net/publication/386275443_Bangladeshi_July_Revolution_Visual_Representation_Impacts_A_Film_Impact_Aspect",
+                      "researchgate-icon-2047x2048-5zkr6kip.png",
+                    ],
+                    ["Zenodo", "https://zenodo.org/records/14250823", "zenodo.png"],
+                    [
+                      "SSRN",
+                      "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5040227",
+                      "SSRN.png",
+                    ],
+                    [
+                      "Figshare",
+                      "https://figshare.com/articles/journal_contribution/Bangladeshi_July_Revolution_Visual_Representation_Impacts_A_Film_Impact_Aspect_pdf/27935412?file=50899491",
+                      "figshare.png",
+                    ],
+                    [
+                      "Academia",
+                      "https://www.academia.edu/125961531/Bangladeshi_July_Revolution_and_Visual_Representation_Impacts_A_Film_Impact_Aspect",
+                      "academia.png",
+                    ],
+                  ].map((v) => (
+                    <a
+                      href={v[1]}
+                      target="_blank"
+                      className="btn btn-sm btn-primary d-flex gap-2 align-items-center"
+                    >
+                      <img
+                        src={"/images/icons/company/" + v[2]}
+                        alt="icon"
+                        className="icon"
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          objectFit: "cover",
+                        }}
+                      />
+                      {v[0]}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
             <hr />
             <div className="box d-flex">
-              <img src="/images/icons/publi1.png" alt="Publications" />
+              <img src="/images/icons/publi1.png" alt="Publication" />
               <div className="details">
                 <h3>The mysteries of dark matter and dark energy</h3>
                 <p>Saad Al Amin</p>
@@ -452,7 +490,7 @@ function About() {
             </div>
             <hr />
             <div className="box d-flex">
-              <img src="/images/icons/publi2.png" alt="Publications" />
+              <img src="/images/icons/publi2.png" alt="Publication" />
               <div className="details">
                 <h3>Ethics & Current Generation's relationship Culture</h3>
                 <p>Saad Al Amin</p>
@@ -469,7 +507,7 @@ function About() {
             </div>
             <hr />
             <div className="box d-flex">
-              <img src="/images/icons/publi3.png" alt="Publications" />
+              <img src="/images/icons/publi3.png" alt="Publication" />
               <div className="details">
                 <h3>
                   Bangladeshi Education System & International System's Gap
@@ -488,7 +526,7 @@ function About() {
             </div>
             <hr />
             <div className="box d-flex">
-              <img src="/images/icons/publi4.png" alt="Publications" />
+              <img src="/images/icons/publi4.png" alt="Publication" />
               <div className="details">
                 <h3>The Spiritual and Cultural Significance of Ramadan</h3>
                 <p>Saad Al Amin</p>

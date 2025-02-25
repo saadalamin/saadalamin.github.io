@@ -353,7 +353,7 @@ main {
 .home .box {
   padding: 10px 0;
 }
-.home .box img,
+.home .box img:not(.icon),
 .home .box .cover {
   width: 40px;
   height: 40px;
@@ -382,7 +382,7 @@ main {
 .home .education a {
   margin-top: 10px;
 }
-.home .publications .box img,
+.home .publications .box img:not(.icon),
 .home .publications .box .cover {
   min-width: 90px !important;
   min-height: 120px;
@@ -704,7 +704,7 @@ main {
   .home {
     padding-top: 10px;
   }
-  .home .box img {
+  .home .box img:not(.icon) {
     width: 60px;
     height: 60px;
   }
