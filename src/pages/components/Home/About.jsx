@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 
 function About() {
   useEffect(() => {
@@ -36,19 +35,17 @@ function About() {
         role="group"
         aria-label="Basic outlined example"
       >
+        <button className="btn btn-sm btn-outline-light m-1">Experience</button>
+        <button className="btn btn-sm btn-outline-light m-1">Skills</button>
+        <button className="btn btn-sm btn-outline-light m-1">Education</button>
         <button
           className="btn btn-sm btn-outline-light active m-1"
           aria-current="page"
         >
-          Experience
+          Publications
         </button>
-        <button className="btn btn-sm btn-outline-light m-1">Skills</button>
-        <button className="btn btn-sm btn-outline-light m-1">Education</button>
         <button className="btn btn-sm btn-outline-light m-1">
           Certifications
-        </button>
-        <button className="btn btn-sm btn-outline-light m-1">
-          Publications
         </button>
         <button className="btn btn-sm btn-outline-light m-1">Awards</button>
         <button className="btn btn-sm btn-outline-light m-1">Languages</button>
@@ -56,7 +53,7 @@ function About() {
       <br />
       {/**-- __UNDER_SECTIONS --**/}
       <div id="sections">
-        <section className="experience-container">
+        <section className="experience-container dn">
           {/**-- __EXPERIENCE --**/}
           <h4 className="title">Experience</h4>
           <div className="experience shadow">
@@ -412,11 +409,11 @@ function About() {
           </div>
         </section>
         {/**-- __PUBLICATIONS --**/}
-        <section className="publications-container dn">
+        <section className="publications-container">
           <h4 className="title">Publications</h4>
           <div className="publications shadow">
             <div className="box d-flex">
-            <img src="/images/icons/tshgsrhtrh.jpg" alt="Publication" />
+              <img src="/images/icons/tshgsrhtrh.jpg" alt="Publication" />
               <div className="details">
                 <h3>
                   Bangladeshi July Revolution & Visual Representation Impacts: A
@@ -426,48 +423,56 @@ function About() {
                 <span>Published on : Nov 30, 2024</span>
 
                 <span className="mt-1">Published by:</span>
-                <div className="d-flex gap-2">
-                  {[
-                    [
-                      "Researchgate",
-                      "https://www.researchgate.net/publication/386275443_Bangladeshi_July_Revolution_Visual_Representation_Impacts_A_Film_Impact_Aspect",
-                      "researchgate-icon-2047x2048-5zkr6kip.png",
-                    ],
-                    ["Zenodo", "https://zenodo.org/records/14250823", "zenodo.png"],
-                    [
-                      "SSRN",
-                      "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5040227",
-                      "SSRN.png",
-                    ],
-                    [
-                      "Figshare",
-                      "https://figshare.com/articles/journal_contribution/Bangladeshi_July_Revolution_Visual_Representation_Impacts_A_Film_Impact_Aspect_pdf/27935412?file=50899491",
-                      "figshare.png",
-                    ],
-                    [
-                      "Academia",
-                      "https://www.academia.edu/125961531/Bangladeshi_July_Revolution_and_Visual_Representation_Impacts_A_Film_Impact_Aspect",
-                      "academia.png",
-                    ],
-                  ].map((v) => (
-                    <a
-                      href={v[1]}
-                      target="_blank"
-                      className="btn btn-sm btn-primary d-flex gap-2 align-items-center"
-                    >
-                      <img
-                        src={"/images/icons/company/" + v[2]}
-                        alt="icon"
-                        className="icon"
-                        style={{
-                          width: "20px",
-                          height: "20px",
-                          objectFit: "cover",
-                        }}
-                      />
-                      {v[0]}
-                    </a>
-                  ))}
+                <div className="row">
+                  <div className="d-flex flex-wrap gap-2">
+                    {[
+                      [
+                        "Researchgate",
+                        "https://www.researchgate.net/publication/386275443_Bangladeshi_July_Revolution_Visual_Representation_Impacts_A_Film_Impact_Aspect",
+                        "researchgate-icon-2047x2048-5zkr6kip.png",
+                      ],
+                      [
+                        "Zenodo",
+                        "https://zenodo.org/records/14250823",
+                        "zenodo.png",
+                      ],
+                      [
+                        "SSRN",
+                        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5040227",
+                        "SSRN.png",
+                      ],
+                      [
+                        "Figshare",
+                        "https://figshare.com/articles/journal_contribution/Bangladeshi_July_Revolution_Visual_Representation_Impacts_A_Film_Impact_Aspect_pdf/27935412?file=50899491",
+                        "figshare.png",
+                      ],
+                      [
+                        "Academia",
+                        "https://www.academia.edu/125961531/Bangladeshi_July_Revolution_and_Visual_Representation_Impacts_A_Film_Impact_Aspect",
+                        "academia.png",
+                      ],
+                    ].map((v, index) => (
+                      <a
+                        key={index}
+                        href={v[1]}
+                        target="_blank"
+                        rel="noopener noreferrer" // Recommended for security
+                        className="btn btn-sm btn-primary d-flex gap-2 align-items-center"
+                      >
+                        <img
+                          src={`/images/icons/company/${v[2]}`}
+                          alt="icon"
+                          className="icon"
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            objectFit: "cover",
+                          }}
+                        />
+                        {v[0]}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -590,6 +595,14 @@ function About() {
               <img src="/images/icons/hnlang.png" alt="Language" />
               <div className="details">
                 <h3>Hindi</h3>
+                <p>Elementary proficiency</p>
+              </div>
+            </div>
+            <hr />
+            <div className="box d-flex">
+              <img src="/images/icons/urlang.png" alt="Language" />
+              <div className="details">
+                <h3>Urdu</h3>
                 <p>Elementary proficiency</p>
               </div>
             </div>
