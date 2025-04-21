@@ -4,7 +4,7 @@ function Hero() {
   return (
     <>
       <div className="first w-100">
-        <div className="intro p-sm-5">
+        <div className="intro">
           <div className="row align-items-center justify-content-between gap-2 gap-lg-0 w-100 m-0">
             <div className="col-12 col-lg-5 one order-1 order-md-0">
               <h2 className="fw-bolder">Saad Al Amin</h2>
@@ -56,11 +56,12 @@ function Hero() {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-lg-7 video">
+            <div className="col-12 col-lg-7 video d-flex justify-content-center align-items-center order-0 order-md-1">
               <iframe
                 id="video"
-                className="w-100 rounded-3"
+                className="rounded-3"
                 style={{
+                  width: "85%",
                   aspectRatio: "16/9",
                 }}
                 src="https://www.youtube.com/embed/Q1ro4L_htLw?si=OpPQHae5JT_FWFF6"

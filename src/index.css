@@ -94,8 +94,7 @@ main {
 }
 .navbar .navbar-brand img {
   border-radius: 0.2rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .navbar .dropdown-menu {
   background-color: #242526;
@@ -221,13 +220,11 @@ main {
   align-items: center;
   max-height: 300px;
   aspect-ratio: 16/9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.065);
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
-  -o-object-position: 0 30%;
-     object-position: 0 30%;
+  object-position: 0 30%;
 }
 .home .posts-a .post img:hover {
   border: 1.5px solid white;
@@ -290,8 +287,7 @@ main {
   height: 78px;
   padding: 18px;
   border-radius: 1rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   background-color: #fff;
   margin-top: -100px;
 }
@@ -332,7 +328,6 @@ main {
   color: #333;
   background-color: #fff;
   padding: 4px 10px;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 0.4rem;
   margin: 0 auto;
@@ -382,12 +377,33 @@ main {
 .home .education a {
   margin-top: 10px;
 }
+@media (max-width: 767px) {
+  .home .skills,
+  .home .experience,
+  .home .education,
+  .home .certifications,
+  .home .publications,
+  .home .awards,
+  .home .languages {
+    padding: 20px 10px;
+    margin: 10px 0;
+  }
+  .home .certifications a,
+  .home .publications a,
+  .home .education a {
+    margin-top: 0px;
+  }
+  .home .certifications a:first-child,
+  .home .publications a:first-child,
+  .home .education a:first-child {
+    margin-top: 10px;
+  }
+}
 .home .publications .box img:not(.icon),
 .home .publications .box .cover {
   min-width: 90px !important;
   min-height: 120px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .home .skills li {
   padding: 8px 0;
@@ -534,8 +550,7 @@ main {
   width: 100%;
   height: 100%;
   min-height: 115px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .works .project-container-d .row div img:hover,
 .works .project-container-e .row div img:hover {
@@ -544,8 +559,7 @@ main {
 }
 .works .project-container-g img {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .works .project-container-g span {
   display: block;
@@ -571,7 +585,6 @@ main {
   padding: 0 10px;
 }
 .about .opinion .opinion-list .item {
-  height: -moz-min-content;
   height: min-content;
   border-radius: 2rem;
   background-color: #fff;
@@ -609,8 +622,7 @@ main {
   height: 100px;
   border-radius: 100rem;
   border: 8px solid #eee;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .about .media-links {
   padding-top: 10px;
@@ -853,8 +865,7 @@ footer {
   width: 100%;
   max-width: 400px;
   border: 1px dashed #fff;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #modalForPress li {
@@ -880,22 +891,19 @@ footer {
   width: 200px !important;
   border-radius: 0.3rem;
   aspect-ratio: 16/9;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .__alert {
   position: fixed;
   bottom: 10px;
   left: 15px;
-  width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(24, 25, 26, 0.5);
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 10px 0 rgba(150, 144, 162, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   padding: 10px 20px;
   z-index: 10000000;
   border-radius: 0.7rem;
@@ -1097,7 +1105,6 @@ footer {
   text-align: center;
 }
 .admin-container .hero-section p {
-  width: -moz-fit-content;
   width: fit-content;
   margin: 28px auto 19px auto;
   border: 1px dashed rgba(255, 255, 255, 0.4);

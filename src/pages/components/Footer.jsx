@@ -3,11 +3,8 @@ function Footer() {
     return (
         <>
             <footer className="py-5">
-                <div className="container py-3">
-                    <h1 hidden>Saad Al Amin</h1>
-                    <p className="Footer-desc">Saad Al Amin is a Bangladeshi artist, filmmaker and graphics designer born in Bangladesh. He is now working as a leading personality in tons of activities.</p>
-                    <br />
-                    <hr />
+                <div className="container">
+                    <hr className="text-light pb-2" />
                     <div className="d-flex justify-content-between">
                         <p>
                             Created by{" "}
