@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import countersData from "../../data/counters.json"
+import countersData from "../../../../public/data/counters.json"
 
 function Counter() {
   const [counters, setCounters] = useState([0, 0]);
 
   useEffect(() => {
     const targetValues = [countersData.audience, countersData.teamMember];
-    const duration = 4000;
+    const duration = 2000;
     const interval = 100;
 
     const animateCounters = () => {
@@ -35,7 +35,7 @@ function Counter() {
 
   return (
     <>
-      <div className="count shadow row row-gap-5 justify-content-center text-center ">
+      <div className="count shadow row row-gap-5 justify-content-center text-center">
         <section className="col-12 col-md-3">
           <h2>{counters[0].toLocaleString("en-US")}+</h2>
           <p>Audience</p>
