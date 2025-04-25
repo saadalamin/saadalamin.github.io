@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+import countersData from "../../data/counters.json"
 
 function Counter() {
   const [counters, setCounters] = useState([0, 0]);
 
   useEffect(() => {
-    const targetValues = [35000, 300];
-    const duration = 2000;
-    const interval = 50;
+    const targetValues = [countersData.audience, countersData.teamMember];
+    const duration = 4000;
+    const interval = 100;
 
     const animateCounters = () => {
       const increments = targetValues.map((value) =>
@@ -44,7 +45,7 @@ function Counter() {
           <p>Team Member</p>
         </section>
         <section className="col-12 col-md-3">
-          <h2>10M+</h2>
+          <h2>{countersData.reached || "20M+"}</h2>
           <p>Reached</p>
         </section>
       </div>
