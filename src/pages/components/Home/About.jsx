@@ -241,18 +241,17 @@ function About() {
           <h4 className="title">Education</h4>
           <div className="education shadow">
             <div className="box d-flex">
-              <img src="/images/icons/tmkm.jpg" alt="Education" />
+              <img src="/images/icons/knox.jpg" alt="Education" />
               <div className="details">
-                <h3>Tamirul Millat Kamil Madrasah</h3>
-                <p>HSC Level</p>
-                <span>2021 - 2023</span>
-                <span>A+</span>
+                <h3>Knox College, USA</h3>
+                <p>Bachelor in Film & Liberal Studies</p>
+                <span>Sep 2025 - Sep 2029</span>
                 <a
-                  href="https://www.linkedin.com/school/tmkm-edu/"
+                  href="https://www.knox.edu/"
                   target="_blank"
                   className="btn btn-sm btn-primary"
                 >
-                  Visit
+                  Visit the College
                 </a>
               </div>
             </div>
@@ -261,15 +260,15 @@ function About() {
               <img src="/images/icons/tmkm.jpg" alt="Education" />
               <div className="details">
                 <h3>Tamirul Millat Kamil Madrasah</h3>
-                <p>SSC Level</p>
-                <span>2019 - 2021</span>
+                <p>SSC & HSC Level</p>
+                <span>2019 - 2023</span>
                 <span>A+</span>
                 <a
                   href="https://www.linkedin.com/school/tmkm-edu/"
                   target="_blank"
                   className="btn btn-sm btn-primary"
                 >
-                  Visit
+                  Visit the School
                 </a>
               </div>
             </div>
