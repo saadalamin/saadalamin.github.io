@@ -7,11 +7,7 @@ function Footer() {
                     <hr className="text-light pb-2" />
                     <div className="d-flex justify-content-between">
                         <p>
-                            Created by{" "}
-                            <a className="link-light" href="https://www.facebook.com/mosefatullah">
-                                Sefatullah
-                            </a>
-                            . All rights reserved.
+                            All rights reserved.
                         </p>
                         <ul className="list-unstyled d-flex">
                             <li className="ms-3">
